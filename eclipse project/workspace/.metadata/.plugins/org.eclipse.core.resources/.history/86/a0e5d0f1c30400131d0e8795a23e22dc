@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package farrusco.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPrintingPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.PrintingPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramPrintingPreferencePage() {
+		setPreferenceStore(farrusco.diagram.part.FarruscoDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

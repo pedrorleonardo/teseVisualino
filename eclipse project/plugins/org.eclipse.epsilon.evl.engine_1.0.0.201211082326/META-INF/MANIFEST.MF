@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.evl,org.eclipse.epsilon.evl.execut
+ e,org.eclipse.epsilon.evl.execute.context,org.eclipse.epsilon.evl.exe
+ cute.exceptions,org.eclipse.epsilon.evl.execute.operations,org.eclips
+ e.epsilon.evl.parse,org.eclipse.epsilon.evl.trace
+Require-Bundle: org.eclipse.epsilon.eol.engine;visibility:=reexport,or
+ g.eclipse.epsilon.erl.engine;visibility:=reexport
+Eclipse-AutoStart: true
+Bundle-Vendor: Eclipse.org
+Bundle-ClassPath: org.eclipse.epsilon.evl.engine.jar
+Bundle-Version: 1.0.0.201211082326
+Bundle-Localization: plugin
+Bundle-Name: Epsilon Validation Language Engine
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.evl.engine
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

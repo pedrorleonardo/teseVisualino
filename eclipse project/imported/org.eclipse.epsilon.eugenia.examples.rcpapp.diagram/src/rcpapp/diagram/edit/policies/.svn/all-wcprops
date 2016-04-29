@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/policies
+END
+RcpappTextSelectionEditPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/policies/RcpappTextSelectionEditPolicy.java
+END
+ModelItemSemanticEditPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/policies/ModelItemSemanticEditPolicy.java
+END
+RcpappBaseItemSemanticEditPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/policies/RcpappBaseItemSemanticEditPolicy.java
+END
+ComponentItemSemanticEditPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/policies/ComponentItemSemanticEditPolicy.java
+END
+RcpappTextNonResizableEditPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/policies/RcpappTextNonResizableEditPolicy.java
+END
+ModelCanonicalEditPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/policies/ModelCanonicalEditPolicy.java
+END

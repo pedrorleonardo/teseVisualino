@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.egl.dt,org.eclipse.epsilon.egl.dt.
+ debug,org.eclipse.epsilon.egl.dt.editor,org.eclipse.epsilon.egl.dt.ed
+ itor.outline,org.eclipse.epsilon.egl.dt.extensions,org.eclipse.epsilo
+ n.egl.dt.extensions.fineGrainedTracePostprocessor,org.eclipse.epsilon
+ .egl.dt.extensions.formatter,org.eclipse.epsilon.egl.dt.extensions.te
+ mplateFactoryType,org.eclipse.epsilon.egl.dt.launching,org.eclipse.ep
+ silon.egl.dt.launching.tabs,org.eclipse.epsilon.egl.dt.views,org.ecli
+ pse.epsilon.egl.dt.widgets;x-friends:="org.eclipse.epsilon.egl.dt.tes
+ t",org.eclipse.epsilon.egl.dt.wizards
+Require-Bundle: org.eclipse.epsilon.egl.engine,org.eclipse.epsilon.com
+ mon.dt,org.eclipse.ui.workbench.texteditor,org.eclipse.jface.text,org
+ .eclipse.epsilon.eol.dt,org.eclipse.ui.ide
+Bundle-Vendor: Eclipse.org
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: org.eclipse.epsilon.egl.dt.jar
+Bundle-Version: 1.0.0.201211082326
+Bundle-Name: Epsilon Generation Language Development Tools
+Bundle-Activator: org.eclipse.epsilon.egl.dt.EglPlugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.egl.dt;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

@@ -1,0 +1,23 @@
+INDEX VERSION 1.126+C:\Users\Leonardo\Desktop\eclipse-epsilon\workspace2\.metadata\.plugins\org.eclipse.jdt.core
+1487012200.index
+933457818.index
+3673939011.index
+1819734858.index
+1233530181.index
+968344441.index
+3800656831.index
+373055054.index
+1499660547.index
+3617533925.index
+325049177.index
+1443192297.index
+192107651.index
+9231116.index
+1271116425.index
+1132906450.index
+4085895149.index
+654066119.index
+944935147.index
+2086377199.index
+602043440.index
+1694433789.index

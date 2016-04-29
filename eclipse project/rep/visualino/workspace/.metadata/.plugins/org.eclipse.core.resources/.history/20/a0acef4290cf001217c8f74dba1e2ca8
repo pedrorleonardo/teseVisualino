@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package farrusco.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramRulersAndGridPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.RulerGridPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramRulersAndGridPreferencePage() {
+		setPreferenceStore(farrusco.diagram.part.FarruscoDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

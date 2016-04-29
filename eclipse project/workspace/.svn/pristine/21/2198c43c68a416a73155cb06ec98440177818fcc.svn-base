@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="farrusco">
+  <figures name="Default" implementationBundle="figuresPlan.figures">
+    <descriptors name="PrioridadeFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.PrioridadeFigure">
+        <customChildren accessor="getFigurePrioridadeLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigurePrioridadeLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="ParaleloFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.ParaleloFigure">
+        <customChildren accessor="getFigureParaleloLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigureParaleloLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="SequencialFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.SequencialFigure"/>
+    </descriptors>
+    <descriptors name="AlterarEstadoFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.AlterarEstadoFigure">
+        <customChildren accessor="getFigureAlterarEstadoLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigureAlterarEstadoLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="DistanciaFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.DistanciaFigure">
+        <customChildren accessor="getFigureDistanciaLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigureDistanciaLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="BumpersFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.BumpersFigure">
+        <customChildren accessor="getFigureBumpersLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigureBumpersLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="EsperaFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.EsperaFigure">
+        <customChildren accessor="getFigureEsperaLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigureEsperaLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="MotorFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.MotorFigure">
+        <customChildren accessor="getFigureMotorLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigureMotorLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="ServoFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.ServoFigure">
+        <customChildren accessor="getFigureServoLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigureServoLabelFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="LEDFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="figuresPlan.figures.LEDFigure">
+        <customChildren accessor="getFigureLEDLabelFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors accessor="getFigureLEDLabelFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="FilhoFigure">
+      <actualFigure xsi:type="gmfgraph:CustomConnection" qualifiedClassName="figuresPlan.figures.FilhoFigure"/>
+    </descriptors>
+    <descriptors name="IrmaoFigure">
+      <actualFigure xsi:type="gmfgraph:CustomConnection" qualifiedClassName="figuresPlan.figures.IrmaoFigure"/>
+    </descriptors>
+  </figures>
+  <nodes name="Prioridade" figure="PrioridadeFigure"/>
+  <nodes name="Paralelo" figure="ParaleloFigure"/>
+  <nodes name="Sequencial" figure="SequencialFigure"/>
+  <nodes name="AlterarEstado" figure="AlterarEstadoFigure"/>
+  <nodes name="Distancia" figure="DistanciaFigure"/>
+  <nodes name="Bumpers" figure="BumpersFigure"/>
+  <nodes name="Espera" figure="EsperaFigure"/>
+  <nodes name="Motor" figure="MotorFigure"/>
+  <nodes name="Servo" figure="ServoFigure"/>
+  <nodes name="LED" figure="LEDFigure"/>
+  <connections name="Filho" figure="FilhoFigure"/>
+  <connections name="Irmao" figure="IrmaoFigure"/>
+  <labels name="PrioridadeLabel" figure="PrioridadeFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="ParaleloLabel" figure="ParaleloFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="AlterarEstadoLabel" figure="AlterarEstadoFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="DistanciaLabel" figure="DistanciaFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="BumpersLabel" figure="BumpersFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="EsperaLabel" figure="EsperaFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="MotorLabel" figure="MotorFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels name="ServoLabel" figure="ServoFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="LEDLabel" figure="LEDFigure" accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+</gmfgraph:Canvas>

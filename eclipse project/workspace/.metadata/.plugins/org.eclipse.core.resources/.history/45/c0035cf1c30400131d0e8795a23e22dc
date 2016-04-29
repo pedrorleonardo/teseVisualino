@@ -1,0 +1,158 @@
+/*
+ * 
+ */
+package farrusco.diagram.edit.commands;
+
+/**
+ * @generated
+ */
+public class FilhoReorientCommand extends org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand {
+
+	/**
+ * @generated
+ */
+	private final int reorientDirection;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject oldEnd;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject newEnd;
+
+	/**
+ * @generated
+ */
+	public FilhoReorientCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest request) {
+		super(request.getLabel(), request.getRelationship(), request);
+		reorientDirection = request.getDirection();
+		oldEnd = request.getOldRelationshipEnd();
+		newEnd = request.getNewRelationshipEnd();
+	}
+	
+	/**
+ * @generated
+ */
+	public boolean canExecute() {
+			if (false == getElementToEdit() instanceof farrusco.Filho) {
+		return false;
+	}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return canReorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return canReorientTarget();
+		}
+		return false;
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientSource() {
+			if (!(oldEnd instanceof farrusco.Behavior && newEnd instanceof farrusco.Behavior)) {
+		return false;
+	}
+				if (getLink().getTarget().size() != 1) {
+			return false;
+		}
+		farrusco.Node target = (farrusco.Node) getLink().getTarget().get(0);
+			if (!(getLink().eContainer() instanceof farrusco.Robot)) {
+		return false;
+	}
+	farrusco.Robot container = (farrusco.Robot) getLink().eContainer();
+	return farrusco.diagram.edit.policies.FarruscoBaseItemSemanticEditPolicy.getLinkConstraints().canExistFilho_4001(container, getLink(), getNewSource(), target);
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientTarget() {
+			if (!(oldEnd instanceof farrusco.Node && newEnd instanceof farrusco.Node)) {
+		return false;
+	}
+						if (getLink().getSource().size() != 1) {
+			return false;
+		}
+		farrusco.Behavior source = (farrusco.Behavior) getLink().getSource().get(0);
+				if (!(getLink().eContainer() instanceof farrusco.Robot)) {
+		return false;
+	}
+	farrusco.Robot container = (farrusco.Robot) getLink().eContainer();
+	return farrusco.diagram.edit.policies.FarruscoBaseItemSemanticEditPolicy.getLinkConstraints().canExistFilho_4001(container, getLink(), source, getNewTarget());
+	}
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+			org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+			throws org.eclipse.core.commands.ExecutionException {
+		if (!canExecute()) {
+			throw new org.eclipse.core.commands.ExecutionException("Invalid arguments in reorient link command");  //$NON-NLS-1$
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return reorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return reorientTarget();
+		}
+		throw new IllegalStateException();
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientSource() throws org.eclipse.core.commands.ExecutionException {
+				getLink().getSource().remove(getOldSource());
+	getLink().getSource().add(getNewSource());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(getLink());
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientTarget() throws org.eclipse.core.commands.ExecutionException {
+				getLink().getTarget().remove(getOldTarget());
+	getLink().getTarget().add(getNewTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(getLink());
+	}
+		
+	/**
+ * @generated
+ */
+	protected farrusco.Filho getLink() {
+		return (farrusco.Filho) getElementToEdit();
+	}
+	
+	/**
+ * @generated
+ */
+	protected farrusco.Behavior getOldSource() {
+		return (farrusco.Behavior) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected farrusco.Behavior getNewSource() {
+		return (farrusco.Behavior) newEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected farrusco.Node getOldTarget() {
+		return (farrusco.Node) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected farrusco.Node getNewTarget() {
+		return (farrusco.Node) newEnd;
+	}
+}

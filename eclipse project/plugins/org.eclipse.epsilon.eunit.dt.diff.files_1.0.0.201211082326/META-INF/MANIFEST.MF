@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.eunit.dt.diff.files
+Require-Bundle: org.eclipse.epsilon.eunit.dt,org.eclipse.core.runtime,
+ org.eclipse.compare,org.eclipse.ui
+Bundle-Vendor: Eclipse.org
+Bundle-Version: 1.0.0.201211082326
+Bundle-Name: EUnit File Differencer
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.eunit.dt.diff.files;singleton
+ :=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

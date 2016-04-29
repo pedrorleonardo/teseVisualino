@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.evl.dt,org.eclipse.epsilon.evl.dt.
+ editor,org.eclipse.epsilon.evl.dt.editor.outline,org.eclipse.epsilon.
+ evl.dt.launching,org.eclipse.epsilon.evl.dt.launching.tabs,org.eclips
+ e.epsilon.evl.dt.views,org.eclipse.epsilon.evl.dt.wizards
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: org.eclipse.epsilon.evl.dt.jar
+Bundle-Name: Epsilon Validation Language Development Tools
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.epsilon.eol.dt,org.eclipse.epsilon.evl.eng
+ ine,org.eclipse.jface.text,org.eclipse.epsilon.common.dt
+Bundle-Vendor: Eclipse.org
+Bundle-Version: 1.0.0.201211082326
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.eclipse.epsilon.evl.dt.EvlPlugin
+Bundle-SymbolicName: org.eclipse.epsilon.evl.dt;singleton:=true
+
+

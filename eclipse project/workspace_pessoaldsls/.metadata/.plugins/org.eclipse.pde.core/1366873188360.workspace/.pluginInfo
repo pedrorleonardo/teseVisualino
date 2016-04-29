@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="1093" localization="plugin" name="%pluginName" project="LDE.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1094" class="arduino.provider.ArduinoEditPlugin$Implementation" localization="plugin" name="%pluginName" project="LDE.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1095" localization="plugin" name="%pluginName" project="LDE" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1096" class="arduino.presentation.ArduinoEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="LDE.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1097" class="arduino.diagram.part.ArduinoDiagramEditorPlugin" localization="plugin" name="%pluginName" project="LDE.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+</map>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/helpers
+END
+ModelEditHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/helpers/ModelEditHelper.java
+END
+RcpappBaseEditHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/helpers/RcpappBaseEditHelper.java
+END
+ComponentEditHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/helpers/ComponentEditHelper.java
+END

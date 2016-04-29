@@ -1,0 +1,567 @@
+/*
+ * 
+ */
+package farrusco.diagram.part;
+
+import org.eclipse.osgi.util.NLS;
+
+/**
+ * @generated
+ */
+public class Messages extends NLS {
+
+	/**
+	 * @generated
+	 */
+	static {
+		NLS.initializeMessages("messages", Messages.class); //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private Messages() {
+	}
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoCreationWizardTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoCreationWizard_DiagramModelFilePageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoCreationWizard_DiagramModelFilePageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoCreationWizard_DomainModelFilePageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoCreationWizard_DomainModelFilePageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoCreationWizardOpenEditorError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoCreationWizardCreationError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoCreationWizardPageExtensionError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditorUtil_OpenModelResourceErrorDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditorUtil_OpenModelResourceErrorDialogMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditorUtil_CreateDiagramProgressTask;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditorUtil_CreateDiagramCommandLabel;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_isModifiable;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_handleElementContentChanged;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_IncorrectInputError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_NoDiagramInResourceError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_DiagramLoadingError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_UnsynchronizedFileSaveError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_SaveDiagramTask;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_SaveNextResourceTask;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDocumentProvider_SaveAsOperation;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_ResourceErrorDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_ResourceErrorDialogMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_WizardTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_OpenModelFileDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_CreationPageName;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_CreationPageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_CreationPageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_RootSelectionPageName;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_RootSelectionPageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_RootSelectionPageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_RootSelectionPageSelectionTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_RootSelectionPageNoSelectionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_RootSelectionPageInvalidSelectionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_InitDiagramCommand;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoNewDiagramFileWizard_IncorrectRootError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditor_SavingDeletedFile;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditor_SaveAsErrorTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditor_SaveAsErrorMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditor_SaveErrorTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoDiagramEditor_SaveErrorMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoElementChooserDialog_SelectModelElementTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String ModelElementSelectionPageMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String ValidateActionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String Acções1Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Ligações2Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CriarPrograma3Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CriarPrograma3Group_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Controlo4Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Colisao1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Colisao1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Distancia2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Distancia2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Espera3CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Espera3CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Luz4CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Luz4CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Motores5CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Motores5CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Servo6CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Servo6CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Filho1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Filho1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Irmao2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Irmao2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Programa1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Programa1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Paralelo1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Paralelo1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Sequencia2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Sequencia2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Decisor3CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Decisor3CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String AlterarEstado4CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String AlterarEstado4CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String CommandName_OpenDiagram;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Robot_1000_links;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Servo_2005_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Servo_2005_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Bumpers_2002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Bumpers_2002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_LED_2006_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_LED_2006_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Irmao_4002_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Irmao_4002_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Motor_2004_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Motor_2004_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Sequencial_2009_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Sequencial_2009_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Prioridade_2007_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Prioridade_2007_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_AlterarEstado_2010_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_AlterarEstado_2010_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Distancia_2001_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Distancia_2001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Paralelo_2008_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Paralelo_2008_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Filho_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Filho_4001_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Espera_2003_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Espera_2003_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorActionProvider_OpenDiagramActionName;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_UnexpectedValueType;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_WrongStringConversion;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_UnknownLiteral;
+
+	/**
+	 * @generated
+	 */
+	public static String MessageFormatParser_InvalidInputError;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoModelingAssistantProviderTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String FarruscoModelingAssistantProviderMessage;
+
+	//TODO: put accessor fields manually	
+}

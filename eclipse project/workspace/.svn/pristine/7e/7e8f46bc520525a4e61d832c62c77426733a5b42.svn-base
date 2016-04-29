@@ -1,0 +1,15 @@
+[%
+
+var outputDir = ".";
+
+var srcGenDir = outputDir + "/";
+
+
+var template = TemplateFactory.load("Demo.egl");
+
+template.generate(srcGenDir + "/programa/programa.ino");
+
+
+
+%]
+

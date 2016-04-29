@@ -1,0 +1,7 @@
+# Tracing options for the org.farrusco.diagram plug-in
+
+# Common issues
+org.farrusco.diagram/debug=false
+
+# Visual IDs
+org.farrusco.diagram/debug/visualID=false

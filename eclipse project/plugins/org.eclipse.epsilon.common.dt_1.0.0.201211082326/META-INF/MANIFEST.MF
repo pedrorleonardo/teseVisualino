@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.common.dt,org.eclipse.epsilon.comm
+ on.dt.actions,org.eclipse.epsilon.common.dt.console,org.eclipse.epsil
+ on.common.dt.editor,org.eclipse.epsilon.common.dt.editor.contentassis
+ t,org.eclipse.epsilon.common.dt.editor.hyperlinks,org.eclipse.epsilon
+ .common.dt.editor.outline,org.eclipse.epsilon.common.dt.extensions,or
+ g.eclipse.epsilon.common.dt.launching,org.eclipse.epsilon.common.dt.l
+ aunching.dialogs,org.eclipse.epsilon.common.dt.launching.extensions,o
+ rg.eclipse.epsilon.common.dt.launching.tabs,org.eclipse.epsilon.commo
+ n.dt.nature,org.eclipse.epsilon.common.dt.tools,org.eclipse.epsilon.c
+ ommon.dt.util,org.eclipse.epsilon.common.dt.variables,org.eclipse.eps
+ ilon.common.dt.wizards
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: org.eclipse.epsilon.common.dt.jar
+Bundle-Name: Epsilon Common Development Tools
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.ui;visibility:=reexport,org.eclipse.core.r
+ untime;visibility:=reexport,org.eclipse.ui.editors;visibility:=reexpo
+ rt,org.eclipse.ui.workbench.texteditor,org.eclipse.jface.text,org.ecl
+ ipse.ui.views,org.eclipse.epsilon.eol.engine;visibility:=reexport,org
+ .eclipse.ui.ide,org.eclipse.debug.ui;visibility:=reexport,org.eclipse
+ .ui.console,org.eclipse.core.variables,org.eclipse.epsilon.erl.engine
+ ;visibility:=reexport
+Bundle-Vendor: Eclipse.org
+Bundle-Version: 1.0.0.201211082326
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.eclipse.epsilon.common.dt.EpsilonCommonsPlugin
+Bundle-SymbolicName: org.eclipse.epsilon.common.dt;singleton:=true
+
+

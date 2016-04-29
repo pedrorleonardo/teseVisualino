@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="farrusco.presentation.FarruscoModelWizardID"
+            name="%_UI_FarruscoModelWizard_label"
+            class="farrusco.presentation.FarruscoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FarruscoModelFile.gif">
+         <description>%_UI_FarruscoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="farrusco.presentation.FarruscoEditorID"
+            name="%_UI_FarruscoEditor_label"
+            icon="icons/full/obj16/FarruscoModelFile.gif"
+            extensions="farrusco"
+            class="farrusco.presentation.FarruscoEditor"
+            contributorClass="farrusco.presentation.FarruscoActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

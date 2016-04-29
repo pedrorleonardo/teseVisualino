@@ -1,0 +1,46 @@
+package figuresPlan.figures.activator;
+
+/**
+ * @generated
+ */
+public class PluginActivator extends org.eclipse.core.runtime.Plugin {
+
+	/**
+	 * @generated
+	 */
+	public static final String ID = "figuresPlan.figures"; //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	private static PluginActivator ourInstance;
+
+	/**
+	 * @generated
+	 */
+	public PluginActivator() {
+	}
+
+	/**
+	 * @generated
+	 */
+	public void start(org.osgi.framework.BundleContext context) throws Exception {
+		super.start(context);
+		ourInstance = this;
+	}
+
+	/**
+	 * @generated
+	 */
+	public void stop(org.osgi.framework.BundleContext context) throws Exception {
+		ourInstance = null;
+		super.stop(context);
+	}
+
+	/**
+	 * @generated
+	 */
+	public static PluginActivator getDefault() {
+		return ourInstance;
+	}
+}

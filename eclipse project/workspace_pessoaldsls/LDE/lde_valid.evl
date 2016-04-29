@@ -1,0 +1,264 @@
+context Robo{
+	constraint HasMoreThanZeroElements{
+		check : Robo.allInstances().at(0).temAcoes.size > 0
+		
+		message : 'Tem que ter ações'
+	}
+	
+	constraint HasStart {
+		check {
+			var robot := Robo.allInstances().at(0);
+			for(a in robot.temAcoes) {
+				if(a.type.name.compareTo("Inicio") == 0){
+					return true;
+				}
+			}
+			return false;
+		}
+		
+		message : 'Tem que ter um Início'
+	}
+	
+	constraint NotTooManyConnections{
+		check {
+			var acum := 0;
+			var nrTr := 0;
+			var robot := Robo.allInstances().at(0);
+			
+			if(robot.temAcoes.size <= 0){
+				return true;
+			}
+			
+			for(t in robot.temTransicoes) {
+				if(t.Acao_de_Saida.isDefined() or t.Acao_de_Entrada.isDefined()){
+					nrTr := nrTr + 1;
+				}
+			}
+			
+			for(a in robot.temAcoes){
+				if(a.type.name.compareTo("While") == 0){
+					acum := acum + 1;
+				}
+				if(a.type.name.compareTo("If") == 0){
+					acum := acum + 1;
+				}
+			}
+			
+			if((robot.temAcoes.size-acum-1) >= nrTr){
+				return true;
+			}
+			
+			return false;
+		}
+		
+		message : 'Não pode existir conexões em excesso'
+	}
+	
+		constraint NoLackOfConnections{
+		check {
+			var acum := 0;
+			var nrTr := 0;
+			var robot := Robo.allInstances().at(0);
+			for(t in robot.temTransicoes) {
+				if(t.Acao_de_Saida.isDefined() or t.Acao_de_Entrada.isDefined()){
+					nrTr := nrTr + 1;
+				}
+			}
+			
+			for(a in robot.temAcoes){
+				if(a.type.name.compareTo("While") == 0){
+					acum := acum + 1;
+				}
+				if(a.type.name.compareTo("If") == 0){
+					acum := acum + 1;
+				}
+			}
+			
+			if((robot.temAcoes.size-acum-1) <= nrTr){
+				return true;
+			}
+			return false;
+		}
+		
+		message : 'Não pode existir ações por ligar'		
+	}
+}
+
+context Transicoes{
+	constraint NoTransitionsToTheActionItself{
+		check { 
+			if(self.Acao_de_Entrada.isDefined()) {
+				if(self.Acao_de_Saida.isDefined()){ 
+					if(self.Acao_de_Saida <> self.Acao_de_Entrada) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+	
+		message : 'Não pode existir conexões para a própria ação'
+	}
+	
+
+}
+
+context Inicio{
+	constraint AtLeastOneStart {
+		check {
+			var acum := 0;
+			var robot := Robo.allInstances().at(0);
+			for(a in robot.temAcoes) {
+				if(a.type.name.compareTo("Inicio") == 0){
+					acum := acum + 1;
+				    if(acum>1){
+				    	return false;
+				    }
+				}
+			}
+		return true;
+		}
+		
+		message : 'Só pode ter um Início'
+	}
+	
+	constraint HasNoEndTransition{
+		check : not self.Transicao_de_Entrada.isDefined()
+		
+		message : 'O Início não pode ter uma conexão de entrada'
+	}
+}
+
+context Fim{
+	constraint HasNoStartTransition{
+		check : not self.Transicao_de_Saida.isDefined()
+		
+		message : 'O Fim não pode ter uma conexão de saída'
+	}
+}
+
+context If{
+	constraint HaveThen{
+		check : self.then.isDefined()
+		
+		message : 'O If tem que ter um Then'
+	}
+	
+	constraint HaveCondition{
+		check : self.tem.isDefined()
+		
+		message : 'O If tem que ter uma Condição'
+	}
+}
+
+context While{
+	constraint HaveThen{
+		check : self.corpo.isDefined()
+		
+		message : 'O While tem que ter um Corpo'
+	}
+	
+	constraint HaveCondition{
+		check : self.tem.isDefined()
+		
+		message : 'O While tem que ter uma Condição'
+	}
+}
+
+context Distancia_Infra_Vermelhos{
+	constraint GreaterOrEqualThanZero {
+		check : self.distancia >= 0
+		
+		message : 'A distância tem que ser um número positivo'
+		
+		fix {
+			title : 'Modificar para valor padrão'
+			
+			do {
+				self.distancia := 100;
+			}
+		}
+	}
+}
+
+context Rodar_Esquerda_Tempo{
+	constraint GreaterOrEqualThanZero {
+		check : self.Tempo >= 0
+		
+		message : 'O Tempo tem que ser um número positivo'
+		
+		fix {
+			title : 'Modificar para valor padrão'
+			
+			do {
+				self.Tempo := 10;
+			}
+		}
+	}
+}
+
+context Rodar_Direita_Tempo{
+	constraint GreaterOrEqualThanZero {
+		check : self.Tempo >= 0
+		
+		message : 'O Tempo tem que ser um número positivo'
+		
+		fix {
+			title : 'Modificar para valor padrão'
+			
+			do {
+				self.Tempo := 10;
+			}
+		}
+	}
+}
+
+context Mover_Frente_Tempo{
+	constraint GreaterOrEqualThanZero {
+		check : self.Tempo >= 0
+		
+		message : 'O Tempo tem que ser um número positivo'
+		
+		fix {
+			title : 'Modificar para valor padrão'
+			
+			do {
+				self.Tempo := 10;
+			}
+		}
+	}
+}
+
+context Mover_Tras_Tempo{
+	constraint GreaterOrEqualThanZero {
+		check : self.Tempo >= 0
+		
+		message : 'O Tempo tem que ser um número positivo'
+		
+		fix {
+			title : 'Modificar para valor padrão'
+			
+			do {
+				self.Tempo := 10;
+			}
+		}
+	}
+}
+
+context Virar_para_X_Graus{
+	constraint GreaterOrEqualThanZero {
+		check : self.Graus >= 0 and self.Graus <= 180
+		
+		message : 'O Grau tem que ser um número entre 0 e 180'
+		
+		fix {
+			title : 'Modificar para valor padrão'
+			
+			do {
+				self.Graus := 90;
+			}
+		}
+	}
+}

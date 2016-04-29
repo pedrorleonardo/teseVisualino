@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:arduino="http://arduino/1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_CxBG4O-jEeKaq4wISPC35A" type="Arduino" name="default3.arduino_diagram" measurementUnit="Pixel">
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_CxBG4e-jEeKaq4wISPC35A"/>
+  <element xmi:type="arduino:Robo" href="default3.arduino#/"/>
+</notation:Diagram>

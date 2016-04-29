@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package farrusco.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		farrusco.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+farrusco.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+farrusco.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+farrusco.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+farrusco.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return farrusco.diagram.part.FarruscoDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

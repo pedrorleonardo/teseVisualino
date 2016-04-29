@@ -1,0 +1,82 @@
+8
+
+dir
+2272
+http://dev.eclipse.org/svnroot/modeling/org.eclipse.epsilon/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.tests
+http://dev.eclipse.org/svnroot/modeling/org.eclipse.epsilon
+
+
+
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b1e7822e-7b56-0410-88b3-db6ede196368
+
+META-INF
+dir
+
+.classpath
+file
+
+
+
+
+2013-06-13T15:17:09.962459Z
+11cfb09e7af4fa07830a0305dc39c31b
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+
+.project
+file
+
+
+
+
+2013-06-13T15:17:09.965459Z
+751ae643d333a7bfbde96e237537f275
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+
+src
+dir
+
+plugin.properties
+file
+
+
+
+
+2013-06-13T15:17:09.968459Z
+5d24480cf2aad47c39b83da1cf406875
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+
+build.properties
+file
+
+
+
+
+2013-06-13T15:17:09.970460Z
+a98a402b4fa48b5c99425c9a88f197c8
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+

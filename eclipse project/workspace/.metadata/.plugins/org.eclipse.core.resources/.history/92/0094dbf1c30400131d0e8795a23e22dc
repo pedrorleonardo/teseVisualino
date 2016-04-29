@@ -1,0 +1,249 @@
+
+/*
+ * 
+ */
+package farrusco.diagram.part;
+
+/**
+ * @generated
+ */
+public class FarruscoPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createAcções1Group());
+paletteRoot.add(createLigações2Group());
+paletteRoot.add(createCriarPrograma3Group());
+paletteRoot.add(createControlo4Group());
+	}
+
+	/**
+ * Creates "Acções" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createAcções1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(farrusco.diagram.part.Messages.Acções1Group_title);
+				 paletteContainer.setId("createAcções1Group"); //$NON-NLS-1$
+								paletteContainer.add(createColisao1CreationTool());
+paletteContainer.add(createDistancia2CreationTool());
+paletteContainer.add(createLuz3CreationTool());
+paletteContainer.add(createMotores4CreationTool());
+paletteContainer.add(createPescoço5CreationTool());
+paletteContainer.add(createRelógio6CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Ligações" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createLigações2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(farrusco.diagram.part.Messages.Ligações2Group_title);
+				 paletteContainer.setId("createLigações2Group"); //$NON-NLS-1$
+								paletteContainer.add(createFilho1CreationTool());
+paletteContainer.add(createIrmao2CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Criar Programa" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createCriarPrograma3Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(farrusco.diagram.part.Messages.CriarPrograma3Group_title);
+				 paletteContainer.setId("createCriarPrograma3Group"); //$NON-NLS-1$
+		paletteContainer.setDescription(farrusco.diagram.part.Messages.CriarPrograma3Group_desc);
+						paletteContainer.add(createPrograma1CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Controlo" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createControlo4Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(farrusco.diagram.part.Messages.Controlo4Group_title);
+				 paletteContainer.setId("createControlo4Group"); //$NON-NLS-1$
+								paletteContainer.add(createParalelo1CreationTool());
+paletteContainer.add(createSequencia2CreationTool());
+paletteContainer.add(createDecisor3CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createColisao1CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Colisao1CreationTool_title, farrusco.diagram.part.Messages.Colisao1CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Bumpers_2002));
+				 entry.setId("createColisao1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Bumpers_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDistancia2CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Distancia2CreationTool_title, farrusco.diagram.part.Messages.Distancia2CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Distancia_2001));
+				 entry.setId("createDistancia2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Distancia_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createLuz3CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Luz3CreationTool_title, farrusco.diagram.part.Messages.Luz3CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.LED_2006));
+				 entry.setId("createLuz3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.LED_2006));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createMotores4CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Motores4CreationTool_title, farrusco.diagram.part.Messages.Motores4CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Motor_2004));
+				 entry.setId("createMotores4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Motor_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createPescoço5CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Pescoço5CreationTool_title, farrusco.diagram.part.Messages.Pescoço5CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Servo_2005));
+				 entry.setId("createPescoço5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Servo_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createRelógio6CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Relógio6CreationTool_title, farrusco.diagram.part.Messages.Relógio6CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Espera_2003));
+				 entry.setId("createRelógio6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Espera_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createFilho1CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(farrusco.diagram.part.Messages.Filho1CreationTool_title, farrusco.diagram.part.Messages.Filho1CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Filho_4001));
+				 entry.setId("createFilho1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Filho_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createIrmao2CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(farrusco.diagram.part.Messages.Irmao2CreationTool_title, farrusco.diagram.part.Messages.Irmao2CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Irmao_4002));
+				 entry.setId("createIrmao2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Irmao_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createPrograma1CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(farrusco.diagram.part.Messages.Programa1CreationTool_title, farrusco.diagram.part.Messages.Programa1CreationTool_desc, null, null) {};
+				 entry.setId("createPrograma1CreationTool"); //$NON-NLS-1$
+						entry.setToolClass(org.farrusco.generate.action.GenerateTool.class);
+				return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createParalelo1CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Paralelo1CreationTool_title, farrusco.diagram.part.Messages.Paralelo1CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Paralelo_2008));
+				 entry.setId("createParalelo1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Paralelo_2008));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createSequencia2CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Sequencia2CreationTool_title, farrusco.diagram.part.Messages.Sequencia2CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Sequencial_2009));
+				 entry.setId("createSequencia2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Sequencial_2009));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDecisor3CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(farrusco.diagram.part.Messages.Decisor3CreationTool_title, farrusco.diagram.part.Messages.Decisor3CreationTool_desc, java.util.Collections.singletonList(farrusco.diagram.providers.FarruscoElementTypes.Prioridade_2007));
+				 entry.setId("createDecisor3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(farrusco.diagram.providers.FarruscoElementTypes.getImageDescriptor(farrusco.diagram.providers.FarruscoElementTypes.Prioridade_2007));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+
+	/**
+ * @generated
+ */
+	private static class NodeToolEntry extends org.eclipse.gef.palette.ToolEntry {
+
+		/**
+ * @generated
+ */
+		private final java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes;
+
+		/**
+ * @generated
+ */
+		private NodeToolEntry(String title, String description, java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes) {
+			super(title, description, null, null);
+			this.elementTypes = elementTypes;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.Tool createTool() {
+			org.eclipse.gef.Tool tool = new org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool(elementTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+
+	/**
+ * @generated
+ */
+	private static class LinkToolEntry extends org.eclipse.gef.palette.ToolEntry {
+
+		/**
+ * @generated
+ */
+		private final java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> relationshipTypes;
+
+		/**
+ * @generated
+ */
+		private LinkToolEntry(String title, String description, java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> relationshipTypes) {
+			super(title, description, null, null);
+			this.relationshipTypes = relationshipTypes;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.Tool createTool() {
+			org.eclipse.gef.Tool tool = new org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool(relationshipTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+}

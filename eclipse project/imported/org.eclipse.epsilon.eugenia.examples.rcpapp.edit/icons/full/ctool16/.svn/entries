@@ -1,0 +1,41 @@
+8
+
+dir
+2272
+http://dev.eclipse.org/svnroot/modeling/org.eclipse.epsilon/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.edit/icons/full/ctool16
+http://dev.eclipse.org/svnroot/modeling/org.eclipse.epsilon
+
+
+
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b1e7822e-7b56-0410-88b3-db6ede196368
+
+CreateModel_components_Component.gif
+file
+
+
+
+
+2013-06-13T15:16:52.949486Z
+d914e8d12004afe4910ec73e3e5b188b
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+has-props
+

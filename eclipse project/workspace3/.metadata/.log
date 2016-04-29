@@ -1,0 +1,77 @@
+!SESSION 2013-06-03 13:18:00.150 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_PT
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.modeling.product -data C:\Users\Leonardo\Desktop\eclipse-epsilon\workspace3 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-06-03 13:21:55.150
+!MESSAGE An internal error occurred during: "Generating all GMF models".
+!STACK 0
+java.lang.NoSuchMethodError: org.eclipse.epsilon.emc.emf.EmfModelResourceFactory.clearCache()V
+	at org.eclipse.epsilon.eugenia.EugeniaWorkflowDelegate$1.run(EugeniaWorkflowDelegate.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-06-03 13:22:03.788
+!MESSAGE An internal error occurred during: "Generating GMF .gmfgraph, .gmftool and .gmfmap models".
+!STACK 0
+java.lang.NoSuchMethodError: org.eclipse.epsilon.evl.execute.context.IEvlContext.getUnsatisfiedConstraints()Ljava/util/List;
+	at org.eclipse.epsilon.eugenia.AbstractEcoreModelValidationDelegate$1.execute(AbstractEcoreModelValidationDelegate.java:74)
+	at org.eclipse.epsilon.eugenia.EugeniaActionDelegate.runImpl(EugeniaActionDelegate.java:173)
+	at org.eclipse.epsilon.eugenia.GuardedEcoreModelGenerationDelegate.runImpl(GuardedEcoreModelGenerationDelegate.java:15)
+	at org.eclipse.epsilon.eugenia.EugeniaActionDelegate$1.run(EugeniaActionDelegate.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-06-03 13:22:36.037
+!MESSAGE An internal error occurred during: "Generating all GMF models".
+!STACK 0
+java.lang.NoSuchMethodError: org.eclipse.epsilon.emc.emf.EmfModelResourceFactory.clearCache()V
+	at org.eclipse.epsilon.eugenia.EugeniaWorkflowDelegate$1.run(EugeniaWorkflowDelegate.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2013-06-03 13:23:02.510
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/epsilon/interim/~.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2013-06-03 13:23:02.511
+!MESSAGE No repository found at http://download.eclipse.org/epsilon/interim/~.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2013-06-03 13:23:05.268
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://www.baeyens.it/eclipse/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2013-06-03 13:23:05.268
+!MESSAGE No repository found at http://www.baeyens.it/eclipse/.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2013-06-03 13:23:13.836
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2013-06-03 13:23:13.836
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2013-06-03 13:23:13.836
+!MESSAGE "Emfatic (Incubation)" will be ignored because it is already installed.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2013-06-03 13:23:13.839
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2013-06-03 13:23:13.839
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2013-06-03 13:23:13.839
+!MESSAGE "Emfatic (Incubation)" will be ignored because it is already installed.

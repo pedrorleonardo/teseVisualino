@@ -1,0 +1,311 @@
+!SESSION 2013-06-14 16:36:41.191 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_PT
+Framework arguments:  -product org.eclipse.epsilon.eugenia.examples.rcpapp.diagram.RCPApp
+Command-line arguments:  -product org.eclipse.epsilon.eugenia.examples.rcpapp.diagram.RCPApp -data C:\Users\Leonardo\Desktop\eclipse-epsilon\workspace/../runtime-rcpapp.product -dev file:C:/Users/Leonardo/Desktop/eclipse-epsilon/workspace/.metadata/.plugins/org.eclipse.pde.core/rcpapp.product/dev.properties -os win32 -ws win32 -arch x86 -consoleLog
+
+!ENTRY org.eclipse.equinox.ds 4 0 2013-06-14 16:36:41.679
+!MESSAGE [SCR] Exception while activating instance org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngineManager@795d5f of component org.eclipse.e4.ui.css.swt.theme  
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/swt/widgets/Display
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.getDeclaredMethods(Unknown Source)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.getMethod(ServiceComponent.java:126)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:213)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:347)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.swt.widgets.Display
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 15 more
+
+!ENTRY org.eclipse.equinox.ds 4 0 2013-06-14 16:36:41.680
+!MESSAGE [SCR] Exception while activating instance org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngineManager@795d5f of component org.eclipse.e4.ui.css.swt.theme  
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/swt/widgets/Display
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.getDeclaredMethods(Unknown Source)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.getMethod(ServiceComponent.java:126)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:213)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:347)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.swt.widgets.Display
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 15 more
+
+!ENTRY org.eclipse.equinox.app 0 0 2013-06-14 16:36:41.787
+!MESSAGE Product org.eclipse.epsilon.eugenia.examples.rcpapp.diagram.RCPApp could not be found.
+
+!ENTRY org.eclipse.osgi 2 0 2013-06-14 16:36:41.816
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-06-14 16:36:41.817
+!MESSAGE Bundle initial@reference:file:imported/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/ was not resolved.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.817
+!MESSAGE Missing required bundle org.eclipse.wb.swt.widgets.baseline_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.817
+!MESSAGE Missing required bundle org.eclipse.wb.rcp.swing2swt_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.817
+!MESSAGE Missing required bundle org.eclipse.wb.swt_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.817
+!MESSAGE Missing required bundle org.eclipse.e4.ui.css.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.817
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.renderers.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.818
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.addons.swt.source_0.10.1.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.818
+!MESSAGE Missing required bundle org.eclipse.e4.ui.css.swt.theme.source_0.9.3.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.818
+!MESSAGE Missing required bundle org.eclipse.swt.win32.win32.x86.source_3.100.1.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.818
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.swt.source_0.10.2.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-06-14 16:36:41.818
+!MESSAGE Bundle initial@reference:file:imported/org.eclipse.epsilon.eugenia.examples.rcpapp/ was not resolved.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.818
+!MESSAGE Missing required bundle org.eclipse.swt.win32.win32.x86.source_3.100.1.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.818
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.addons.swt.source_0.10.1.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.819
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.819
+!MESSAGE Missing required bundle org.eclipse.e4.ui.css.swt.theme.source_0.9.3.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.819
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.renderers.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.819
+!MESSAGE Missing required bundle org.eclipse.e4.ui.css.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.819
+!MESSAGE Missing required bundle org.eclipse.wb.swt_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.819
+!MESSAGE Missing required bundle org.eclipse.wb.rcp.swing2swt_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.820
+!MESSAGE Missing required bundle org.eclipse.wb.swt.widgets.baseline_1.5.2.
+
+!ENTRY org.eclipse.osgi 2 0 2013-06-14 16:36:41.821
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-06-14 16:36:41.822
+!MESSAGE Bundle org.eclipse.epsilon.eugenia.examples.rcpapp.edit_1.0.0.qualifier [16] was not resolved.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.edit 2 0 2013-06-14 16:36:41.822
+!MESSAGE Missing required bundle org.eclipse.epsilon.eugenia.examples.rcpapp_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-06-14 16:36:41.822
+!MESSAGE Bundle org.eclipse.epsilon.eugenia.examples.rcpapp_1.0.0.qualifier [126] was not resolved.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.822
+!MESSAGE Missing required bundle org.eclipse.e4.ui.css.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.822
+!MESSAGE Missing required bundle org.eclipse.e4.ui.css.swt.theme.source_0.9.3.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.822
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.addons.swt.source_0.10.1.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.822
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.renderers.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.823
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.823
+!MESSAGE Missing required bundle org.eclipse.swt.win32.win32.x86.source_3.100.1.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.823
+!MESSAGE Missing required bundle org.eclipse.wb.rcp.swing2swt_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.823
+!MESSAGE Missing required bundle org.eclipse.wb.swt_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp 2 0 2013-06-14 16:36:41.823
+!MESSAGE Missing required bundle org.eclipse.wb.swt.widgets.baseline_1.5.2.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-06-14 16:36:41.823
+!MESSAGE Bundle org.eclipse.epsilon.eugenia.examples.rcpapp.diagram_1.0.0.qualifier [127] was not resolved.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.823
+!MESSAGE Missing required bundle org.eclipse.epsilon.eugenia.examples.rcpapp_0.0.0.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.824
+!MESSAGE Missing required bundle org.eclipse.epsilon.eugenia.examples.rcpapp.edit_0.0.0.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.824
+!MESSAGE Missing required bundle org.eclipse.e4.ui.css.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.824
+!MESSAGE Missing required bundle org.eclipse.e4.ui.css.swt.theme.source_0.9.3.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.824
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.addons.swt.source_0.10.1.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.824
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.renderers.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.824
+!MESSAGE Missing required bundle org.eclipse.e4.ui.workbench.swt.source_0.10.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.824
+!MESSAGE Missing required bundle org.eclipse.swt.win32.win32.x86.source_3.100.1.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.824
+!MESSAGE Missing required bundle org.eclipse.wb.rcp.swing2swt_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.825
+!MESSAGE Missing required bundle org.eclipse.wb.swt_1.5.2.
+!SUBENTRY 2 org.eclipse.epsilon.eugenia.examples.rcpapp.diagram 2 0 2013-06-14 16:36:41.825
+!MESSAGE Missing required bundle org.eclipse.wb.swt.widgets.baseline_1.5.2.
+
+!ENTRY org.eclipse.osgi 4 0 2013-06-14 16:36:41.825
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2013-06-14 16:36:41.834
+!MESSAGE [SCR] Error while attempting to deactivate instance of component Component[
+	name = org.eclipse.e4.ui.css.swt.theme
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = true
+	implementation = org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngineManager
+	state = Disabled
+	properties = 
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.ui.css.swt.theme.IThemeManager]
+	references = null
+	located in bundle = org.eclipse.e4.ui.css.swt.theme_0.9.3.v20120806-170624 [23]
+]
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/swt/widgets/Display
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.getDeclaredMethods(Unknown Source)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.getMethod(ServiceComponent.java:126)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.deactivate(ServiceComponent.java:337)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.deactivate(ServiceComponentProp.java:161)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.dispose(ServiceComponentProp.java:389)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.dispose(ServiceComponentProp.java:102)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.disposeInstances(InstanceProcess.java:366)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.disposeInstances(InstanceProcess.java:306)
+	at org.eclipse.equinox.internal.ds.Resolver.disposeComponentConfigs(Resolver.java:717)
+	at org.eclipse.equinox.internal.ds.Resolver.disableComponents(Resolver.java:693)
+	at org.eclipse.equinox.internal.ds.SCRManager.stoppingBundle(SCRManager.java:554)
+	at org.eclipse.equinox.internal.ds.SCRManager.bundleChanged(SCRManager.java:233)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:847)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEventPrivileged(Framework.java:1568)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEvent(Framework.java:1504)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEvent(Framework.java:1499)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:506)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.swt.widgets.Display
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 39 more
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2013-06-14 16:36:41.835
+!MESSAGE [SCR] Error while attempting to deactivate instance of component Component[
+	name = org.eclipse.e4.ui.css.swt.theme
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = true
+	implementation = org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngineManager
+	state = Disabled
+	properties = 
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.ui.css.swt.theme.IThemeManager]
+	references = null
+	located in bundle = org.eclipse.e4.ui.css.swt.theme_0.9.3.v20120806-170624 [23]
+]
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/swt/widgets/Display
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.getDeclaredMethods(Unknown Source)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.getMethod(ServiceComponent.java:126)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.deactivate(ServiceComponent.java:337)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.deactivate(ServiceComponentProp.java:161)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.dispose(ServiceComponentProp.java:389)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.dispose(ServiceComponentProp.java:102)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.disposeInstances(InstanceProcess.java:366)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.disposeInstances(InstanceProcess.java:306)
+	at org.eclipse.equinox.internal.ds.Resolver.disposeComponentConfigs(Resolver.java:717)
+	at org.eclipse.equinox.internal.ds.Resolver.disableComponents(Resolver.java:693)
+	at org.eclipse.equinox.internal.ds.SCRManager.stoppingBundle(SCRManager.java:554)
+	at org.eclipse.equinox.internal.ds.SCRManager.bundleChanged(SCRManager.java:233)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:847)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEventPrivileged(Framework.java:1568)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEvent(Framework.java:1504)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEvent(Framework.java:1499)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:506)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.swt.widgets.Display
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 39 more

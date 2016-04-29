@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.dt.exeed,org.eclipse.epsilon.dt.ex
+ eed.modelink
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: org.eclipse.epsilon.dt.exeed.jar,lib/jdom.jar
+Bundle-Name: Exeed EMF Model Editor
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.epsilon.emc.emf;visibility:=reexport,org.e
+ clipse.emf.ecore.editor;visibility:=reexport,org.eclipse.epsilon.comm
+ on.dt;visibility:=reexport,org.eclipse.epsilon.emf.dt;visibility:=ree
+ xport,org.eclipse.epsilon.eol.dt,org.jdom_1.0
+Bundle-Vendor: Eclipse.org
+Bundle-Version: 1.0.0.201211082326
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.eclipse.epsilon.dt.exeed.ExeedPlugin
+Bundle-SymbolicName: org.eclipse.epsilon.dt.exeed;singleton:=true
+
+

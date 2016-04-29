@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='update site: http://subclipse.tigris.org/update_1.0.x' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='3'>
+    <property name='p2.timestamp' value='1367313557185'/>
+    <property name='eclipse.p2.force.threading' value='true'/>
+    <property name='site.checksum' value='2801623919'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='5'>
+    <artifact classifier='org.eclipse.update.feature' id='org.tigris.subversion.subclipse' version='1.0.7'>
+      <repositoryProperties size='1'>
+        <property name='artifact.reference' value='http://subclipse.tigris.org/update_1.0.x/features/org.tigris.subversion.subclipse_1.0.7.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse' version='1.0.5'>
+      <repositoryProperties size='1'>
+        <property name='artifact.reference' value='http://subclipse.tigris.org/update_1.0.x/plugins/org.tigris.subversion.subclipse_1.0.5.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse.core' version='1.0.7'>
+      <repositoryProperties size='1'>
+        <property name='artifact.reference' value='http://subclipse.tigris.org/update_1.0.x/plugins/org.tigris.subversion.subclipse.core_1.0.7.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse.ui' version='1.0.5'>
+      <repositoryProperties size='1'>
+        <property name='artifact.reference' value='http://subclipse.tigris.org/update_1.0.x/plugins/org.tigris.subversion.subclipse.ui_1.0.5.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.javahl.win32' version='1.0.6'>
+      <repositoryProperties size='1'>
+        <property name='artifact.reference' value='http://subclipse.tigris.org/update_1.0.x/plugins/org.tigris.subversion.javahl.win32_1.0.6.jar'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

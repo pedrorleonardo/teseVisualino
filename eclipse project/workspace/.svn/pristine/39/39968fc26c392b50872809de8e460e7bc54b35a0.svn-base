@@ -1,0 +1,1274 @@
+/**
+ */
+package farrusco.impl;
+
+import farrusco.Action;
+import farrusco.Actuate;
+import farrusco.AlterarEstado;
+import farrusco.Behavior;
+import farrusco.Bumpers;
+import farrusco.Condition;
+import farrusco.Distancia;
+import farrusco.EscolhaBumper;
+import farrusco.Espera;
+import farrusco.EstadoDaLuz;
+import farrusco.EstadoDecorrer;
+import farrusco.EstadoFalha;
+import farrusco.EstadoSucesso;
+import farrusco.FarruscoFactory;
+import farrusco.FarruscoPackage;
+import farrusco.Filho;
+import farrusco.Irmao;
+import farrusco.Motor;
+import farrusco.Node;
+import farrusco.Paralelo;
+import farrusco.Prioridade;
+import farrusco.Robot;
+import farrusco.Sequencial;
+import farrusco.Servo;
+import farrusco.TipoDistancia;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class FarruscoPackageImpl extends EPackageImpl implements FarruscoPackage
+{
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass robotEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass nodeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass filhoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass irmaoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass behaviorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass prioridadeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass paraleloEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sequencialEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass alterarEstadoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass actionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass conditionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass distanciaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bumpersEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass esperaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass actuateEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass motorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass servoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ledEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum estadoDaLuzEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum estadoSucessoEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum estadoFalhaEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum estadoDecorrerEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum escolhaBumperEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum tipoDistanciaEEnum = null;
+
+  /**
+   * Creates an instance of the model <b>Package</b>, registered with
+   * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+   * package URI value.
+   * <p>Note: the correct way to create the package is via the static
+   * factory method {@link #init init()}, which also performs
+   * initialization of the package, or returns the registered package,
+   * if one already exists.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.emf.ecore.EPackage.Registry
+   * @see farrusco.FarruscoPackage#eNS_URI
+   * @see #init()
+   * @generated
+   */
+  private FarruscoPackageImpl()
+  {
+    super(eNS_URI, FarruscoFactory.eINSTANCE);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private static boolean isInited = false;
+
+  /**
+   * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+   * 
+   * <p>This method is used to initialize {@link FarruscoPackage#eINSTANCE} when that field is accessed.
+   * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #eNS_URI
+   * @see #createPackageContents()
+   * @see #initializePackageContents()
+   * @generated
+   */
+  public static FarruscoPackage init()
+  {
+    if (isInited) return (FarruscoPackage)EPackage.Registry.INSTANCE.getEPackage(FarruscoPackage.eNS_URI);
+
+    // Obtain or create and register package
+    FarruscoPackageImpl theFarruscoPackage = (FarruscoPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof FarruscoPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new FarruscoPackageImpl());
+
+    isInited = true;
+
+    // Create package meta-data objects
+    theFarruscoPackage.createPackageContents();
+
+    // Initialize created meta-data
+    theFarruscoPackage.initializePackageContents();
+
+    // Mark meta-data to indicate it can't be changed
+    theFarruscoPackage.freeze();
+
+  
+    // Update the registry and return the package
+    EPackage.Registry.INSTANCE.put(FarruscoPackage.eNS_URI, theFarruscoPackage);
+    return theFarruscoPackage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRobot()
+  {
+    return robotEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRobot_Nodes()
+  {
+    return (EReference)robotEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRobot_Child()
+  {
+    return (EReference)robotEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRobot_Next()
+  {
+    return (EReference)robotEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRobot_Nome()
+  {
+    return (EAttribute)robotEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNode()
+  {
+    return nodeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFilho()
+  {
+    return filhoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFilho_Source()
+  {
+    return (EReference)filhoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFilho_Target()
+  {
+    return (EReference)filhoEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIrmao()
+  {
+    return irmaoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIrmao_Source()
+  {
+    return (EReference)irmaoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIrmao_Target()
+  {
+    return (EReference)irmaoEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBehavior()
+  {
+    return behaviorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPrioridade()
+  {
+    return prioridadeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPrioridade_Nome()
+  {
+    return (EAttribute)prioridadeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getParalelo()
+  {
+    return paraleloEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getParalelo_Nome()
+  {
+    return (EAttribute)paraleloEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSequencial()
+  {
+    return sequencialEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSequencial_Nome()
+  {
+    return (EAttribute)sequencialEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAlterarEstado()
+  {
+    return alterarEstadoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAlterarEstado_Nome()
+  {
+    return (EAttribute)alterarEstadoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAlterarEstado_Alterar_Sucesso()
+  {
+    return (EAttribute)alterarEstadoEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAlterarEstado_Alterar_Falha()
+  {
+    return (EAttribute)alterarEstadoEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAlterarEstado_Alterar_Decorrer()
+  {
+    return (EAttribute)alterarEstadoEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAction()
+  {
+    return actionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCondition()
+  {
+    return conditionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDistancia()
+  {
+    return distanciaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDistancia_Nome()
+  {
+    return (EAttribute)distanciaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDistancia_Distancia()
+  {
+    return (EAttribute)distanciaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDistancia_Menor_Maior()
+  {
+    return (EAttribute)distanciaEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBumpers()
+  {
+    return bumpersEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBumpers_Nome()
+  {
+    return (EAttribute)bumpersEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBumpers_Bumper_Esquerdo_ou_Direito()
+  {
+    return (EAttribute)bumpersEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEspera()
+  {
+    return esperaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEspera_Nome()
+  {
+    return (EAttribute)esperaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEspera_Tempo()
+  {
+    return (EAttribute)esperaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getActuate()
+  {
+    return actuateEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMotor()
+  {
+    return motorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMotor_Nome()
+  {
+    return (EAttribute)motorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMotor_Motor_Esquerdo()
+  {
+    return (EAttribute)motorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMotor_Motor_Direito()
+  {
+    return (EAttribute)motorEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getServo()
+  {
+    return servoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getServo_Nome()
+  {
+    return (EAttribute)servoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getServo_Posicao_Minima()
+  {
+    return (EAttribute)servoEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getServo_Posicao_Maxima()
+  {
+    return (EAttribute)servoEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getServo_Passo_a_Passo()
+  {
+    return (EAttribute)servoEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLED()
+  {
+    return ledEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLED_Nome()
+  {
+    return (EAttribute)ledEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLED_Ligado_ou_Desligado()
+  {
+    return (EAttribute)ledEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getEstadoDaLuz()
+  {
+    return estadoDaLuzEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getEstadoSucesso()
+  {
+    return estadoSucessoEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getEstadoFalha()
+  {
+    return estadoFalhaEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getEstadoDecorrer()
+  {
+    return estadoDecorrerEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getEscolhaBumper()
+  {
+    return escolhaBumperEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getTipoDistancia()
+  {
+    return tipoDistanciaEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FarruscoFactory getFarruscoFactory()
+  {
+    return (FarruscoFactory)getEFactoryInstance();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private boolean isCreated = false;
+
+  /**
+   * Creates the meta-model objects for the package.  This method is
+   * guarded to have no affect on any invocation but its first.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void createPackageContents()
+  {
+    if (isCreated) return;
+    isCreated = true;
+
+    // Create classes and their features
+    robotEClass = createEClass(ROBOT);
+    createEReference(robotEClass, ROBOT__NODES);
+    createEReference(robotEClass, ROBOT__CHILD);
+    createEReference(robotEClass, ROBOT__NEXT);
+    createEAttribute(robotEClass, ROBOT__NOME);
+
+    nodeEClass = createEClass(NODE);
+
+    filhoEClass = createEClass(FILHO);
+    createEReference(filhoEClass, FILHO__SOURCE);
+    createEReference(filhoEClass, FILHO__TARGET);
+
+    irmaoEClass = createEClass(IRMAO);
+    createEReference(irmaoEClass, IRMAO__SOURCE);
+    createEReference(irmaoEClass, IRMAO__TARGET);
+
+    behaviorEClass = createEClass(BEHAVIOR);
+
+    prioridadeEClass = createEClass(PRIORIDADE);
+    createEAttribute(prioridadeEClass, PRIORIDADE__NOME);
+
+    paraleloEClass = createEClass(PARALELO);
+    createEAttribute(paraleloEClass, PARALELO__NOME);
+
+    sequencialEClass = createEClass(SEQUENCIAL);
+    createEAttribute(sequencialEClass, SEQUENCIAL__NOME);
+
+    alterarEstadoEClass = createEClass(ALTERAR_ESTADO);
+    createEAttribute(alterarEstadoEClass, ALTERAR_ESTADO__NOME);
+    createEAttribute(alterarEstadoEClass, ALTERAR_ESTADO__ALTERAR_SUCESSO);
+    createEAttribute(alterarEstadoEClass, ALTERAR_ESTADO__ALTERAR_FALHA);
+    createEAttribute(alterarEstadoEClass, ALTERAR_ESTADO__ALTERAR_DECORRER);
+
+    actionEClass = createEClass(ACTION);
+
+    conditionEClass = createEClass(CONDITION);
+
+    distanciaEClass = createEClass(DISTANCIA);
+    createEAttribute(distanciaEClass, DISTANCIA__NOME);
+    createEAttribute(distanciaEClass, DISTANCIA__DISTANCIA);
+    createEAttribute(distanciaEClass, DISTANCIA__MENOR_MAIOR);
+
+    bumpersEClass = createEClass(BUMPERS);
+    createEAttribute(bumpersEClass, BUMPERS__NOME);
+    createEAttribute(bumpersEClass, BUMPERS__BUMPER_ESQUERDO_OU_DIREITO);
+
+    esperaEClass = createEClass(ESPERA);
+    createEAttribute(esperaEClass, ESPERA__NOME);
+    createEAttribute(esperaEClass, ESPERA__TEMPO);
+
+    actuateEClass = createEClass(ACTUATE);
+
+    motorEClass = createEClass(MOTOR);
+    createEAttribute(motorEClass, MOTOR__NOME);
+    createEAttribute(motorEClass, MOTOR__MOTOR_ESQUERDO);
+    createEAttribute(motorEClass, MOTOR__MOTOR_DIREITO);
+
+    servoEClass = createEClass(SERVO);
+    createEAttribute(servoEClass, SERVO__NOME);
+    createEAttribute(servoEClass, SERVO__POSICAO_MINIMA);
+    createEAttribute(servoEClass, SERVO__POSICAO_MAXIMA);
+    createEAttribute(servoEClass, SERVO__PASSO_APASSO);
+
+    ledEClass = createEClass(LED);
+    createEAttribute(ledEClass, LED__NOME);
+    createEAttribute(ledEClass, LED__LIGADO_OU_DESLIGADO);
+
+    // Create enums
+    estadoDaLuzEEnum = createEEnum(ESTADO_DA_LUZ);
+    estadoSucessoEEnum = createEEnum(ESTADO_SUCESSO);
+    estadoFalhaEEnum = createEEnum(ESTADO_FALHA);
+    estadoDecorrerEEnum = createEEnum(ESTADO_DECORRER);
+    escolhaBumperEEnum = createEEnum(ESCOLHA_BUMPER);
+    tipoDistanciaEEnum = createEEnum(TIPO_DISTANCIA);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private boolean isInitialized = false;
+
+  /**
+   * Complete the initialization of the package and its meta-model.  This
+   * method is guarded to have no affect on any invocation but its first.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void initializePackageContents()
+  {
+    if (isInitialized) return;
+    isInitialized = true;
+
+    // Initialize package
+    setName(eNAME);
+    setNsPrefix(eNS_PREFIX);
+    setNsURI(eNS_URI);
+
+    // Create type parameters
+
+    // Set bounds for type parameters
+
+    // Add supertypes to classes
+    behaviorEClass.getESuperTypes().add(this.getNode());
+    prioridadeEClass.getESuperTypes().add(this.getBehavior());
+    paraleloEClass.getESuperTypes().add(this.getBehavior());
+    sequencialEClass.getESuperTypes().add(this.getBehavior());
+    alterarEstadoEClass.getESuperTypes().add(this.getBehavior());
+    actionEClass.getESuperTypes().add(this.getNode());
+    conditionEClass.getESuperTypes().add(this.getAction());
+    distanciaEClass.getESuperTypes().add(this.getCondition());
+    bumpersEClass.getESuperTypes().add(this.getCondition());
+    esperaEClass.getESuperTypes().add(this.getCondition());
+    actuateEClass.getESuperTypes().add(this.getAction());
+    motorEClass.getESuperTypes().add(this.getActuate());
+    servoEClass.getESuperTypes().add(this.getActuate());
+    ledEClass.getESuperTypes().add(this.getActuate());
+
+    // Initialize classes and features; add operations and parameters
+    initEClass(robotEClass, Robot.class, "Robot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRobot_Nodes(), this.getNode(), null, "nodes", null, 0, -1, Robot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRobot_Child(), this.getFilho(), null, "child", null, 0, -1, Robot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRobot_Next(), this.getIrmao(), null, "next", null, 0, -1, Robot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRobot_Nome(), ecorePackage.getEString(), "Nome", null, 0, 1, Robot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(filhoEClass, Filho.class, "Filho", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFilho_Source(), this.getBehavior(), null, "source", null, 0, -1, Filho.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFilho_Target(), this.getNode(), null, "target", null, 0, -1, Filho.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(irmaoEClass, Irmao.class, "Irmao", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIrmao_Source(), this.getNode(), null, "source", null, 0, -1, Irmao.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIrmao_Target(), this.getNode(), null, "target", null, 0, -1, Irmao.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(behaviorEClass, Behavior.class, "Behavior", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(prioridadeEClass, Prioridade.class, "Prioridade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPrioridade_Nome(), ecorePackage.getEString(), "Nome", "Decisor", 0, 1, Prioridade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(paraleloEClass, Paralelo.class, "Paralelo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getParalelo_Nome(), ecorePackage.getEString(), "Nome", "Paralelo", 0, 1, Paralelo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sequencialEClass, Sequencial.class, "Sequencial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSequencial_Nome(), ecorePackage.getEString(), "Nome", "Sequencia", 0, 1, Sequencial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(alterarEstadoEClass, AlterarEstado.class, "AlterarEstado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAlterarEstado_Nome(), ecorePackage.getEString(), "Nome", "Alterar Estado", 0, 1, AlterarEstado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlterarEstado_Alterar_Sucesso(), this.getEstadoSucesso(), "Alterar_Sucesso", "Sucesso", 0, 1, AlterarEstado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlterarEstado_Alterar_Falha(), this.getEstadoFalha(), "Alterar_Falha", "Falha", 0, 1, AlterarEstado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlterarEstado_Alterar_Decorrer(), this.getEstadoDecorrer(), "Alterar_Decorrer", "Decorrer", 0, 1, AlterarEstado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(actionEClass, Action.class, "Action", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(conditionEClass, Condition.class, "Condition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(distanciaEClass, Distancia.class, "Distancia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDistancia_Nome(), ecorePackage.getEString(), "Nome", "Distancia", 0, 1, Distancia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDistancia_Distancia(), ecorePackage.getEInt(), "distancia", "100", 0, 1, Distancia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDistancia_Menor_Maior(), this.getTipoDistancia(), "Menor_Maior", "Menor", 0, 1, Distancia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(bumpersEClass, Bumpers.class, "Bumpers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBumpers_Nome(), ecorePackage.getEString(), "Nome", "Bumpers", 0, 1, Bumpers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBumpers_Bumper_Esquerdo_ou_Direito(), this.getEscolhaBumper(), "Bumper_Esquerdo_ou_Direito", "Esquerdo", 0, 1, Bumpers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(esperaEClass, Espera.class, "Espera", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEspera_Nome(), ecorePackage.getEString(), "Nome", "Espera", 0, 1, Espera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEspera_Tempo(), ecorePackage.getEInt(), "Tempo", "500", 0, 1, Espera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(actuateEClass, Actuate.class, "Actuate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(motorEClass, Motor.class, "Motor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMotor_Nome(), ecorePackage.getEString(), "Nome", "Motor", 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMotor_Motor_Esquerdo(), ecorePackage.getEInt(), "Motor_Esquerdo", "255", 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMotor_Motor_Direito(), ecorePackage.getEInt(), "Motor_Direito", "255", 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(servoEClass, Servo.class, "Servo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getServo_Nome(), ecorePackage.getEString(), "Nome", "Servo", 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getServo_Posicao_Minima(), ecorePackage.getEInt(), "Posicao_Minima", "0", 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getServo_Posicao_Maxima(), ecorePackage.getEInt(), "Posicao_Maxima", "160", 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getServo_Passo_a_Passo(), ecorePackage.getEInt(), "Passo_a_Passo", "10", 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ledEClass, farrusco.LED.class, "LED", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLED_Nome(), ecorePackage.getEString(), "Nome", "Luz", 0, 1, farrusco.LED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLED_Ligado_ou_Desligado(), this.getEstadoDaLuz(), "Ligado_ou_Desligado", "Ligado", 0, 1, farrusco.LED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    // Initialize enums and add enum literals
+    initEEnum(estadoDaLuzEEnum, EstadoDaLuz.class, "EstadoDaLuz");
+    addEEnumLiteral(estadoDaLuzEEnum, EstadoDaLuz.LIGADO);
+    addEEnumLiteral(estadoDaLuzEEnum, EstadoDaLuz.DESLIGADO);
+
+    initEEnum(estadoSucessoEEnum, EstadoSucesso.class, "EstadoSucesso");
+    addEEnumLiteral(estadoSucessoEEnum, EstadoSucesso.SUCESSO);
+    addEEnumLiteral(estadoSucessoEEnum, EstadoSucesso.FALHA);
+    addEEnumLiteral(estadoSucessoEEnum, EstadoSucesso.DECORRER);
+
+    initEEnum(estadoFalhaEEnum, EstadoFalha.class, "EstadoFalha");
+    addEEnumLiteral(estadoFalhaEEnum, EstadoFalha.FALHA);
+    addEEnumLiteral(estadoFalhaEEnum, EstadoFalha.SUCESSO);
+    addEEnumLiteral(estadoFalhaEEnum, EstadoFalha.DECORRER);
+
+    initEEnum(estadoDecorrerEEnum, EstadoDecorrer.class, "EstadoDecorrer");
+    addEEnumLiteral(estadoDecorrerEEnum, EstadoDecorrer.SUCESSO);
+    addEEnumLiteral(estadoDecorrerEEnum, EstadoDecorrer.FALHA);
+    addEEnumLiteral(estadoDecorrerEEnum, EstadoDecorrer.DECORRER);
+
+    initEEnum(escolhaBumperEEnum, EscolhaBumper.class, "EscolhaBumper");
+    addEEnumLiteral(escolhaBumperEEnum, EscolhaBumper.ESQUERDO);
+    addEEnumLiteral(escolhaBumperEEnum, EscolhaBumper.DIREITO);
+
+    initEEnum(tipoDistanciaEEnum, TipoDistancia.class, "TipoDistancia");
+    addEEnumLiteral(tipoDistanciaEEnum, TipoDistancia.MENOR);
+    addEEnumLiteral(tipoDistanciaEEnum, TipoDistancia.MAIOR);
+
+    // Create resource
+    createResource(eNS_URI);
+
+    // Create annotations
+    // gmf
+    createGmfAnnotations();
+    // gmf.diagram
+    createGmf_1Annotations();
+    // gmf.link
+    createGmf_2Annotations();
+    // gmf.node
+    createGmf_3Annotations();
+  }
+
+  /**
+   * Initializes the annotations for <b>gmf</b>.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected void createGmfAnnotations()
+  {
+    String source = "gmf";		
+    addAnnotation
+      (this, 
+       source, 
+       new String[] 
+       {
+       "farr", "usco"
+       });													
+  }
+
+  /**
+   * Initializes the annotations for <b>gmf.diagram</b>.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected void createGmf_1Annotations()
+  {
+    String source = "gmf.diagram";			
+    addAnnotation
+      (robotEClass, 
+       source, 
+       new String[] 
+       {
+       "farr", "usco"
+       });												
+  }
+
+  /**
+   * Initializes the annotations for <b>gmf.link</b>.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected void createGmf_2Annotations()
+  {
+    String source = "gmf.link";				
+    addAnnotation
+      (filhoEClass, 
+       source, 
+       new String[] 
+       {
+       "source", "source",
+       "target", "target",
+       "style", "solid"
+       });		
+    addAnnotation
+      (irmaoEClass, 
+       source, 
+       new String[] 
+       {
+       "source", "source",
+       "target", "target",
+       "target.decoration", "arrow",
+       "style", "dash"
+       });										
+  }
+
+  /**
+   * Initializes the annotations for <b>gmf.node</b>.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected void createGmf_3Annotations()
+  {
+    String source = "gmf.node";						
+    addAnnotation
+      (prioridadeEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.PrioridadeFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Decisor"
+       });		
+    addAnnotation
+      (paraleloEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.ParaleloFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Paralelo"
+       });		
+    addAnnotation
+      (sequencialEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.SequencialFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Sequencia"
+       });		
+    addAnnotation
+      (alterarEstadoEClass, 
+       source, 
+       new String[] 
+       {
+       "label", "Nome",
+       "label.text", "Alterar Estado",
+       "label.readOnly", "true",
+       "tool.name", "Alterar Estado"
+       });		
+    addAnnotation
+      (distanciaEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.DistanciaFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Distancia"
+       });		
+    addAnnotation
+      (bumpersEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.BumpersFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Colisao"
+       });		
+    addAnnotation
+      (esperaEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.EsperaFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Espera"
+       });		
+    addAnnotation
+      (motorEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.MotorFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Motores"
+       });		
+    addAnnotation
+      (servoEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.ServoFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Servo"
+       });		
+    addAnnotation
+      (ledEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figuresPlan.figures.LEDFigure",
+       "label", "Nome",
+       "label.readOnly", "true",
+       "label.placement", "none",
+       "tool.name", "Luz"
+       });
+  }
+
+} //FarruscoPackageImpl

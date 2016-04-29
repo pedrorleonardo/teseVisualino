@@ -1,0 +1,275 @@
+#include <BehaviorTree.h>
+#include <Intro.h>
+
+void setup(){
+    WorldState* state = new WorldState();
+    Farrusco* f = new Farrusco();
+    //BehaviorTree::ParallelNode* brain = new BehaviorTree::ParallelNode();
+[%var all_instances := Robot.allInstances();%]
+[%var all_nodes := Node.allInstances();%]
+[%if(not(all_nodes.isEmpty())){%]
+[%var all_nodes2 := Node.allInstances();%]
+[%var root2 := all_nodes2.getRoot();%]
+[%/*var all_actions := ActionChild.allInstances();*/%]
+[%var all_childs := Filho.allInstances();%]
+[%var all_next := Irmao.allInstances();%]
+[%/*var nodie := Node.allInstances.at(3);*/%]
+[*[%out.println("SOU A ROOT "+ root2);%]
+[%out.println(nodie);%]
+[%out.println(all_next.select(tee|tee.target.asSequence.at(0) = nodie));%]
+[%= all_actions.size() + "lala"%]
+[%= all_childs.size()%]
+*]
+[%for(t in all_nodes){%]
+[%if(root2.id = t.id){
+out.println(t.declareNode());}
+%]
+[%else out.println(t.declareNode());%]
+[%}%]
+
+    Serial.begin(9600);
+    pinMode(13, OUTPUT);
+    GameLogic* logic = new GameLogic();
+[*AQUI VAMOS POR A ORDEM DAS CENAS*]
+[%var root_obj := root2.obj_root();%]
+[%if(not(root_obj == "NOT_FOUND")){%]
+f->brain->addChild([%= root_obj%]
+[*IT STARTS*]
+
+[%var r := root2.getFilhos22();%]
+[*[%var uu := all_nodes.at(1);%]
+[%out.println("NO! "+ uu);%]
+[%var uuu := uu.getFilhos22();%]
+*]
+[%r.metodo2();%]
+[%out.println(");");%]
+
+
+    state->insertObject(f);
+    SL::gl = logic;  
+    SL::ws = state; 
+         
+}
+void loop(){
+        
+	gl->step();
+}
+[%}%]
+[%}%]
+[%
+operation Sequence getRoot(): Node{
+	var all_childs := Filho.allInstances();	
+	for(y in self){
+		if(not(y.isAction())){
+			if((all_childs.select(tee|tee.target.at(0) = y)).isEmpty)
+			return y;
+		}
+	}
+}
+
+
+operation Node getFilhos22(): Sequence {
+	var arr :  Sequence;
+	//var all_actions := ActionChild.allInstances();
+	var all_childs := Filho.allInstances();	
+	var all_nexts := Irmao.allInstances();
+	var all_nodes := Node.allInstances();
+	//for (t22 in all_actions){
+	//	if(t22.source.asSequence().at(0) == self){
+			//out.println("KAZAM"+t22.target.at(0));
+	//		arr.add(t22.target.at(0));
+	//	}
+	//}
+	
+	for(ta2 in all_childs){
+		
+		if(ta2.source.asSequence().at(0) == self)
+			arr.add(ta2.target.at(0));
+		
+	}
+	//lets order the childs
+	if (arr.size == 1)
+		return arr;
+	else{
+		var arr2 : Sequence;
+		//out.println("TAMANHO DOS NOS" +arr.size());
+		for (x in arr){//x é um NODE
+			//out.println("CAMUMBA " + x);
+			//out.println("OIOI " + all_nexts.select(tee|tee.target.at(0) = x));
+			var temp := all_nexts.select(tee|tee.target.at(0) = x);
+			if(temp.isEmpty()){
+				//out.println("ENCONTRADO" + x);// este X é um node
+				arr2.add(x);
+				break;
+			}
+		}
+		var t := arr2.at(0);//problema AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+		while(not (t==null)){
+			//out.println("NOOOO " + t);//NODE
+			var temp := all_nexts.select(tee|tee.source.at(0) = t);
+			//out.println(temp.isEmpty());
+			if(temp.isEmpty()){
+				break;
+			}
+			
+			t := temp.at(0).target.at(0);
+			arr2.add(temp.at(0).target.at(0));
+		}
+		return arr2;
+	}
+}
+
+operation Sequence metodo2(){
+	for (y in self){
+		if(y.isAction()){
+			out.print(y.printAction());
+		} 
+		else{
+			out.print(y.printBehNode());
+			var s := y.getFilhos22();
+			if(not(s.isEmpty())){
+				s.metodo2();
+				out.print(")");
+			}
+		}
+	}
+}
+
+operation Node declareNode(): String{
+	switch(self.type.name){
+		case "Motor" : return self.declareMotors();break;
+		case "LED" : return self.declareLED();break;
+		case "Bumpers" : return self.declareBumper();break;
+		case "Distancia" : return self.declareIRSense();break;
+		case "Espera" : return self.declareWait();break;
+		case "Servo" : return self.declareServoRange();break;
+		case "Prioridade": return self.declarePriority();break;
+		case "Paralelo": return self.declareParallel();break;
+		case "Sequencial": return self.declareSequential();break;
+		case "AlterarEstado": return self.declareStatusOverride();break;
+	}
+
+}
+
+operation Node declareMotors(): String{
+	return "SL::Behaviors::Motor* mt"+self.id.subString(9)+" = new SL::Behaviors::Motor("+self.Motor_Esquerdo+","+self.Motor_Direito+"); ";
+}
+
+operation Node declareLED(): String{
+var on_off := "Ligado";
+if(self.Ligado_ou_Desligado.toString().equals("Desligado"))
+on_off := false;
+   	return "SL::Behaviors::TurnLed* tl"+self.id.subString(9)+" = new SL::Behaviors::TurnLed("+self.Ligado_ou_Desligado+");";
+}
+
+operation Node declareWait(): String{
+	return "SL::Behaviors::DelayTime* wt"+self.id.subString(9)+" = new SL::Behaviors::DelayTime("+self.Tempo+"); ";
+}
+
+operation Node declareBumper(): String{
+	var esquerdo := "true";
+	if(self.Bumper_Esquerdo_ou_Direito.toString() == "Direito"){
+		esquerdo:="false";
+	}
+   	return "SL::Behaviors::Bumper* rb"+self.id.subString(9)+" = new SL::Behaviors::Bumper("+esquerdo+");";
+}
+
+
+operation Node declareIRSense(): String{
+var menor := "false";
+if(self.Menor_Maior.toString() == "Menor"){
+	menor := "true";
+}
+	return "SL::Behaviors::IRSense* ir"+self.id.subString(9)+" = new SL::Behaviors::IRSense("+self.distancia+","+menor+"); ";
+}
+
+operation Node declareServoRange(): String{
+	return "SL::Behaviors::ServoRange* ir"+self.id.subString(9)+" = new SL::Behaviors::ServoRange("+self.Posicao_Minima+","+self.Posicao_Maxima+self.Passo_a_Passo+"); ";
+}
+
+
+
+operation Node declareParallel(): String{
+	return "BehaviorTree::ParallelNode* p"+self.id.substring(9)+" = new BehaviorTree::ParallelNode();";
+}
+operation Node declareSequential(): String{
+	return "BehaviorTree::SequentialNode* s"+self.id.substring(9)+" = new BehaviorTree::SequentialNode();";
+}
+
+operation Node declarePriority(): String{
+	return "BehaviorTree::PriorityNode* pr"+self.id.substring(9)+" = new BehaviorTree::PriorityNode();";
+}
+
+operation Node declareStatusOverride(): String{
+
+var primeiro=0;
+var segundo=0;
+var terceiro=0;
+if(self.Alterar_Sucesso.toString()=="Sucesso")
+	primeiro :=0;
+else if(self.Alterar_Sucesso.toString()=="Falha")
+	primeiro :=1;
+else if(self.Alterar_Sucesso.toString()=="Decorrer")
+	primeiro:=2;
+if(self.Alterar_Falha.toString()=="Sucesso")
+	segundo := 1;
+else if(self.Alterar_Falha.toString()=="Falha")
+	segundo :=0;
+else if(self.Alterar_Falha.toString()=="Decorrer")
+	segundo :=2;	
+if(self.Alterar_Decorrer.toString()=="Sucesso")
+	terceiro :=1;
+else if(self.Alterar_Decorrer.toString()=="Falha")
+	terceiro :=2;
+else if(self.Alterar_Decorrer.toString()=="Decorrer")
+	terceiro :=0;
+	
+	return "BehaviorTree::StatusOverride* so"+self.id.substring(9)+" = new BehaviorTree::StatusOverride("+primeiro+","+segundo+","+terceiro+");";
+}
+operation Node declareRoot(): String{
+	switch(self.type.name){
+		case "Prioridade": return "BehaviorTree::PriorityNode* root = new BehaviorTree::PriorityNode();";break;
+		case "Sequencial" :return "BehaviorTree::SequentialNode* root = new BehaviorTree::SequentialNode();";break;
+		case "Paralelo": return "BehaviorTree::ParallelNode* root = new BehaviorTree::ParallelNode();";break;
+		case "AlterarEstado": return "BehaviorTree::StatusOverride* root = new BehaviorTree::StatusOverride("+self.Alterar_Sucesso+","+self.Alterar_Falha+","+self.Alterar_Decorrer+");";break;
+	}
+}
+operation Node obj_root(): String{
+	switch(self.type.name){
+		case "Prioridade": return "pr"+self.id.substring(9);break;
+		case "Paralelo": return "p"+self.id.substring(9);break;
+		case "Sequencial": return "s"+self.id.substring(9);break;
+		case "AlterarEstado": return "so"+self.id.substring(9);break;
+		default: return "NOT_FOUND";break;
+	}
+}
+
+operation Node isAction(): Boolean{
+	switch(self.type.name){
+		case "Prioridade": return false;break;
+		case "Paralelo": return false;break;
+		case "Sequencial": return false;break;
+		case "AlterarEstado": return false;break;
+		default: return true;break;
+	}
+	
+}
+operation Node printBehNode(): String{
+	switch(self.type.name){
+		case "Prioridade": return "->addChild(pr"+self.id.substring(9);break;
+		case "Paralelo" : return "->addChild(p"+self.id.substring(9);break;
+		case "Sequencial": return "->addChild(s"+self.id.substring(9);break;
+		case "AlterarEstado": return "->addChild(so"+self.id.substring(9);break;
+	}
+}
+operation Node printAction(): String{
+	switch(self.type.name){
+		case "Motor" : return "->addChild(mt"+self.id.substring(9)+")";break;
+		case "LED" : return "->addChild(tl"+self.id.substring(9)+")";break;
+		case "Bumpers" : return "->addChild(rb"+self.id.substring(9)+")";break;
+		case "Distancia" : return "->addChild(ir"+self.id.substring(9)+")";break;
+		case "Espera" : return "->addChild(wt"+self.id.substring(9)+")";break;
+		case "Servo" : return "->addChild(sr"+self.id.substring(9)+")";break;
+	}
+}
+%]

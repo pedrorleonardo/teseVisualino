@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.edit/src/rcpapp/provider
+END
+RcpappItemProviderAdapterFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.edit/src/rcpapp/provider/RcpappItemProviderAdapterFactory.java
+END
+ModelItemProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.edit/src/rcpapp/provider/ModelItemProvider.java
+END
+RcpappEditPlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.edit/src/rcpapp/provider/RcpappEditPlugin.java
+END
+ComponentItemProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.edit/src/rcpapp/provider/ComponentItemProvider.java
+END

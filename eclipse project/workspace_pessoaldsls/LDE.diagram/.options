@@ -1,0 +1,7 @@
+# Tracing options for the LDE.diagram plug-in
+
+# Common issues
+LDE.diagram/debug=false
+
+# Visual IDs
+LDE.diagram/debug/visualID=false

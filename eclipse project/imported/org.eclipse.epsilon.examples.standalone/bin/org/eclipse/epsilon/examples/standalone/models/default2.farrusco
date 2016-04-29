@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<farrusco:Robot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:farrusco="http://farrusco/1.0">
+  <nodes xsi:type="farrusco:StateOverride" succ_policy="2"/>
+  <nodes xsi:type="farrusco:LED"/>
+  <nodes xsi:type="farrusco:Sequential"/>
+  <nodes xsi:type="farrusco:LED" on_off="true"/>
+  <nodes xsi:type="farrusco:Wait" time="4000"/>
+  <nodes xsi:type="farrusco:Wait" time="4000"/>
+  <nodes xsi:type="farrusco:Paralell"/>
+  <nodes xsi:type="farrusco:Prior"/>
+  <nodes xsi:type="farrusco:Motors" MotorRight="0"/>
+  <nodes xsi:type="farrusco:StateOverride" succ_policy="2" fail_policy="2"/>
+  <nodes xsi:type="farrusco:StateOverride" succ_policy="2" fail_policy="2"/>
+  <nodes xsi:type="farrusco:Paralell"/>
+  <nodes xsi:type="farrusco:LeftBumper"/>
+  <nodes xsi:type="farrusco:Motors"/>
+  <nodes xsi:type="farrusco:RightBumper"/>
+  <nodes xsi:type="farrusco:Paralell"/>
+  <nodes xsi:type="farrusco:StateOverride" runn_policy="1"/>
+  <nodes xsi:type="farrusco:Motors"/>
+  <actionChild source="//@nodes.2" target="//@nodes.1"/>
+  <actionChild source="//@nodes.2" target="//@nodes.4"/>
+  <actionChild source="//@nodes.2" target="//@nodes.3"/>
+  <actionChild source="//@nodes.2" target="//@nodes.5"/>
+  <actionChild source="//@nodes.11" target="//@nodes.8"/>
+  <actionChild source="//@nodes.11" target="//@nodes.12"/>
+  <actionChild source="//@nodes.16" target="//@nodes.17"/>
+  <actionChild source="//@nodes.15" target="//@nodes.13"/>
+  <actionChild source="//@nodes.15" target="//@nodes.14"/>
+  <child source="//@nodes.0" target="//@nodes.6"/>
+  <child source="//@nodes.6" target="//@nodes.9"/>
+  <child source="//@nodes.6" target="//@nodes.10"/>
+  <child source="//@nodes.9" target="//@nodes.2"/>
+  <child source="//@nodes.10" target="//@nodes.7"/>
+  <child source="//@nodes.7" target="//@nodes.11"/>
+  <child source="//@nodes.7" target="//@nodes.15"/>
+  <child source="//@nodes.7" target="//@nodes.16"/>
+  <next source="//@nodes.1" target="//@nodes.4"/>
+  <next source="//@nodes.4" target="//@nodes.3"/>
+  <next source="//@nodes.3" target="//@nodes.5"/>
+  <next source="//@nodes.9" target="//@nodes.10"/>
+  <next source="//@nodes.11" target="//@nodes.15"/>
+  <next source="//@nodes.15" target="//@nodes.16"/>
+  <next source="//@nodes.8" target="//@nodes.12"/>
+  <next source="//@nodes.13" target="//@nodes.14"/>
+</farrusco:Robot>

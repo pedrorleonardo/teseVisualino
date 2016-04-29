@@ -1,0 +1,52 @@
+8
+
+dir
+2272
+http://dev.eclipse.org/svnroot/modeling/org.eclipse.epsilon/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp/src/rcpapp/util
+http://dev.eclipse.org/svnroot/modeling/org.eclipse.epsilon
+
+
+
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b1e7822e-7b56-0410-88b3-db6ede196368
+
+RcpappSwitch.java
+file
+
+
+
+
+2013-06-13T15:16:35.359480Z
+b3344c19d31a5d91b4959f2025ca459f
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+
+RcpappAdapterFactory.java
+file
+
+
+
+
+2013-06-13T15:16:35.361480Z
+15f35528f46fa7161db4b669b376000c
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+

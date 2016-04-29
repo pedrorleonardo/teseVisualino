@@ -1,0 +1,83 @@
+/*
+ * 
+ */
+package farrusco.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class FarruscoEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (farrusco.diagram.part.FarruscoVisualIDRegistry.getVisualID(view)) {
+				
+	case farrusco.diagram.edit.parts.RobotEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.RobotEditPart(view);
+									
+	case farrusco.diagram.edit.parts.DistanciaEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.DistanciaEditPart(view);
+														
+	case farrusco.diagram.edit.parts.BumpersEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.BumpersEditPart(view);
+														
+	case farrusco.diagram.edit.parts.EsperaEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.EsperaEditPart(view);
+														
+	case farrusco.diagram.edit.parts.MotorEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.MotorEditPart(view);
+														
+	case farrusco.diagram.edit.parts.ServoEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.ServoEditPart(view);
+														
+	case farrusco.diagram.edit.parts.LEDEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.LEDEditPart(view);
+														
+	case farrusco.diagram.edit.parts.PrioridadeEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.PrioridadeEditPart(view);
+														
+	case farrusco.diagram.edit.parts.ParaleloEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.ParaleloEditPart(view);
+														
+	case farrusco.diagram.edit.parts.SequencialEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.SequencialEditPart(view);
+														
+	case farrusco.diagram.edit.parts.AlterarEstadoEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.AlterarEstadoEditPart(view);
+					
+	case farrusco.diagram.edit.parts.AlterarEstadoNomeEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.AlterarEstadoNomeEditPart(view);
+																	
+	case farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.FilhoEditPart(view);
+					
+									
+	case farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID:
+		return new farrusco.diagram.edit.parts.IrmaoEditPart(view);
+					
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

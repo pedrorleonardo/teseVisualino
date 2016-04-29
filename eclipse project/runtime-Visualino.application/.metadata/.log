@@ -1,0 +1,13 @@
+!SESSION 2013-06-11 11:42:13.266 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_PT
+Framework arguments:  -application Visualino.application
+Command-line arguments:  -application Visualino.application -data C:\Users\Leonardo\Desktop\eclipse-epsilon\workspace/../runtime-Visualino.application -dev file:C:/Users/Leonardo/Desktop/eclipse-epsilon/workspace/.metadata/.plugins/org.eclipse.pde.core/Visualino.application/dev.properties -os win32 -ws win32 -arch x86 -consoleLog
+
+!ENTRY org.eclipse.ui 4 4 2013-06-11 11:42:15.885
+!MESSAGE Unable to find Action Set: org.farrusco.diagram.InitDiagram
+
+!ENTRY org.eclipse.ui 4 4 2013-06-11 11:42:15.886
+!MESSAGE Unable to find Action Set: org.farrusco.diagram.ActionSet

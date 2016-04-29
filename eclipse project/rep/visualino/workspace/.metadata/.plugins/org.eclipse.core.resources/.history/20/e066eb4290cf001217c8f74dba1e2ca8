@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package farrusco.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramGeneralPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.DiagramsPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramGeneralPreferencePage() {
+		setPreferenceStore(farrusco.diagram.part.FarruscoDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

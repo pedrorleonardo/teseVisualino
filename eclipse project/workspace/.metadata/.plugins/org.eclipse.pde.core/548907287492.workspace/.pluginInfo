@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="1100" localization="OSGI-INF/l10n/bundle" name="%Bundle-Name" project="org.farrusco.generate.engine"/>
+	<bundle bundleID="1101" localization="OSGI-INF/l10n/bundle" name="%Bundle-Name" project="org.farrusco.generate.action"/>
+	<bundle bundleID="1094" localization="plugin" name="%pluginName" project="org.farrusco.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1104" localization="plugin" name="%pluginName" project="org.farrusco" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1096" class="farrusco.diagram.part.FarruscoDiagramEditorPlugin" localization="plugin" name="%pluginName" project="org.farrusco.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1105" class="figuresPlan.figures.activator.PluginActivator" localization="plugin" name="%pluginName" project="figuresPlan.figures" provider="%providerName"/>
+	<bundle bundleID="1097" class="farrusco.provider.FarruscoEditPlugin$Implementation" localization="plugin" name="%pluginName" project="org.farrusco.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1099" class="farrusco.presentation.FarruscoEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="org.farrusco.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+</map>

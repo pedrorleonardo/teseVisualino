@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:arduino="http://arduino/1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_cTUogM6eEeKVI_uSZBMIyg" type="Arduino" name="default.arduino_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_eLH3oM6eEeKVI_uSZBMIyg" type="2029">
+    <children xmi:type="notation:DecorationNode" xmi:id="_eLVTAM6eEeKVI_uSZBMIyg" type="5027"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_eLIesM6eEeKVI_uSZBMIyg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_eLIesc6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Inicio" href="default.arduino#//@temAcoes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eLIess6eEeKVI_uSZBMIyg" x="134" y="117"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_goyz8M6eEeKVI_uSZBMIyg" type="2022">
+    <children xmi:type="notation:DecorationNode" xmi:id="_gozbAM6eEeKVI_uSZBMIyg" type="5022"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_goyz8c6eEeKVI_uSZBMIyg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_goyz8s6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Virar_Max_Esq" href="default.arduino#//@temAcoes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_goyz886eEeKVI_uSZBMIyg" x="372" y="120"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_jeCiwM6eEeKVI_uSZBMIyg" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_jeDw4M6eEeKVI_uSZBMIyg" type="5006"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_jeDJ0M6eEeKVI_uSZBMIyg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_jeDJ0c6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Ligar_Cores_Policia" href="default.arduino#//@temAcoes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jeDJ0s6eEeKVI_uSZBMIyg" x="216" y="120"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_lItU0M6eEeKVI_uSZBMIyg" type="2018">
+    <children xmi:type="notation:DecorationNode" xmi:id="_lIt74M6eEeKVI_uSZBMIyg" type="5018"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_lItU0c6eEeKVI_uSZBMIyg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lItU0s6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Mover_Frente_Tempo" href="default.arduino#//@temAcoes.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lItU086eEeKVI_uSZBMIyg" x="528" y="120"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_mBHjgM6eEeKVI_uSZBMIyg" type="2030">
+    <children xmi:type="notation:DecorationNode" xmi:id="_mBIKkM6eEeKVI_uSZBMIyg" type="5028"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_mBHjgc6eEeKVI_uSZBMIyg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_mBHjgs6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Fim" href="default.arduino#//@temAcoes.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBHjg86eEeKVI_uSZBMIyg" x="612" y="120"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_cTVPkM6eEeKVI_uSZBMIyg"/>
+  <element xmi:type="arduino:Robo" href="default.arduino#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_muyh0M6eEeKVI_uSZBMIyg" type="4001" source="_eLH3oM6eEeKVI_uSZBMIyg" target="_jeCiwM6eEeKVI_uSZBMIyg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_muyh0c6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Transicoes" href="default.arduino#//@temTransicoes.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_muyh0s6eEeKVI_uSZBMIyg" points="[20, 0, -118, -3]$[86, 0, -52, -3]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_nGU4EM6eEeKVI_uSZBMIyg" type="4001" source="_jeCiwM6eEeKVI_uSZBMIyg" target="_goyz8M6eEeKVI_uSZBMIyg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_nGU4Ec6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Transicoes" href="default.arduino#//@temTransicoes.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nGU4Es6eEeKVI_uSZBMIyg" points="[53, 5, -142, 5]$[189, 20, -6, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_ndmvoM6eEeKVI_uSZBMIyg" type="4001" source="_goyz8M6eEeKVI_uSZBMIyg" target="_lItU0M6eEeKVI_uSZBMIyg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_ndmvoc6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Transicoes" href="default.arduino#//@temTransicoes.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ndmvos6eEeKVI_uSZBMIyg" points="[56, 10, -101, -15]$[179, 32, 22, 7]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_n2B2sM6eEeKVI_uSZBMIyg" type="4001" source="_lItU0M6eEeKVI_uSZBMIyg" target="_mBHjgM6eEeKVI_uSZBMIyg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_n2B2sc6eEeKVI_uSZBMIyg" fontName="Ubuntu"/>
+    <element xmi:type="arduino:Transicoes" href="default.arduino#//@temTransicoes.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_n2B2ss6eEeKVI_uSZBMIyg" points="[34, 3, -106, -15]$[135, -2, -5, -20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_n2JLcM6eEeKVI_uSZBMIyg" id="(0.20930232558139536,0.35)"/>
+  </edges>
+</notation:Diagram>

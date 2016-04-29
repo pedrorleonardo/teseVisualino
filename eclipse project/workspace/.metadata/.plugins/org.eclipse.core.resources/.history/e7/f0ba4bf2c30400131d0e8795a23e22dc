@@ -1,0 +1,738 @@
+	/*
+ * 
+ */
+package farrusco.diagram.part;
+
+	/**
+ * @generated
+ */
+public class FarruscoDiagramUpdater {
+		
+	/**
+ * @generated
+ */
+public static boolean isShortcutOrphaned(org.eclipse.gmf.runtime.notation.View view) {
+	return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (farrusco.diagram.part.FarruscoVisualIDRegistry.getVisualID(view)) {
+		case farrusco.diagram.edit.parts.RobotEditPart.VISUAL_ID:
+	return getRobot_1000SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoNodeDescriptor> getRobot_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+farrusco.Robot modelElement = (farrusco.Robot) view.getElement();
+	java.util.LinkedList<farrusco.diagram.part.FarruscoNodeDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getNodes().iterator(); it.hasNext();) {
+		farrusco.Node childElement = (farrusco.Node) it.next();
+					int visualID = farrusco.diagram.part.FarruscoVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == farrusco.diagram.edit.parts.DistanciaEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == farrusco.diagram.edit.parts.BumpersEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == farrusco.diagram.edit.parts.EsperaEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == farrusco.diagram.edit.parts.MotorEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == farrusco.diagram.edit.parts.ServoEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == farrusco.diagram.edit.parts.LEDEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == farrusco.diagram.edit.parts.PrioridadeEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == farrusco.diagram.edit.parts.ParaleloEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == farrusco.diagram.edit.parts.SequencialEditPart.VISUAL_ID) {
+	result.add(new farrusco.diagram.part.FarruscoNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (farrusco.diagram.part.FarruscoVisualIDRegistry.getVisualID(view)) {
+		case farrusco.diagram.edit.parts.RobotEditPart.VISUAL_ID:
+	return getRobot_1000ContainedLinks(view);
+case farrusco.diagram.edit.parts.DistanciaEditPart.VISUAL_ID:
+	return getDistancia_2001ContainedLinks(view);
+case farrusco.diagram.edit.parts.BumpersEditPart.VISUAL_ID:
+	return getBumpers_2002ContainedLinks(view);
+case farrusco.diagram.edit.parts.EsperaEditPart.VISUAL_ID:
+	return getEspera_2003ContainedLinks(view);
+case farrusco.diagram.edit.parts.MotorEditPart.VISUAL_ID:
+	return getMotor_2004ContainedLinks(view);
+case farrusco.diagram.edit.parts.ServoEditPart.VISUAL_ID:
+	return getServo_2005ContainedLinks(view);
+case farrusco.diagram.edit.parts.LEDEditPart.VISUAL_ID:
+	return getLED_2006ContainedLinks(view);
+case farrusco.diagram.edit.parts.PrioridadeEditPart.VISUAL_ID:
+	return getPrioridade_2007ContainedLinks(view);
+case farrusco.diagram.edit.parts.ParaleloEditPart.VISUAL_ID:
+	return getParalelo_2008ContainedLinks(view);
+case farrusco.diagram.edit.parts.SequencialEditPart.VISUAL_ID:
+	return getSequencial_2009ContainedLinks(view);
+case farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID:
+	return getFilho_4001ContainedLinks(view);
+case farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID:
+	return getIrmao_4002ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (farrusco.diagram.part.FarruscoVisualIDRegistry.getVisualID(view)) {
+		case farrusco.diagram.edit.parts.DistanciaEditPart.VISUAL_ID:
+	return getDistancia_2001IncomingLinks(view);
+case farrusco.diagram.edit.parts.BumpersEditPart.VISUAL_ID:
+	return getBumpers_2002IncomingLinks(view);
+case farrusco.diagram.edit.parts.EsperaEditPart.VISUAL_ID:
+	return getEspera_2003IncomingLinks(view);
+case farrusco.diagram.edit.parts.MotorEditPart.VISUAL_ID:
+	return getMotor_2004IncomingLinks(view);
+case farrusco.diagram.edit.parts.ServoEditPart.VISUAL_ID:
+	return getServo_2005IncomingLinks(view);
+case farrusco.diagram.edit.parts.LEDEditPart.VISUAL_ID:
+	return getLED_2006IncomingLinks(view);
+case farrusco.diagram.edit.parts.PrioridadeEditPart.VISUAL_ID:
+	return getPrioridade_2007IncomingLinks(view);
+case farrusco.diagram.edit.parts.ParaleloEditPart.VISUAL_ID:
+	return getParalelo_2008IncomingLinks(view);
+case farrusco.diagram.edit.parts.SequencialEditPart.VISUAL_ID:
+	return getSequencial_2009IncomingLinks(view);
+case farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID:
+	return getFilho_4001IncomingLinks(view);
+case farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID:
+	return getIrmao_4002IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (farrusco.diagram.part.FarruscoVisualIDRegistry.getVisualID(view)) {
+		case farrusco.diagram.edit.parts.DistanciaEditPart.VISUAL_ID:
+	return getDistancia_2001OutgoingLinks(view);
+case farrusco.diagram.edit.parts.BumpersEditPart.VISUAL_ID:
+	return getBumpers_2002OutgoingLinks(view);
+case farrusco.diagram.edit.parts.EsperaEditPart.VISUAL_ID:
+	return getEspera_2003OutgoingLinks(view);
+case farrusco.diagram.edit.parts.MotorEditPart.VISUAL_ID:
+	return getMotor_2004OutgoingLinks(view);
+case farrusco.diagram.edit.parts.ServoEditPart.VISUAL_ID:
+	return getServo_2005OutgoingLinks(view);
+case farrusco.diagram.edit.parts.LEDEditPart.VISUAL_ID:
+	return getLED_2006OutgoingLinks(view);
+case farrusco.diagram.edit.parts.PrioridadeEditPart.VISUAL_ID:
+	return getPrioridade_2007OutgoingLinks(view);
+case farrusco.diagram.edit.parts.ParaleloEditPart.VISUAL_ID:
+	return getParalelo_2008OutgoingLinks(view);
+case farrusco.diagram.edit.parts.SequencialEditPart.VISUAL_ID:
+	return getSequencial_2009OutgoingLinks(view);
+case farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID:
+	return getFilho_4001OutgoingLinks(view);
+case farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID:
+	return getIrmao_4002OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getRobot_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Robot modelElement = (farrusco.Robot) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Filho_4001(modelElement));	
+	result.addAll(getContainedTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getDistancia_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getBumpers_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getEspera_2003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getMotor_2004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getServo_2005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getLED_2006ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getPrioridade_2007ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getParalelo_2008ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getSequencial_2009ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getFilho_4001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getIrmao_4002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getDistancia_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Distancia modelElement = (farrusco.Distancia) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getBumpers_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Bumpers modelElement = (farrusco.Bumpers) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getEspera_2003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Espera modelElement = (farrusco.Espera) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getMotor_2004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Motor modelElement = (farrusco.Motor) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getServo_2005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Servo modelElement = (farrusco.Servo) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getLED_2006IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.LED modelElement = (farrusco.LED) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getPrioridade_2007IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Prioridade modelElement = (farrusco.Prioridade) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getParalelo_2008IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Paralelo modelElement = (farrusco.Paralelo) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getSequencial_2009IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Sequencial modelElement = (farrusco.Sequencial) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getFilho_4001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getIrmao_4002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getDistancia_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Distancia modelElement = (farrusco.Distancia) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getBumpers_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Bumpers modelElement = (farrusco.Bumpers) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getEspera_2003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Espera modelElement = (farrusco.Espera) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getMotor_2004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Motor modelElement = (farrusco.Motor) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getServo_2005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Servo modelElement = (farrusco.Servo) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getLED_2006OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.LED modelElement = (farrusco.LED) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getPrioridade_2007OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Prioridade modelElement = (farrusco.Prioridade) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Filho_4001(modelElement));	
+	result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getParalelo_2008OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Paralelo modelElement = (farrusco.Paralelo) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Filho_4001(modelElement));	
+	result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getSequencial_2009OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	farrusco.Sequencial modelElement = (farrusco.Sequencial) view.getElement();
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Filho_4001(modelElement));	
+	result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getFilho_4001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getIrmao_4002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<farrusco.diagram.part.FarruscoLinkDescriptor> getContainedTypeModelFacetLinks_Filho_4001(farrusco.Robot container) {
+	java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getChild().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof farrusco.Filho) {
+		continue;
+	}
+	farrusco.Filho link = (farrusco.Filho) linkObject;
+		if (farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID != farrusco.diagram.part.FarruscoVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			java.util.List targets = link.getTarget();
+Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+if (false == theTarget instanceof farrusco.Node) {
+	continue;
+}
+farrusco.Node dst = (farrusco.Node) theTarget;
+							java.util.List sources = link.getSource();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof farrusco.Behavior) {
+	continue;
+}
+farrusco.Behavior src = (farrusco.Behavior) theSource;
+							result.add(new farrusco.diagram.part.FarruscoLinkDescriptor(src, dst, link, farrusco.diagram.providers.FarruscoElementTypes.Filho_4001, farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+
+	/**
+ * @generated
+ */
+private static java.util.Collection<farrusco.diagram.part.FarruscoLinkDescriptor> getContainedTypeModelFacetLinks_Irmao_4002(farrusco.Robot container) {
+	java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getNext().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof farrusco.Irmao) {
+		continue;
+	}
+	farrusco.Irmao link = (farrusco.Irmao) linkObject;
+		if (farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID != farrusco.diagram.part.FarruscoVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			java.util.List targets = link.getTarget();
+Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+if (false == theTarget instanceof farrusco.Node) {
+	continue;
+}
+farrusco.Node dst = (farrusco.Node) theTarget;
+							java.util.List sources = link.getSource();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof farrusco.Node) {
+	continue;
+}
+farrusco.Node src = (farrusco.Node) theSource;
+							result.add(new farrusco.diagram.part.FarruscoLinkDescriptor(src, dst, link, farrusco.diagram.providers.FarruscoElementTypes.Irmao_4002, farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+	
+/**
+ * @generated
+ */
+private static java.util.Collection<farrusco.diagram.part.FarruscoLinkDescriptor> getIncomingTypeModelFacetLinks_Filho_4001(farrusco.Node target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() != farrusco.FarruscoPackage.eINSTANCE.getFilho_Target() || false == setting.getEObject() instanceof farrusco.Filho) {
+	continue;
+}
+farrusco.Filho link = (farrusco.Filho) setting.getEObject();
+	if (farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID != farrusco.diagram.part.FarruscoVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+				java.util.List sources = link.getSource();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof farrusco.Behavior) {
+	continue;
+}
+farrusco.Behavior src = (farrusco.Behavior) theSource;
+			result.add(new farrusco.diagram.part.FarruscoLinkDescriptor(src, target, link, farrusco.diagram.providers.FarruscoElementTypes.Filho_4001, farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<farrusco.diagram.part.FarruscoLinkDescriptor> getIncomingTypeModelFacetLinks_Irmao_4002(farrusco.Node target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() != farrusco.FarruscoPackage.eINSTANCE.getIrmao_Target() || false == setting.getEObject() instanceof farrusco.Irmao) {
+	continue;
+}
+farrusco.Irmao link = (farrusco.Irmao) setting.getEObject();
+	if (farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID != farrusco.diagram.part.FarruscoVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+				java.util.List sources = link.getSource();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof farrusco.Node) {
+	continue;
+}
+farrusco.Node src = (farrusco.Node) theSource;
+			result.add(new farrusco.diagram.part.FarruscoLinkDescriptor(src, target, link, farrusco.diagram.providers.FarruscoElementTypes.Irmao_4002, farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+				
+		/**
+ * @generated
+ */
+private static java.util.Collection<farrusco.diagram.part.FarruscoLinkDescriptor> getOutgoingTypeModelFacetLinks_Filho_4001(farrusco.Behavior source) {
+	farrusco.Robot container = null;
+	// Find container element for the link.
+	// Climb up by containment hierarchy starting from the source
+	// and return the first element that is instance of the container class.
+	for (org.eclipse.emf.ecore.EObject element = source; element != null && container == null; element = element.eContainer()) {
+		if (element instanceof farrusco.Robot) {
+			container = (farrusco.Robot) element;
+		}
+	}
+	if (container == null) {
+		return java.util.Collections.emptyList();
+	}
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getChild().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof farrusco.Filho) {
+		continue;
+	}
+	farrusco.Filho link = (farrusco.Filho) linkObject;
+		if (farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID != farrusco.diagram.part.FarruscoVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			java.util.List targets = link.getTarget();
+Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+if (false == theTarget instanceof farrusco.Node) {
+	continue;
+}
+farrusco.Node dst = (farrusco.Node) theTarget;
+							java.util.List sources = link.getSource();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof farrusco.Behavior) {
+	continue;
+}
+farrusco.Behavior src = (farrusco.Behavior) theSource;
+								if (src != source) {
+	continue;
+}
+						result.add(new farrusco.diagram.part.FarruscoLinkDescriptor(src, dst, link, farrusco.diagram.providers.FarruscoElementTypes.Filho_4001, farrusco.diagram.edit.parts.FilhoEditPart.VISUAL_ID));
+		}
+	return result;	
+}		
+				
+		/**
+ * @generated
+ */
+private static java.util.Collection<farrusco.diagram.part.FarruscoLinkDescriptor> getOutgoingTypeModelFacetLinks_Irmao_4002(farrusco.Node source) {
+	farrusco.Robot container = null;
+	// Find container element for the link.
+	// Climb up by containment hierarchy starting from the source
+	// and return the first element that is instance of the container class.
+	for (org.eclipse.emf.ecore.EObject element = source; element != null && container == null; element = element.eContainer()) {
+		if (element instanceof farrusco.Robot) {
+			container = (farrusco.Robot) element;
+		}
+	}
+	if (container == null) {
+		return java.util.Collections.emptyList();
+	}
+		java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor> result = new java.util.LinkedList<farrusco.diagram.part.FarruscoLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getNext().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof farrusco.Irmao) {
+		continue;
+	}
+	farrusco.Irmao link = (farrusco.Irmao) linkObject;
+		if (farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID != farrusco.diagram.part.FarruscoVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			java.util.List targets = link.getTarget();
+Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+if (false == theTarget instanceof farrusco.Node) {
+	continue;
+}
+farrusco.Node dst = (farrusco.Node) theTarget;
+							java.util.List sources = link.getSource();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof farrusco.Node) {
+	continue;
+}
+farrusco.Node src = (farrusco.Node) theSource;
+								if (src != source) {
+	continue;
+}
+						result.add(new farrusco.diagram.part.FarruscoLinkDescriptor(src, dst, link, farrusco.diagram.providers.FarruscoElementTypes.Irmao_4002, farrusco.diagram.edit.parts.IrmaoEditPart.VISUAL_ID));
+		}
+	return result;	
+}		
+		
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<farrusco.diagram.part.FarruscoNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return FarruscoDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FarruscoDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FarruscoDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<farrusco.diagram.part.FarruscoLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FarruscoDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

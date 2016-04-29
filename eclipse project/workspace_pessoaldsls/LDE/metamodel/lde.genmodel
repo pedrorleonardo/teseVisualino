@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/LDE/src" modelPluginID="LDE"
+    modelName="Arduino" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>lde.emf</foreignModel>
+  <genPackages prefix="Arduino" disposableProviderFactory="true" ecorePackage="lde.ecore#/">
+    <genClasses ecoreClass="lde.ecore#//Robo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference lde.ecore#//Robo/temAcoes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference lde.ecore#//Robo/temTransicoes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Robo/Nome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference lde.ecore#//Robo/temCondicoes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="lde.ecore#//Acao">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lde.ecore#//Acao/Transicao_de_Entrada"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lde.ecore#//Acao/Transicao_de_Saida"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Transicoes">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lde.ecore#//Transicoes/Acao_de_Entrada"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lde.ecore#//Transicoes/Acao_de_Saida"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Virar_Esquerda">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Virar_Esquerda/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Mover_Frente">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Mover_Frente/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Mover_Tras">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Mover_Tras/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Virar_Direita">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Virar_Direita/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Rodar_Esquerda_Tempo"/>
+    <genClasses ecoreClass="lde.ecore#//Rodar_Direita_Tempo"/>
+    <genClasses image="false" ecoreClass="lde.ecore#//Acoes_Predefinidas"/>
+    <genClasses image="false" ecoreClass="lde.ecore#//Acoes_Modificaveis"/>
+    <genClasses ecoreClass="lde.ecore#//Mover_Frente_Tempo"/>
+    <genClasses ecoreClass="lde.ecore#//Mover_Tras_Tempo"/>
+    <genClasses ecoreClass="lde.ecore#//Virar_para_X_Graus"/>
+    <genClasses ecoreClass="lde.ecore#//Virar_Max_Drt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Virar_Max_Drt/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Virar_Max_Esq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Virar_Max_Esq/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Centrar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Centrar/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Virar_45_Esq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Virar_45_Esq/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Virar_45_Drt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Virar_45_Drt/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Mover_Aleatoriamente">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Mover_Aleatoriamente/nome"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="lde.ecore#//LED"/>
+    <genClasses image="false" ecoreClass="lde.ecore#//Verde"/>
+    <genClasses image="false" ecoreClass="lde.ecore#//Tricolor"/>
+    <genClasses ecoreClass="lde.ecore#//Ligar_LED_Verde">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Ligar_LED_Verde/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Desligar_LED_Verde">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Desligar_LED_Verde/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Ligar_Intermitencia">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Ligar_Intermitencia/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Desligar_Intermitencia">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Desligar_Intermitencia/nome"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="lde.ecore#//Varias_Cores"/>
+    <genClasses image="false" ecoreClass="lde.ecore#//Unica_Cor"/>
+    <genClasses ecoreClass="lde.ecore#//Ligar_Cores_Policia">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Ligar_Cores_Policia/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Ligar_Cores_Arco_Iris">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Ligar_Cores_Arco_Iris/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Ligar_Azul">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Ligar_Azul/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Ligar_Verde">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Ligar_Verde/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Ligar_Vermelho">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Ligar_Vermelho/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Desligar_Cor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Desligar_Cor/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Desligar_Cores">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Desligar_Cores/nome"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="lde.ecore#//Acoes_Condicionais">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lde.ecore#//Acoes_Condicionais/tem"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//While">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//While/nome"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lde.ecore#//While/corpo"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//If">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//If/nome"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lde.ecore#//If/then"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="lde.ecore#//Condicao"/>
+    <genClasses ecoreClass="lde.ecore#//Bumper_Pressionado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Bumper_Pressionado/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Distancia_Infra_Vermelhos">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Distancia_Infra_Vermelhos/distancia"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="lde.ecore#//Corpo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Corpo/evitarObstaculo"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="lde.ecore#//Corpo_Modificavel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Corpo_Modificavel/tempo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Corpo_Modificavel/evitarObstaculo"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="lde.ecore#//Cabeca"/>
+    <genClasses image="false" ecoreClass="lde.ecore#//Cabeca_Modificavel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Cabeca_Modificavel/graus"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Inicio">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Inicio/nome"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Inicio/evitarObstaculo"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Fim">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Fim/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Parar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lde.ecore#//Parar/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="lde.ecore#//Parar_Tempo"/>
+  </genPackages>
+</genmodel:GenModel>

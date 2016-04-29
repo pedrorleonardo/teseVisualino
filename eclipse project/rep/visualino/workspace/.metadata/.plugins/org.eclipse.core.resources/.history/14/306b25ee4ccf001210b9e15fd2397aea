@@ -1,0 +1,54 @@
+-- This script is executed automatically by Eugenia 
+
+/*
+"Clearing Empty Feature Mappings...".println();
+var feature_mappings = GmfMap!FeatureLabelMapping.all.select(f|f.features.isEmpty());
+
+for (n in feature_mappings){
+  ("Found Mapping: " + n).println();
+  delete n;
+}
+"Clearing Empty Feature Mappings... DONE".println();
+*/
+
+var toolsPalette = GmfTool!Palette.all.first;
+
+var actionToolGroup = new GmfTool!ToolGroup;
+actionToolGroup.title="Actions";
+actionToolGroup.description="Actions";
+actionToolGroup.collapsible=true;
+toolsPalette.tools.add(actionToolGroup);
+
+"Inserting Custom Tool Generate IDs... ".println();
+
+var generateIDsTool = new GmfTool!GenericTool;
+generateIDsTool.title = "Criar Programa";
+generateIDsTool.description = "Criar Programa";
+generateIDsTool.toolClass="org.farrusco.generate.action.GenerateTool";
+
+actionToolGroup.tools.add(generateIDsTool);
+
+"Inserting Custom Tool Generate IDs... DONE".println();
+
+
+var palette := GmfTool!Palette.all.first();
+
+var toolGroupActivities= new GmfTool!ToolGroup;
+toolGroupActivities.title := 'Controlo';
+toolGroupActivities.collapsible := true;
+palette.tools.add(toolGroupActivities);
+
+//var toolGroupActivities2= new GmfTool!ToolGroup;
+//toolGroupActivities2.title := 'Accoes';
+//toolGroupActivities2.collapsible := true;
+//palette.tools.add(toolGroupActivities2);
+
+var toolGroupObjects = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Objects');
+
+var y;
+y := toolGroupObjects.tools.selectOne(r|r.title="Paralelo");
+toolGroupActivities.tools.add(y);
+y := toolGroupObjects.tools.selectOne(r|r.title="Sequencia");
+toolGroupActivities.tools.add(y);
+y := toolGroupObjects.tools.selectOne(r|r.title="Decisor");
+toolGroupActivities.tools.add(y);

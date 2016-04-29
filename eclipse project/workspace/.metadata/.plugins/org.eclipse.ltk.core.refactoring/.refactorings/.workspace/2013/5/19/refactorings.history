@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;org.eclipse.epsilon.examples.standalone&apos;" deleteContents="true" description="Delete resource &apos;org.eclipse.epsilon.examples.standalone&apos;" element1="/org.eclipse.epsilon.examples.standalone" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1367917720085"/>
+</session>

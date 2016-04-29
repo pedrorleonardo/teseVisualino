@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.eol,org.eclipse.epsilon.eol.annota
+ tions,org.eclipse.epsilon.eol.exceptions,org.eclipse.epsilon.eol.exce
+ ptions.flowcontrol,org.eclipse.epsilon.eol.exceptions.models,org.ecli
+ pse.epsilon.eol.execute,org.eclipse.epsilon.eol.execute.context,org.e
+ clipse.epsilon.eol.execute.control,org.eclipse.epsilon.eol.execute.in
+ trospection,org.eclipse.epsilon.eol.execute.introspection.java,org.ec
+ lipse.epsilon.eol.execute.operations,org.eclipse.epsilon.eol.execute.
+ operations.contributors,org.eclipse.epsilon.eol.execute.operations.co
+ ntributors.compatibility,org.eclipse.epsilon.eol.execute.operations.d
+ eclarative,org.eclipse.epsilon.eol.execute.operations.simple,org.ecli
+ pse.epsilon.eol.execute.operations.simple.assertions,org.eclipse.epsi
+ lon.eol.execute.prettyprinting,org.eclipse.epsilon.eol.models,org.ecl
+ ipse.epsilon.eol.models.java,org.eclipse.epsilon.eol.models.transacti
+ ons,org.eclipse.epsilon.eol.parse,org.eclipse.epsilon.eol.tools,org.e
+ clipse.epsilon.eol.types,org.eclipse.epsilon.eol.userinput,org.eclips
+ e.epsilon.eol.util,org.eclipse.epsilon.eol.validate
+Require-Bundle: org.eclipse.epsilon.common;visibility:=reexport,org.ec
+ lipse.epsilon.dependencies;visibility:=reexport
+Bundle-Vendor: Eclipse.org
+Bundle-ClassPath: org.eclipse.epsilon.eol.engine.jar
+Bundle-Version: 1.0.0.201211082326
+Bundle-Name: Epsilon Object Language
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.eol.engine;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

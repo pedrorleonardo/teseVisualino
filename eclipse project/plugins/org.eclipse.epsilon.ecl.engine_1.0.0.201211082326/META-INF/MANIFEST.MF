@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.ecl,org.eclipse.epsilon.ecl.except
+ ions,org.eclipse.epsilon.ecl.execute,org.eclipse.epsilon.ecl.execute.
+ context,org.eclipse.epsilon.ecl.execute.operations,org.eclipse.epsilo
+ n.ecl.parse,org.eclipse.epsilon.ecl.trace
+Require-Bundle: org.eclipse.epsilon.eol.engine,org.eclipse.epsilon.erl
+ .engine;visibility:=reexport
+Bundle-Vendor: Eclipse.org
+Bundle-ClassPath: org.eclipse.epsilon.ecl.engine.jar
+Bundle-Version: 1.0.0.201211082326
+Bundle-Name: Epsilon Comparison Language Engine
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.ecl.engine
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

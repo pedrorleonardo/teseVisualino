@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part
+END
+RcpappDocumentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappDocumentProvider.java
+END
+RcpappDiagramUpdater.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappDiagramUpdater.java
+END
+RcpappDiagramEditorPlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappDiagramEditorPlugin.java
+END
+RcpappLinkDescriptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappLinkDescriptor.java
+END
+RcpappNewDiagramFileWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappNewDiagramFileWizard.java
+END
+Messages.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/Messages.java
+END
+DeleteElementAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/DeleteElementAction.java
+END
+RcpappDiagramUpdateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappDiagramUpdateCommand.java
+END
+ModelElementSelectionPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/ModelElementSelectionPage.java
+END
+RcpappShortcutPropertyTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappShortcutPropertyTester.java
+END
+RcpappDiagramEditorUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappDiagramEditorUtil.java
+END
+RcpappVisualIDRegistry.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappVisualIDRegistry.java
+END
+DiagramEditorContextMenuProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/DiagramEditorContextMenuProvider.java
+END
+RcpappDiagramEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappDiagramEditor.java
+END
+ShortcutCreationWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/ShortcutCreationWizard.java
+END
+RcpappMatchingStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappMatchingStrategy.java
+END
+LoadResourceAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/LoadResourceAction.java
+END
+ValidateAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/ValidateAction.java
+END
+RcpappDiagramActionBarContributor.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappDiagramActionBarContributor.java
+END
+RcpappCreationWizardPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappCreationWizardPage.java
+END
+RcpappNodeDescriptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappNodeDescriptor.java
+END
+RcpappCreationWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappCreationWizard.java
+END
+RcpappInitDiagramFileAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappInitDiagramFileAction.java
+END
+RcpappPaletteFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/RcpappPaletteFactory.java
+END
+ValidationMarker.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/part/ValidationMarker.java
+END

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.ewl,org.eclipse.epsilon.ewl.execut
+ e.context,org.eclipse.epsilon.ewl.parse
+Require-Bundle: org.eclipse.epsilon.eol.engine
+Bundle-Vendor: Eclipse.org
+Bundle-ClassPath: org.eclipse.epsilon.ewl.engine.jar
+Bundle-Version: 1.0.0.201211082326
+Bundle-Localization: plugin
+Bundle-Name: Epsilon Wizard Engine Engine
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.ewl.engine
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

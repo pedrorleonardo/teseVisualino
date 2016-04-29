@@ -1,0 +1,871 @@
+/*
+ * 
+ */
+package farrusco.diagram.part;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
+
+import farrusco.Behavior;
+import farrusco.Bumpers;
+import farrusco.Distancia;
+import farrusco.Espera;
+import farrusco.FarruscoPackage;
+import farrusco.Filho;
+import farrusco.Irmao;
+import farrusco.Motor;
+import farrusco.Node;
+import farrusco.Paralelo;
+import farrusco.Prioridade;
+import farrusco.Robot;
+import farrusco.Sequencial;
+import farrusco.Servo;
+import farrusco.diagram.edit.parts.BumpersEditPart;
+import farrusco.diagram.edit.parts.DistanciaEditPart;
+import farrusco.diagram.edit.parts.EsperaEditPart;
+import farrusco.diagram.edit.parts.FilhoEditPart;
+import farrusco.diagram.edit.parts.IrmaoEditPart;
+import farrusco.diagram.edit.parts.LEDEditPart;
+import farrusco.diagram.edit.parts.MotorEditPart;
+import farrusco.diagram.edit.parts.ParaleloEditPart;
+import farrusco.diagram.edit.parts.PrioridadeEditPart;
+import farrusco.diagram.edit.parts.RobotEditPart;
+import farrusco.diagram.edit.parts.SequencialEditPart;
+import farrusco.diagram.edit.parts.ServoEditPart;
+import farrusco.diagram.providers.FarruscoElementTypes;
+
+/**
+ * @generated
+ */
+public class FarruscoDiagramUpdater {
+
+	/**
+	 * @generated
+	 */
+	public static boolean isShortcutOrphaned(View view) {
+		return !view.isSetElement() || view.getElement() == null
+				|| view.getElement().eIsProxy();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoNodeDescriptor> getSemanticChildren(View view) {
+		switch (FarruscoVisualIDRegistry.getVisualID(view)) {
+		case RobotEditPart.VISUAL_ID:
+			return getRobot_1000SemanticChildren(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoNodeDescriptor> getRobot_1000SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Robot modelElement = (Robot) view.getElement();
+		LinkedList<FarruscoNodeDescriptor> result = new LinkedList<FarruscoNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getNodes().iterator(); it.hasNext();) {
+			Node childElement = (Node) it.next();
+			int visualID = FarruscoVisualIDRegistry.getNodeVisualID(view,
+					childElement);
+			if (visualID == DistanciaEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == BumpersEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == EsperaEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == MotorEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ServoEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == LEDEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == PrioridadeEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == ParaleloEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SequencialEditPart.VISUAL_ID) {
+				result.add(new FarruscoNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getContainedLinks(View view) {
+		switch (FarruscoVisualIDRegistry.getVisualID(view)) {
+		case RobotEditPart.VISUAL_ID:
+			return getRobot_1000ContainedLinks(view);
+		case DistanciaEditPart.VISUAL_ID:
+			return getDistancia_2001ContainedLinks(view);
+		case BumpersEditPart.VISUAL_ID:
+			return getBumpers_2002ContainedLinks(view);
+		case EsperaEditPart.VISUAL_ID:
+			return getEspera_2003ContainedLinks(view);
+		case MotorEditPart.VISUAL_ID:
+			return getMotor_2004ContainedLinks(view);
+		case ServoEditPart.VISUAL_ID:
+			return getServo_2005ContainedLinks(view);
+		case LEDEditPart.VISUAL_ID:
+			return getLED_2006ContainedLinks(view);
+		case PrioridadeEditPart.VISUAL_ID:
+			return getPrioridade_2007ContainedLinks(view);
+		case ParaleloEditPart.VISUAL_ID:
+			return getParalelo_2008ContainedLinks(view);
+		case SequencialEditPart.VISUAL_ID:
+			return getSequencial_2009ContainedLinks(view);
+		case FilhoEditPart.VISUAL_ID:
+			return getFilho_4001ContainedLinks(view);
+		case IrmaoEditPart.VISUAL_ID:
+			return getIrmao_4002ContainedLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getIncomingLinks(View view) {
+		switch (FarruscoVisualIDRegistry.getVisualID(view)) {
+		case DistanciaEditPart.VISUAL_ID:
+			return getDistancia_2001IncomingLinks(view);
+		case BumpersEditPart.VISUAL_ID:
+			return getBumpers_2002IncomingLinks(view);
+		case EsperaEditPart.VISUAL_ID:
+			return getEspera_2003IncomingLinks(view);
+		case MotorEditPart.VISUAL_ID:
+			return getMotor_2004IncomingLinks(view);
+		case ServoEditPart.VISUAL_ID:
+			return getServo_2005IncomingLinks(view);
+		case LEDEditPart.VISUAL_ID:
+			return getLED_2006IncomingLinks(view);
+		case PrioridadeEditPart.VISUAL_ID:
+			return getPrioridade_2007IncomingLinks(view);
+		case ParaleloEditPart.VISUAL_ID:
+			return getParalelo_2008IncomingLinks(view);
+		case SequencialEditPart.VISUAL_ID:
+			return getSequencial_2009IncomingLinks(view);
+		case FilhoEditPart.VISUAL_ID:
+			return getFilho_4001IncomingLinks(view);
+		case IrmaoEditPart.VISUAL_ID:
+			return getIrmao_4002IncomingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getOutgoingLinks(View view) {
+		switch (FarruscoVisualIDRegistry.getVisualID(view)) {
+		case DistanciaEditPart.VISUAL_ID:
+			return getDistancia_2001OutgoingLinks(view);
+		case BumpersEditPart.VISUAL_ID:
+			return getBumpers_2002OutgoingLinks(view);
+		case EsperaEditPart.VISUAL_ID:
+			return getEspera_2003OutgoingLinks(view);
+		case MotorEditPart.VISUAL_ID:
+			return getMotor_2004OutgoingLinks(view);
+		case ServoEditPart.VISUAL_ID:
+			return getServo_2005OutgoingLinks(view);
+		case LEDEditPart.VISUAL_ID:
+			return getLED_2006OutgoingLinks(view);
+		case PrioridadeEditPart.VISUAL_ID:
+			return getPrioridade_2007OutgoingLinks(view);
+		case ParaleloEditPart.VISUAL_ID:
+			return getParalelo_2008OutgoingLinks(view);
+		case SequencialEditPart.VISUAL_ID:
+			return getSequencial_2009OutgoingLinks(view);
+		case FilhoEditPart.VISUAL_ID:
+			return getFilho_4001OutgoingLinks(view);
+		case IrmaoEditPart.VISUAL_ID:
+			return getIrmao_4002OutgoingLinks(view);
+		}
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getRobot_1000ContainedLinks(
+			View view) {
+		Robot modelElement = (Robot) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Filho_4001(modelElement));
+		result.addAll(getContainedTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getDistancia_2001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getBumpers_2002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getEspera_2003ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getMotor_2004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getServo_2005ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getLED_2006ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getPrioridade_2007ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getParalelo_2008ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getSequencial_2009ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getFilho_4001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getIrmao_4002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getDistancia_2001IncomingLinks(
+			View view) {
+		Distancia modelElement = (Distancia) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getBumpers_2002IncomingLinks(
+			View view) {
+		Bumpers modelElement = (Bumpers) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getEspera_2003IncomingLinks(
+			View view) {
+		Espera modelElement = (Espera) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getMotor_2004IncomingLinks(
+			View view) {
+		Motor modelElement = (Motor) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getServo_2005IncomingLinks(
+			View view) {
+		Servo modelElement = (Servo) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getLED_2006IncomingLinks(
+			View view) {
+		farrusco.LED modelElement = (farrusco.LED) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getPrioridade_2007IncomingLinks(
+			View view) {
+		Prioridade modelElement = (Prioridade) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getParalelo_2008IncomingLinks(
+			View view) {
+		Paralelo modelElement = (Paralelo) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getSequencial_2009IncomingLinks(
+			View view) {
+		Sequencial modelElement = (Sequencial) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Filho_4001(modelElement,
+				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Irmao_4002(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getFilho_4001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getIrmao_4002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getDistancia_2001OutgoingLinks(
+			View view) {
+		Distancia modelElement = (Distancia) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getBumpers_2002OutgoingLinks(
+			View view) {
+		Bumpers modelElement = (Bumpers) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getEspera_2003OutgoingLinks(
+			View view) {
+		Espera modelElement = (Espera) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getMotor_2004OutgoingLinks(
+			View view) {
+		Motor modelElement = (Motor) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getServo_2005OutgoingLinks(
+			View view) {
+		Servo modelElement = (Servo) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getLED_2006OutgoingLinks(
+			View view) {
+		farrusco.LED modelElement = (farrusco.LED) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getPrioridade_2007OutgoingLinks(
+			View view) {
+		Prioridade modelElement = (Prioridade) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Filho_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getParalelo_2008OutgoingLinks(
+			View view) {
+		Paralelo modelElement = (Paralelo) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Filho_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getSequencial_2009OutgoingLinks(
+			View view) {
+		Sequencial modelElement = (Sequencial) view.getElement();
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Filho_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Irmao_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getFilho_4001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<FarruscoLinkDescriptor> getIrmao_4002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FarruscoLinkDescriptor> getContainedTypeModelFacetLinks_Filho_4001(
+			Robot container) {
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		for (Iterator<?> links = container.getChild().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Filho) {
+				continue;
+			}
+			Filho link = (Filho) linkObject;
+			if (FilhoEditPart.VISUAL_ID != FarruscoVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			List targets = link.getTarget();
+			Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+			if (false == theTarget instanceof Node) {
+				continue;
+			}
+			Node dst = (Node) theTarget;
+			List sources = link.getSource();
+			Object theSource = sources.size() == 1 ? sources.get(0) : null;
+			if (false == theSource instanceof Behavior) {
+				continue;
+			}
+			Behavior src = (Behavior) theSource;
+			result.add(new FarruscoLinkDescriptor(src, dst, link,
+					FarruscoElementTypes.Filho_4001, FilhoEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FarruscoLinkDescriptor> getContainedTypeModelFacetLinks_Irmao_4002(
+			Robot container) {
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		for (Iterator<?> links = container.getNext().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Irmao) {
+				continue;
+			}
+			Irmao link = (Irmao) linkObject;
+			if (IrmaoEditPart.VISUAL_ID != FarruscoVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			List targets = link.getTarget();
+			Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+			if (false == theTarget instanceof Node) {
+				continue;
+			}
+			Node dst = (Node) theTarget;
+			List sources = link.getSource();
+			Object theSource = sources.size() == 1 ? sources.get(0) : null;
+			if (false == theSource instanceof Node) {
+				continue;
+			}
+			Node src = (Node) theSource;
+			result.add(new FarruscoLinkDescriptor(src, dst, link,
+					FarruscoElementTypes.Irmao_4002, IrmaoEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FarruscoLinkDescriptor> getIncomingTypeModelFacetLinks_Filho_4001(
+			Node target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != FarruscoPackage.eINSTANCE
+					.getFilho_Target()
+					|| false == setting.getEObject() instanceof Filho) {
+				continue;
+			}
+			Filho link = (Filho) setting.getEObject();
+			if (FilhoEditPart.VISUAL_ID != FarruscoVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			List sources = link.getSource();
+			Object theSource = sources.size() == 1 ? sources.get(0) : null;
+			if (false == theSource instanceof Behavior) {
+				continue;
+			}
+			Behavior src = (Behavior) theSource;
+			result.add(new FarruscoLinkDescriptor(src, target, link,
+					FarruscoElementTypes.Filho_4001, FilhoEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FarruscoLinkDescriptor> getIncomingTypeModelFacetLinks_Irmao_4002(
+			Node target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != FarruscoPackage.eINSTANCE
+					.getIrmao_Target()
+					|| false == setting.getEObject() instanceof Irmao) {
+				continue;
+			}
+			Irmao link = (Irmao) setting.getEObject();
+			if (IrmaoEditPart.VISUAL_ID != FarruscoVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			List sources = link.getSource();
+			Object theSource = sources.size() == 1 ? sources.get(0) : null;
+			if (false == theSource instanceof Node) {
+				continue;
+			}
+			Node src = (Node) theSource;
+			result.add(new FarruscoLinkDescriptor(src, target, link,
+					FarruscoElementTypes.Irmao_4002, IrmaoEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FarruscoLinkDescriptor> getOutgoingTypeModelFacetLinks_Filho_4001(
+			Behavior source) {
+		Robot container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof Robot) {
+				container = (Robot) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		for (Iterator<?> links = container.getChild().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Filho) {
+				continue;
+			}
+			Filho link = (Filho) linkObject;
+			if (FilhoEditPart.VISUAL_ID != FarruscoVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			List targets = link.getTarget();
+			Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+			if (false == theTarget instanceof Node) {
+				continue;
+			}
+			Node dst = (Node) theTarget;
+			List sources = link.getSource();
+			Object theSource = sources.size() == 1 ? sources.get(0) : null;
+			if (false == theSource instanceof Behavior) {
+				continue;
+			}
+			Behavior src = (Behavior) theSource;
+			if (src != source) {
+				continue;
+			}
+			result.add(new FarruscoLinkDescriptor(src, dst, link,
+					FarruscoElementTypes.Filho_4001, FilhoEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<FarruscoLinkDescriptor> getOutgoingTypeModelFacetLinks_Irmao_4002(
+			Node source) {
+		Robot container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof Robot) {
+				container = (Robot) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<FarruscoLinkDescriptor> result = new LinkedList<FarruscoLinkDescriptor>();
+		for (Iterator<?> links = container.getNext().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Irmao) {
+				continue;
+			}
+			Irmao link = (Irmao) linkObject;
+			if (IrmaoEditPart.VISUAL_ID != FarruscoVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			List targets = link.getTarget();
+			Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+			if (false == theTarget instanceof Node) {
+				continue;
+			}
+			Node dst = (Node) theTarget;
+			List sources = link.getSource();
+			Object theSource = sources.size() == 1 ? sources.get(0) : null;
+			if (false == theSource instanceof Node) {
+				continue;
+			}
+			Node src = (Node) theSource;
+			if (src != source) {
+				continue;
+			}
+			result.add(new FarruscoLinkDescriptor(src, dst, link,
+					FarruscoElementTypes.Irmao_4002, IrmaoEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FarruscoNodeDescriptor> getSemanticChildren(View view) {
+			return FarruscoDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FarruscoLinkDescriptor> getContainedLinks(View view) {
+			return FarruscoDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FarruscoLinkDescriptor> getIncomingLinks(View view) {
+			return FarruscoDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<FarruscoLinkDescriptor> getOutgoingLinks(View view) {
+			return FarruscoDiagramUpdater.getOutgoingLinks(view);
+		}
+	};
+
+}

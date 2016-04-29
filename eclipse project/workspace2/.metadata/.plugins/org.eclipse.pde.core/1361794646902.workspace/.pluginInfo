@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="1019" localization="plugin" name="%pluginName" project="filesystem.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1016" localization="plugin" name="%pluginName" project="filesystem" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1018" class="filesystem.presentation.FilesystemEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="filesystem.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1017" class="filesystem.provider.FilesystemEditPlugin$Implementation" localization="plugin" name="%pluginName" project="filesystem.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+</map>

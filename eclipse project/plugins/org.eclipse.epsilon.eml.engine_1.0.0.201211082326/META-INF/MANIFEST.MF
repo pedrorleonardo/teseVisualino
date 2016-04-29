@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.eml,org.eclipse.epsilon.eml.except
+ ions,org.eclipse.epsilon.eml.execute,org.eclipse.epsilon.eml.execute.
+ context,org.eclipse.epsilon.eml.execute.operations,org.eclipse.epsilo
+ n.eml.parse,org.eclipse.epsilon.eml.strategy,org.eclipse.epsilon.eml.
+ trace
+Require-Bundle: org.eclipse.epsilon.eol.engine,org.eclipse.epsilon.ecl
+ .engine,org.eclipse.epsilon.etl.engine
+Bundle-Vendor: Eclipse.org
+Bundle-ClassPath: org.eclipse.epsilon.eml.engine.jar
+Bundle-Version: 1.0.0.201211082326
+Bundle-Localization: plugin
+Bundle-Name: Epsilon Merging Language Engine
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.eml.engine
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:farrusco="http://farrusco/1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_-XU2MOIiEeKOQOnf3G4QBQ" type="Farrusco" name="motores.farrusco_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_-8OTAOIiEeKOQOnf3G4QBQ" type="2004">
+    <element xmi:type="farrusco:Motor" href="default4.farrusco#//@nodes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-8OTAeIiEeKOQOnf3G4QBQ" x="68" y="285"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="__UxV4OIiEeKOQOnf3G4QBQ" type="2004">
+    <element xmi:type="farrusco:Motor" href="default4.farrusco#//@nodes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__UxV4eIiEeKOQOnf3G4QBQ" x="302" y="286"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Ab4u8OIjEeKOQOnf3G4QBQ" type="2003">
+    <element xmi:type="farrusco:Espera" href="default4.farrusco#//@nodes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ab4u8eIjEeKOQOnf3G4QBQ" x="170" y="286"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_AgNOQOIjEeKOQOnf3G4QBQ" type="2003">
+    <element xmi:type="farrusco:Espera" href="default4.farrusco#//@nodes.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AgNOQeIjEeKOQOnf3G4QBQ" x="397" y="286"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Eokx0OIjEeKOQOnf3G4QBQ" type="2009">
+    <element xmi:type="farrusco:Sequencial" href="default4.farrusco#//@nodes.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eokx0eIjEeKOQOnf3G4QBQ" x="250" y="145"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_5tl1gOIjEeKOQOnf3G4QBQ" type="2008">
+    <element xmi:type="farrusco:Paralelo" href="default4.farrusco#//@nodes.5"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5tl1geIjEeKOQOnf3G4QBQ" x="450" y="25"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_6LWIgOIjEeKOQOnf3G4QBQ" type="2006">
+    <element xmi:type="farrusco:LED" href="default4.farrusco#//@nodes.6"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6LWIgeIjEeKOQOnf3G4QBQ" x="540" y="285"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_6btfwOIjEeKOQOnf3G4QBQ" type="2003">
+    <element xmi:type="farrusco:Espera" href="default4.farrusco#//@nodes.7"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6btfweIjEeKOQOnf3G4QBQ" x="830" y="285"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_6i2pkOIjEeKOQOnf3G4QBQ" type="2003">
+    <element xmi:type="farrusco:Espera" href="default4.farrusco#//@nodes.8"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6i2pkeIjEeKOQOnf3G4QBQ" x="635" y="285"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_7sWoQOIjEeKOQOnf3G4QBQ" type="2006">
+    <element xmi:type="farrusco:LED" href="default4.farrusco#//@nodes.9"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7sWoQeIjEeKOQOnf3G4QBQ" x="735" y="285"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_8ZuroOIjEeKOQOnf3G4QBQ" type="2009">
+    <element xmi:type="farrusco:Sequencial" href="default4.farrusco#//@nodes.10"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8ZuroeIjEeKOQOnf3G4QBQ" x="685" y="150"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_-XU2MeIiEeKOQOnf3G4QBQ"/>
+  <element xmi:type="farrusco:Robot" href="default4.farrusco#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_FNnYkOIjEeKOQOnf3G4QBQ" type="4001" source="_Eokx0OIjEeKOQOnf3G4QBQ" target="_-8OTAOIiEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_FNnYkeIjEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FNnYkuIjEeKOQOnf3G4QBQ" points="[-6, 4, 152, -130]$[-157, 108, 1, -26]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FNnYk-IjEeKOQOnf3G4QBQ" id="(0.1,0.6037735849056604)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_F74z0OIjEeKOQOnf3G4QBQ" type="4001" source="_Eokx0OIjEeKOQOnf3G4QBQ" target="_Ab4u8OIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_F74z0eIjEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_F74z0uIjEeKOQOnf3G4QBQ" points="[-6, 11, 65, -132]$[-74, 152, -3, 9]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F74z0-IjEeKOQOnf3G4QBQ" id="(0.26666666666666666,0.7924528301886793)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F74z1OIjEeKOQOnf3G4QBQ" id="(0.4166666666666667,0.8301886792452831)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_GcniUOIjEeKOQOnf3G4QBQ" type="4001" source="_Eokx0OIjEeKOQOnf3G4QBQ" target="__UxV4OIiEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_GcniUeIjEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GcniUuIjEeKOQOnf3G4QBQ" points="[4, 10, -40, -114]$[52, 151, 8, 27]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GcniU-IjEeKOQOnf3G4QBQ" id="(0.6333333333333333,0.8113207547169812)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_G73DEOIjEeKOQOnf3G4QBQ" type="4001" source="_Eokx0OIjEeKOQOnf3G4QBQ" target="_AgNOQOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_G73DEeIjEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G73DEuIjEeKOQOnf3G4QBQ" points="[14, 12, -118, -104]$[132, 105, 0, -11]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G8ANAOIjEeKOQOnf3G4QBQ" id="(0.7666666666666667,0.6792452830188679)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G8ANAeIjEeKOQOnf3G4QBQ" id="(0.5166666666666667,0.20754716981132076)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_HX-XUOIjEeKOQOnf3G4QBQ" type="4002" source="_-8OTAOIiEeKOQOnf3G4QBQ" target="_Ab4u8OIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_HX-XUeIjEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Irmao" href="default4.farrusco#//@next.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HX-XUuIjEeKOQOnf3G4QBQ" points="[30, 9, -72, 8]$[72, 9, -30, 8]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_H3XpEOIjEeKOQOnf3G4QBQ" type="4002" source="_Ab4u8OIjEeKOQOnf3G4QBQ" target="__UxV4OIiEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_H3XpEeIjEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Irmao" href="default4.farrusco#//@next.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H3XpEuIjEeKOQOnf3G4QBQ" points="[30, 0, -84, 0]$[102, -1, -12, -1]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H3XpE-IjEeKOQOnf3G4QBQ" id="(0.2,0.49056603773584906)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_ITVzYOIjEeKOQOnf3G4QBQ" type="4002" source="__UxV4OIiEeKOQOnf3G4QBQ" target="_AgNOQOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_ITVzYeIjEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Irmao" href="default4.farrusco#//@next.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ITVzYuIjEeKOQOnf3G4QBQ" points="[10, 0, -65, -5]$[76, -21, 1, -26]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ITVzY-IjEeKOQOnf3G4QBQ" id="(0.8333333333333334,0.39622641509433965)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="__WOR8OIjEeKOQOnf3G4QBQ" type="4001" source="_5tl1gOIjEeKOQOnf3G4QBQ" target="_8ZuroOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="__WOR8eIjEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__WOR8uIjEeKOQOnf3G4QBQ" points="[30, 13, -200, -88]$[229, 99, -1, -2]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__WXb4OIjEeKOQOnf3G4QBQ" id="(0.4166666666666667,0.03773584905660377)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_AJQRYOIkEeKOQOnf3G4QBQ" type="4001" source="_8ZuroOIjEeKOQOnf3G4QBQ" target="_6LWIgOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_AJQRYeIkEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.5"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AJQRYuIkEeKOQOnf3G4QBQ" points="[-30, 23, 128, -96]$[-166, 109, -8, -10]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AJQRY-IkEeKOQOnf3G4QBQ" id="(0.2833333333333333,0.18867924528301888)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_AftpkOIkEeKOQOnf3G4QBQ" type="4001" source="_8ZuroOIjEeKOQOnf3G4QBQ" target="_6i2pkOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_AftpkeIkEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.6"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AftpkuIkEeKOQOnf3G4QBQ" points="[-11, 27, 38, -92]$[-49, 109, 0, -10]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Aftpk-IkEeKOQOnf3G4QBQ" id="(0.5166666666666667,0.18867924528301888)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_A3OKoOIkEeKOQOnf3G4QBQ" type="4001" source="_8ZuroOIjEeKOQOnf3G4QBQ" target="_7sWoQOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_A3OKoeIkEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.7"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A3OKouIkEeKOQOnf3G4QBQ" points="[12, 27, -41, -88]$[53, 109, 0, -6]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3OKo-IkEeKOQOnf3G4QBQ" id="(0.55,0.11320754716981132)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_Bb0sgOIkEeKOQOnf3G4QBQ" type="4001" source="_8ZuroOIjEeKOQOnf3G4QBQ" target="_6btfwOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_Bb0sgeIkEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.8"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Bb0sguIkEeKOQOnf3G4QBQ" points="[30, 23, -124, -94]$[157, 109, 3, -8]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Bb0sg-IkEeKOQOnf3G4QBQ" id="(0.65,0.1509433962264151)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_BzoIgOIkEeKOQOnf3G4QBQ" type="4002" source="_6LWIgOIjEeKOQOnf3G4QBQ" target="_6i2pkOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_BzoIgeIkEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Irmao" href="default4.farrusco#//@next.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BzoIguIkEeKOQOnf3G4QBQ" points="[30, 3, -43, 0]$[65, 3, -8, 0]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BzoIg-IkEeKOQOnf3G4QBQ" id="(0.13333333333333333,0.5471698113207547)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_CMUVUOIkEeKOQOnf3G4QBQ" type="4002" source="_6i2pkOIjEeKOQOnf3G4QBQ" target="_7sWoQOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_CMUVUeIkEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Irmao" href="default4.farrusco#//@next.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CMUVUuIkEeKOQOnf3G4QBQ" points="[30, -3, -70, -3]$[99, -26, -1, -26]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_CgG0AOIkEeKOQOnf3G4QBQ" type="4002" source="_7sWoQOIjEeKOQOnf3G4QBQ" target="_6btfwOIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_CgG0AeIkEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Irmao" href="default4.farrusco#//@next.5"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CgG0AuIkEeKOQOnf3G4QBQ" points="[30, 4, -65, 4]$[125, 4, 30, 4]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_DI3dIOIkEeKOQOnf3G4QBQ" type="4001" source="_5tl1gOIjEeKOQOnf3G4QBQ" target="_Eokx0OIjEeKOQOnf3G4QBQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_DI3dIeIkEeKOQOnf3G4QBQ"/>
+    <element xmi:type="farrusco:Filho" href="default4.farrusco#//@child.9"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DI3dIuIkEeKOQOnf3G4QBQ" points="[-30, 15, 173, -85]$[-204, 94, -1, -6]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DI3dI-IkEeKOQOnf3G4QBQ" id="(0.45,0.11320754716981132)"/>
+  </edges>
+</notation:Diagram>

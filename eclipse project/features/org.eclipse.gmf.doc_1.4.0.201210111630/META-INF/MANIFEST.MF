@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.6.0_21
+Built-By: hudsonBuild
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+
+Name: epl-v10.html
+SHA1-Digest: pTOyybcpEe+Y8lkSVUtarMleXqE=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: 09gN05tobgS/MdtqyTNQhOhB73M=
+
+Name: license.html
+SHA1-Digest: /vLZjlHkZSXMSfPrWwNqOUDqqbM=
+
+Name: META-INF/maven/org.eclipse.gmf-tooling.features/org.eclipse.gmf.
+ doc/pom.xml
+SHA1-Digest: zSTRI+MNi5kLk/EbfQdpNbDWPHs=
+
+Name: feature.properties
+SHA1-Digest: r3pgscyBDsbrnSrhOuF7ab1co3Y=
+
+Name: META-INF/maven/org.eclipse.gmf-tooling.features/org.eclipse.gmf.
+ doc/pom.properties
+SHA1-Digest: X9+ZLgz1bYmsvccSXa6sMmDzxFA=
+
+Name: feature.xml
+SHA1-Digest: 2bJwBM5Xdv0I8M/JKsMli1J6MVc=
+

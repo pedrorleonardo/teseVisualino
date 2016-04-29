@@ -1,0 +1,28 @@
+/*
+ * 
+ */
+package farrusco.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = farrusco.diagram.part.FarruscoDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			farrusco.diagram.part.FarruscoDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

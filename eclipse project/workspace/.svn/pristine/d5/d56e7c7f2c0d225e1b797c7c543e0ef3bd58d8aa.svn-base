@@ -1,0 +1,49 @@
+package figuresPlan.figures;
+
+import org.eclipse.draw2d.ImageFigure;
+import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.RoundedRectangle;
+import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
+
+import figuresPlan.figures.activator.PluginActivator;
+
+/**
+ * @generated
+ */
+public class MotorFigure extends ImageFigure {
+
+	/**
+	 * @generated
+	 */
+	private WrappingLabel fFigureMotorLabelFigure;
+
+	/**
+	 * @generated
+	 */
+	public MotorFigure() {
+		super(PluginActivator.imageDescriptorFromPlugin(PluginActivator.ID,"images/motor.png").createImage(), 0);	
+
+	}
+
+	/**
+	 * @generated
+	 */
+	private void createContents() {
+
+		fFigureMotorLabelFigure = new WrappingLabel();
+
+		fFigureMotorLabelFigure.setText("Motor");
+
+		this.add(fFigureMotorLabelFigure);
+
+	}
+
+	/**
+	 * @generated
+	 */
+	public WrappingLabel getFigureMotorLabelFigure() {
+		return fFigureMotorLabelFigure;
+	}
+
+}

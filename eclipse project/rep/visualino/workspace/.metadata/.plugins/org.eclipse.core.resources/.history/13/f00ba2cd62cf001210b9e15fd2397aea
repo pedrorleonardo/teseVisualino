@@ -1,0 +1,72 @@
+/*
+ * 
+ */
+package farrusco.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class RobotEditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart  {
+
+		/**
+ * @generated
+ */
+	public final static String MODEL_ID = "Farrusco";  //$NON-NLS-1$
+	
+		/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 1000;
+	
+		/**
+ * @generated
+ */
+	public RobotEditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new farrusco.diagram.edit.policies.RobotItemSemanticEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CANONICAL_ROLE, new farrusco.diagram.edit.policies.RobotCanonicalEditPolicy());
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CREATION_ROLE, new org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent(farrusco.diagram.part.FarruscoVisualIDRegistry.TYPED_INSTANCE));
+					// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.POPUPBAR_ROLE);
+	}
+	
+		
+		/**
+ * @generated
+ */
+	/*package-local*/ static class NodeLabelDragPolicy extends org.eclipse.gef.editpolicies.NonResizableEditPolicy {
+
+		/**
+ * @generated
+ */
+		@SuppressWarnings("rawtypes")
+		protected java.util.List createSelectionHandles() {
+			org.eclipse.gef.handles.MoveHandle h = new org.eclipse.gef.handles.MoveHandle((org.eclipse.gef.GraphicalEditPart) getHost());
+			h.setBorder(null);
+			return java.util.Collections.singletonList(h);
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.commands.Command getCommand(org.eclipse.gef.Request request) {
+			return null;
+		}
+
+		/**
+ * @generated
+ */
+		public boolean understandsRequest(org.eclipse.gef.Request request) {
+			return false;
+		}
+	}
+
+
+
+	}

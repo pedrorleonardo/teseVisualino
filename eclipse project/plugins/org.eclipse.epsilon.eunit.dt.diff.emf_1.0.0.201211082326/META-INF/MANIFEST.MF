@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.eunit.dt.diff.emf
+Require-Bundle: org.eclipse.epsilon.eunit.dt,org.eclipse.compare,org.e
+ clipse.emf.compare.ui,org.eclipse.emf.compare.diff,org.eclipse.emf.ec
+ ore
+Bundle-Vendor: Eclipse.org
+Bundle-Version: 1.0.0.201211082326
+Bundle-Name: EUnit EMF Compare Integration
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.eunit.dt.diff.emf;singleton:=
+ true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

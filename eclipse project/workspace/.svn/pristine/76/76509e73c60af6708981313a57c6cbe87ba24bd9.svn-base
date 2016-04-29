@@ -1,0 +1,47 @@
+package figuresPlan.figures;
+
+import org.eclipse.draw2d.ImageFigure;
+import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.RoundedRectangle;
+import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
+
+import figuresPlan.figures.activator.PluginActivator;
+
+/**
+ * @generated
+ */
+public class SequencialFigure extends ImageFigure {
+
+	/**
+	 * @generated
+	 */
+	private WrappingLabel fFigureBehaviorNameLabelFigure;
+
+	/**
+	 * @generated
+	 */
+	public SequencialFigure() {
+		super(PluginActivator.imageDescriptorFromPlugin(PluginActivator.ID,"file://"+System.getProperty("user.dir")+"/images/sequencia.png").createImage(), 0);	}
+
+	/**
+	 * @generated
+	 */
+	private void createContents() {
+
+		fFigureBehaviorNameLabelFigure = new WrappingLabel();
+
+		fFigureBehaviorNameLabelFigure.setText("");
+
+		this.add(fFigureBehaviorNameLabelFigure);
+
+	}
+
+	/**
+	 * @generated
+	 */
+	public WrappingLabel getFigureBehaviorNameLabelFigure() {
+		return fFigureBehaviorNameLabelFigure;
+	}
+
+}

@@ -1,0 +1,54 @@
+8
+
+dir
+2272
+http://dev.eclipse.org/svnroot/modeling/org.eclipse.epsilon/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.edit/icons/full/obj16
+http://dev.eclipse.org/svnroot/modeling/org.eclipse.epsilon
+
+
+
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b1e7822e-7b56-0410-88b3-db6ede196368
+
+Model.gif
+file
+
+
+
+
+2013-06-13T15:16:52.930485Z
+2a105bf65df256bf548fbdfd2bcc9490
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+has-props
+
+Component.gif
+file
+
+
+
+
+2013-06-13T15:16:52.933485Z
+6ca61ff346a17c25f0413cbb3b0719a3
+2013-06-13T01:12:55.981908Z
+2272
+dkolovos
+has-props
+

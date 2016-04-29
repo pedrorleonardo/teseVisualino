@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link0</name>
+			<type>2</type>
+			<location>C:/Users/Leonardo/Desktop/eclipse-epsilon/plugins/org.eclipse.epsilon.dependencies_1.0.0.201211082326</location>
+		</link>
+		<link>
+			<name>.link2</name>
+			<type>2</type>
+			<location>C:/eclipse backup - Cópia/eclipse-epsilon/plugins/org.eclipse.epsilon.dependencies_1.0.0.201211082326</location>
+		</link>
+	</linkedResources>
+</projectDescription>

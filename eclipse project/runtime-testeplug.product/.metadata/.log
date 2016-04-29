@@ -1,0 +1,16 @@
+!SESSION 2013-06-11 10:06:22.460 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_PT
+Framework arguments:  -product testeplug.product
+Command-line arguments:  -product testeplug.product -data C:\Users\Leonardo\Desktop\eclipse-epsilon\workspace/../runtime-testeplug.product -dev file:C:/Users/Leonardo/Desktop/eclipse-epsilon/workspace/.metadata/.plugins/org.eclipse.pde.core/testeplug.product/dev.properties -os win32 -ws win32 -arch x86 -consoleLog
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2013-06-11 10:06:23.877
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.cleanupaddon.CleanupAddon
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2013-06-11 10:06:23.878
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.dndaddon.DnDAddon
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2013-06-11 10:06:23.879
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon

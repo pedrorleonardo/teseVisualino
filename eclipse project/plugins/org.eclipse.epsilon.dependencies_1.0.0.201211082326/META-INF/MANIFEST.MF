@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Require-Bundle: org.antlr.runtime_3.1.b1;bundle-version="3.1.0";visibi
+ lity:=reexport
+Bundle-Vendor: Eclipse.org
+Bundle-Version: 1.0.0.201211082326
+Bundle-Localization: plugin
+Bundle-Name: Epsilon Dependencies
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.dependencies
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

@@ -1,0 +1,48 @@
+package figuresPlan.figures;
+
+import org.eclipse.draw2d.ImageFigure;
+import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.RoundedRectangle;
+import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
+
+import figuresPlan.figures.activator.PluginActivator;
+
+/**
+ * @generated
+ */
+public class LEDFigure extends ImageFigure {
+
+	/**
+	 * @generated
+	 */
+	private WrappingLabel fFigureLEDLabelFigure;
+
+	/**
+	 * @generated
+	 */
+	public LEDFigure() {
+		super(PluginActivator.imageDescriptorFromPlugin(PluginActivator.ID,"images/led.png").createImage(), 0);	
+	}
+
+	/**
+	 * @generated
+	 */
+	private void createContents() {
+
+		fFigureLEDLabelFigure = new WrappingLabel();
+
+		fFigureLEDLabelFigure.setText("LED");
+
+		this.add(fFigureLEDLabelFigure);
+
+	}
+
+	/**
+	 * @generated
+	 */
+	public WrappingLabel getFigureLEDLabelFigure() {
+		return fFigureLEDLabelFigure;
+	}
+
+}

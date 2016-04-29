@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;far/generated/sketch.ino&apos;" deleteContents="false" description="Delete resource &apos;far/generated/sketch.ino&apos;" element1="/far/generated/sketch.ino" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1369733464511"/>&#x0A;<refactoring comment="Delete resource &apos;far/generated/sketch/sketch.ino&apos;" deleteContents="false" description="Delete resource &apos;far/generated/sketch/sketch.ino&apos;" element1="/far/generated/sketch/sketch.ino" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1369733467664"/>
+</session>

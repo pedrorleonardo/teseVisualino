@@ -1,0 +1,523 @@
+[%	var endCode := '\r' + '<ownedTerms xsi:type="adtmm:CTerm" opSymbol="i"><ownedTerms xsi:type="adtmm:CTerm" opSymbol="empty"/><ownedTerms xsi:type="adtmm:CTerm" opSymbol="emptyList"/>'+ '\r' +'</ownedTerms>';
+	var robot := Robo.allInstances().at(0);
+	var nrTotAcoes := robot.temAcoes.size;
+	var hasCode := false;
+	var text := "";
+	var trans;
+	
+	
+	for(a in robot.temAcoes){
+		if(a.type.name.compareTo("Inicio") == 0){
+			trans := a.Transicao_de_Saida;
+			hasCode := true;
+			break;
+		}
+	}
+	
+	if(hasCode){
+		if(trans == null){
+			text := '<ownedNumOfTerms>' + '\r' + '<ownedElement xsi:type="multisetmm:TermReference">' +'\r' + '<termReferenced xsi:type="adtmm:CTerm" opSymbol="i"><ownedTerms xsi:type="adtmm:CTerm" opSymbol="other"/>' + endCode +'\r' + '</termReferenced>' +'\r' + '</ownedElement>' +'\r' + '</ownedNumOfTerms>';
+		} else {
+			text := '<ownedNumOfTerms>' + '\r' + '<ownedElement xsi:type="multisetmm:TermReference">' +'\r' + '<termReferenced xsi:type="adtmm:CTerm" opSymbol="i"><ownedTerms xsi:type="adtmm:CTerm" opSymbol="other"/>' + trans.Acao_de_Saida.code() +'\r' + '</termReferenced>' +'\r' + '</ownedElement>' +'\r' + '</ownedNumOfTerms>';
+		}
+	}
+	%]
+<?xml version="1.0" encoding="UTF-8"?>
+<apnmm:APN xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adtmm="http://alpina.unige.ch/adtmm" xmlns:apnmm="http://alpina.unige.ch/apnmm" xmlns:multisetmm="http://alpina.unige.ch/multisetmm">
+  <ownedImports importURI="boolean.adt"/>
+  <ownedImports importURI="arduino.adt"/>
+  <ownedImports importURI="property.prop"/>
+  <ownedNodes xsi:type="apnmm:Place" name="Code">
+    <ownedPlaceMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+[%=text%]
+</ownedPlaceMultiset>
+    <sort xsi:type="adtmm:AtomicSort">
+      <declaration href="arduino.adt#//@ownedSorts.0"/>
+    </sort>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Transition" name="reader">
+    <ownedGuard>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <ownedEquations xsi:type="adtmm:Equation">
+        <ownedRightTerm xsi:type="adtmm:CTerm" opSymbol="false"/>
+        <ownedLeftTerm xsi:type="adtmm:CTerm" opSymbol="isEmpty">
+          <ownedTerms xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.1"/>
+          </ownedTerms>
+        </ownedLeftTerm>
+      </ownedEquations>
+    </ownedGuard>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Place" name="Processor">
+    <ownedPlaceMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+    </ownedPlaceMultiset>
+    <sort xsi:type="adtmm:AtomicSort">
+      <declaration href="arduino.adt#//@ownedSorts.0"/>
+    </sort>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Transition" name="isLight_on">
+    <ownedGuard>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <ownedEquations xsi:type="adtmm:Equation">
+        <ownedRightTerm xsi:type="adtmm:CTerm" opSymbol="true"/>
+        <ownedLeftTerm xsi:type="adtmm:CTerm" opSymbol="eq">
+          <ownedTerms xsi:type="adtmm:CTerm" opSymbol="light_on"/>
+          <ownedTerms xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </ownedTerms>
+        </ownedLeftTerm>
+      </ownedEquations>
+    </ownedGuard>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Place" name="WhenHasEndResult">
+    <ownedPlaceMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="false"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedPlaceMultiset>
+    <sort xsi:type="adtmm:AtomicSort">
+      <declaration href="boolean.adt#//@ownedSorts.0"/>
+    </sort>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Place" name="WhenNoMoreCodeResult">
+    <ownedPlaceMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="false"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedPlaceMultiset>
+    <sort xsi:type="adtmm:AtomicSort">
+      <declaration href="boolean.adt#//@ownedSorts.0"/>
+    </sort>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Transition" name="isLight_off">
+    <ownedGuard>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <ownedEquations xsi:type="adtmm:Equation">
+        <ownedRightTerm xsi:type="adtmm:CTerm" opSymbol="true"/>
+        <ownedLeftTerm xsi:type="adtmm:CTerm" opSymbol="eq">
+          <ownedTerms xsi:type="adtmm:CTerm" opSymbol="light_off"/>
+          <ownedTerms xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </ownedTerms>
+        </ownedLeftTerm>
+      </ownedEquations>
+    </ownedGuard>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Transition" name="isEnd">
+    <ownedGuard>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <ownedEquations xsi:type="adtmm:Equation">
+        <ownedRightTerm xsi:type="adtmm:CTerm" opSymbol="true"/>
+        <ownedLeftTerm xsi:type="adtmm:CTerm" opSymbol="eq">
+          <ownedTerms xsi:type="adtmm:CTerm" opSymbol="end"/>
+          <ownedTerms xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </ownedTerms>
+        </ownedLeftTerm>
+      </ownedEquations>
+    </ownedGuard>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Transition" name="isEmpty">
+    <ownedGuard>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <ownedEquations xsi:type="adtmm:Equation">
+        <ownedRightTerm xsi:type="adtmm:CTerm" opSymbol="true"/>
+        <ownedLeftTerm xsi:type="adtmm:CTerm" opSymbol="eq">
+          <ownedTerms xsi:type="adtmm:CTerm" opSymbol="empty"/>
+          <ownedTerms xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </ownedTerms>
+        </ownedLeftTerm>
+      </ownedEquations>
+    </ownedGuard>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Transition" name="isOther">
+    <ownedGuard>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <ownedEquations xsi:type="adtmm:Equation">
+        <ownedRightTerm xsi:type="adtmm:CTerm" opSymbol="true"/>
+        <ownedLeftTerm xsi:type="adtmm:CTerm" opSymbol="eq">
+          <ownedTerms xsi:type="adtmm:CTerm" opSymbol="other"/>
+          <ownedTerms xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </ownedTerms>
+        </ownedLeftTerm>
+      </ownedEquations>
+    </ownedGuard>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Place" name="Garbage">
+    <ownedPlaceMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="false"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedPlaceMultiset>
+    <sort xsi:type="adtmm:AtomicSort">
+      <declaration href="boolean.adt#//@ownedSorts.0"/>
+    </sort>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Place" name="NoMoreCode">
+    <ownedPlaceMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="false"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedPlaceMultiset>
+    <sort xsi:type="adtmm:AtomicSort">
+      <declaration href="boolean.adt#//@ownedSorts.0"/>
+    </sort>
+  </ownedNodes>
+  <ownedNodes xsi:type="apnmm:Place" name="HasEnded">
+    <ownedPlaceMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="false"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedPlaceMultiset>
+    <sort xsi:type="adtmm:AtomicSort">
+      <declaration href="boolean.adt#//@ownedSorts.0"/>
+    </sort>
+  </ownedNodes>
+  <ownedArcs from="//@ownedNodes.0" to="//@ownedNodes.1">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.1"/>
+          </termReferenced>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.1" to="//@ownedNodes.0">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="remove">
+            <ownedTerms xsi:type="adtmm:VariableRef">
+              <variable href="arduino.adt#//@ownedVariables.1"/>
+            </ownedTerms>
+          </termReferenced>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.1" to="//@ownedNodes.2">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="read">
+            <ownedTerms xsi:type="adtmm:VariableRef">
+              <variable href="arduino.adt#//@ownedVariables.1"/>
+            </ownedTerms>
+          </termReferenced>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.2" to="//@ownedNodes.3">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </termReferenced>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.3" to="//@ownedNodes.4">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="true"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.3" to="//@ownedNodes.5">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="true"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.2" to="//@ownedNodes.6">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </termReferenced>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.6" to="//@ownedNodes.4">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="false"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.2" to="//@ownedNodes.7">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </termReferenced>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.2" to="//@ownedNodes.8">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </termReferenced>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.2" to="//@ownedNodes.9">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="arduino.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:VariableRef">
+            <variable href="arduino.adt#//@ownedVariables.0"/>
+          </termReferenced>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.9" to="//@ownedNodes.10">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="true"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.7" to="//@ownedNodes.12">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="true"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedArcs from="//@ownedNodes.8" to="//@ownedNodes.11">
+    <ownedArcMultiset>
+      <ownedImports importURI="boolean.adt"/>
+      <ownedImports importURI="arduino.adt"/>
+      <ownedImports importURI="property.prop"/>
+      <ownedImports importURI="myAPN.apnmm"/>
+      <msSort xsi:type="adtmm:AtomicSort">
+        <declaration href="boolean.adt#//@ownedSorts.0"/>
+      </msSort>
+      <ownedNumOfTerms>
+        <ownedElement xsi:type="multisetmm:TermReference">
+          <termReferenced xsi:type="adtmm:CTerm" opSymbol="true"/>
+        </ownedElement>
+      </ownedNumOfTerms>
+    </ownedArcMultiset>
+  </ownedArcs>
+  <ownedVariables name="y">
+    <variableSort xsi:type="adtmm:AtomicSort">
+      <declaration href="arduino.adt#//@ownedSorts.0"/>
+    </variableSort>
+  </ownedVariables>
+  <ownedVariables name="x">
+    <variableSort xsi:type="adtmm:AtomicSort">
+      <declaration href="arduino.adt#//@ownedSorts.0"/>
+    </variableSort>
+  </ownedVariables>
+</apnmm:APN>
+
+[%operation Acao code() : String {
+			var endCode := '\r' + '<ownedTerms xsi:type="adtmm:CTerm" opSymbol="i"><ownedTerms xsi:type="adtmm:CTerm" opSymbol="empty"/><ownedTerms xsi:type="adtmm:CTerm" opSymbol="emptyList"/>'+ '\r' +'</ownedTerms>';
+			var textToReturn := '';
+			switch(self.type.name){
+				case "Ligar_LED_Verde": textToReturn := "light_on"; break;
+				case "Desligar_LED_Verde": textToReturn := "light_off"; break;
+				case "Ligar_Intermitencia": textToReturn := "light_on"; break;
+				case "Desligar_Intermitencia": textToReturn := "light_off"; break;
+				case "Ligar_Azul": textToReturn := "light_on"; break;
+				case "Ligar_Verde": textToReturn := "light_on"; break;
+				case "Ligar_Vermelho": textToReturn := "light_on"; break;
+				case "Desligar_Cor": textToReturn := "light_off"; break;
+				case "Ligar_Cores_Arco_Iris": textToReturn := "light_on"; break;
+				case "Ligar_Cores_Policia": textToReturn := "light_on"; break;
+				case "Desligar_Cores": textToReturn := "light_off"; break;
+				case "Fim": textToReturn := "end"; break;
+				default : textToReturn := "other"; break;
+			}
+			if(self.Transicao_de_Saida == null){
+				return '\r' + '<ownedTerms xsi:type="adtmm:CTerm" opSymbol="i"><ownedTerms xsi:type="adtmm:CTerm" opSymbol="' + textToReturn + '"/>' + endCode + '\r' + '</ownedTerms>';
+			} else {
+				return '\r' + '<ownedTerms xsi:type="adtmm:CTerm" opSymbol="i"><ownedTerms xsi:type="adtmm:CTerm" opSymbol="' + textToReturn + '"/>' + self.Transicao_de_Saida.Acao_de_Saida.code() + '\r' + '</ownedTerms>'; 
+			}
+}%]
+

@@ -1,0 +1,597 @@
+[% 
+	var robot := Robo.allInstances().at(0);
+	var nrTotAcoes := robot.temAcoes.size;
+%]
+
+/*** Initializations ***/
+
+// ----------------------------------------------------------------- OPTIONS
+
+int execute = 1;
+
+int obstacleAvoidance = 0;
+
+int intermittence = 0;
+int rainbow_color = 0;
+int police_color = 0;
+
+int i_color = 0;
+int p_color = 0;
+int r_color = 0;
+
+// ----------------------------------------------------------------- LDR
+
+//pins
+int LDRLeft_pin = 1;
+int LDRRight_pin = 2;
+
+int LDRLeft, LDRRight;
+
+// ----------------------------------------------------------------- LEDS
+
+//pins
+int red_pin = 19;
+int green_pin = 18;
+int blue_pin = 17;
+const int ledPin =  13;
+
+// ----------------------------------------------------------------- SERVO
+
+#include <Servo.h>
+Servo servo;
+
+#define INC_POS  0
+#define DEC_POS  1
+
+// variavel 'dir' (direcao) define a rotacao do servo
+byte dir = INC_POS;
+
+// o valor para ser enviado ao servo
+int i = 90;
+
+// increment
+int inc = 5;
+
+// delay
+int del = 50;
+
+// ----------------------------------------------------------------- BUMPERS
+
+//pins
+int bumperLeft = 8;
+int bumperRight = 7;
+
+int BLeft = 0, BRight = 0;
+
+// ----------------------------------------------------------------- MOTORES DC
+
+//pins
+int motorA0 = 6;
+int motorA1 = 11;
+int motorB0 = 3;
+int motorB1 = 5;
+
+// calibration variables
+int maxSpeedLeft = 255;
+int maxSpeedRight = 240;
+
+int motorLeftSpeed = 0, motorRightSpeed = 0;
+
+// ----------------------------------------------------------------- IR SENSOR
+
+//pin
+int IRPin = 0;
+int IRValue = 0;
+
+// ----------------------------------------------------------------- SETUP
+
+void setup() {  
+  pinMode (ledPin, OUTPUT);
+  pinMode(motorA0, OUTPUT);
+  pinMode(motorA1, OUTPUT);
+  pinMode(motorB0, OUTPUT);
+  pinMode(motorB1, OUTPUT);
+  servo.attach(9);
+  servo.write(90);
+  pinMode (bumperLeft, INPUT);
+  pinMode (bumperRight, INPUT);
+  digitalWrite(bumperLeft, HIGH);
+  digitalWrite(bumperRight, HIGH);
+  pinMode(red_pin, OUTPUT);
+  pinMode(green_pin, OUTPUT);
+  pinMode(blue_pin, OUTPUT);
+  delay(1000);
+}
+
+/*** Main Function ***/
+[%  var isFirst := true;
+	var trans;
+	%]
+void loop() {
+  if(execute){
+  [%while(true){
+		if((trans==null) and isFirst){
+			isFirst=false;
+			if(nrTotAcoes==1 and robot.temAcoes.at(0).type.name.compareTo("Inicio") == 0 and robot.temAcoes.at(0).evitarObstaculo){
+			  %][%="    ObstacleAvoidance();"%][%
+			  break;
+			}
+			for(t in robot.temTransicoes) {
+				if(t.Acao_de_Entrada.type.name.compareTo("Inicio") == 0){
+				    if(t.Acao_de_Entrada.evitarObstaculo){
+				    %][%="    ObstacleAvoidance();"%][%
+				      break;
+				    }
+					trans:=t;
+					%][%=t.Acao_de_Entrada.code()%][%
+					break;
+				}
+			}
+		} else if(trans==null){
+			break;
+		} else if(trans.Acao_de_Saida.type.name.compareTo("Fim") == 0){%]
+        [%="\r"%][%=trans.Acao_de_Saida.code()%]
+			[%break;
+		} else {
+			%][%="\r"%][%=trans.Acao_de_Saida.code()%][%	
+			trans:=trans.Acao_de_Saida.Transicao_de_Saida;
+		}
+	}%]
+
+  }
+}
+
+/*** Auxiliary Functions ***/
+
+// ----------------------------------------------------------------- GENERAL
+
+void finishExecution(){
+  servo.write(90);
+  intermittenceOff();
+  digitalWrite(ledPin, LOW);
+  police_color = 0;
+  rainbow_color = 0;
+  digitalWrite(red_pin, HIGH);
+  digitalWrite(green_pin, HIGH);
+  digitalWrite(blue_pin, HIGH);
+  DiffTurn (0, 0);
+  execute = 0;
+}
+
+// ----------------------------------------------------------------- BUMPERS
+
+int bumper(){
+ return (digitalRead(bumperLeft) == 1) || (digitalRead(bumperRight) == 1);
+}
+
+void BumperReader() {
+  BLeft = digitalRead(bumperLeft);
+  BRight = digitalRead(bumperRight);
+}
+
+// ----------------------------------------------------------------- INFRA RED SENSOR
+
+int infraRed(int distance){
+  return analogRead(IRPin)<=distance;
+}
+
+void ReadIR() {
+  IRValue = analogRead(IRPin);
+  delay(40);
+}
+
+// ----------------------------------------------------------------- LEDS
+
+void ledControl(){
+  if(rainbow_color){
+    if(r_color==0){
+      ledRedOn();
+      r_color=1;
+    } else if(r_color==1){
+      ledGreenOn();
+      r_color=2;
+    } else {
+      ledBlueOn();
+      r_color=0;
+    }
+  } else if(police_color){
+    if(p_color==0){
+      ledRedOn();
+      p_color=1;
+    } else {
+      ledBlueOn();
+      p_color=0;
+    }
+  }
+  
+  if(intermittence){
+    if(i_color==0){
+      boardLedOn();
+      i_color=1;
+    } else {
+      boardLedOff();
+      i_color=0;
+    }
+  }
+}
+
+void ledRedOn(){
+  digitalWrite(red_pin, LOW);
+  digitalWrite(green_pin, HIGH);
+  digitalWrite(blue_pin, HIGH);
+  delay(100);
+}
+
+void ledGreenOn(){
+  digitalWrite(red_pin, HIGH);
+  digitalWrite(green_pin, LOW);
+  digitalWrite(blue_pin, HIGH);
+  delay(100);
+}
+
+void ledBlueOn(){
+  digitalWrite(red_pin, HIGH);
+  digitalWrite(green_pin, HIGH);
+  digitalWrite(blue_pin, LOW);
+  delay(100);
+}
+
+void ledAllOn(){
+  digitalWrite(red_pin, LOW);
+  digitalWrite(green_pin, LOW);
+  digitalWrite(blue_pin, LOW);
+  delay(100);
+}
+
+void ledAllOff(){
+  digitalWrite(red_pin, HIGH);
+  digitalWrite(green_pin, HIGH);
+  digitalWrite(blue_pin, HIGH);
+  delay(100);
+}
+
+void rainbowColorOn(){
+  rainbow_color = 1;
+  police_color = 0;
+  ledControl();
+}
+
+void policeColorOn(){
+  police_color = 1;
+  rainbow_color = 0;
+  ledControl();
+}
+
+void colorsOff(){
+  rainbow_color = 0;
+  police_color = 0;
+  ledAllOff();
+}
+
+void boardLedOn(){
+  digitalWrite(ledPin, HIGH);
+  delay(100);
+}
+
+void boardLedOff(){
+  digitalWrite(ledPin, LOW);
+  delay(100);
+}
+
+void intermittenceOn(){
+  intermittence = 1;
+}
+void intermittenceOff(){
+  intermittence = 0;
+}
+
+// ----------------------------------------------------------------- MOTOR
+
+void DiffTurn(int speedLeft, int speedRight) {
+ if (speedLeft > 0) {  
+  analogWrite(motorB0, speedLeft);
+  digitalWrite(motorB1, LOW);
+ }
+ if (speedLeft < 0) {  
+  digitalWrite(motorB0, LOW);
+  analogWrite(motorB1, map(speedLeft, 0, -255, 0, 255));
+ }
+ if (speedLeft == 0) {  
+  digitalWrite(motorB0, LOW);
+  digitalWrite(motorB1, LOW); 
+ }
+ if (speedRight > 0 ) {
+  analogWrite(motorA0, speedRight);
+  digitalWrite(motorA1, LOW);
+ }
+ if (speedRight < 0 ) {
+  digitalWrite(motorA0, LOW);
+  analogWrite(motorA1, map(speedRight, 0, -255, 0, 255));
+ }
+ if (speedRight == 0) {
+  digitalWrite(motorA0, LOW);
+  digitalWrite(motorA1, LOW);
+ }
+}
+
+void Beco(int from) {
+  if(obstacleAvoidance){
+  	 ledBlueOn();
+  }
+  DiffTurn(-maxSpeedLeft, -maxSpeedRight);
+  delay(250);
+  if(obstacleAvoidance){
+    ledRedOn();
+  }
+  
+  // se detectou obstaculo pela esquerda, vira p direita
+  if (from == 1)
+   DiffTurn(maxSpeedLeft, -maxSpeedRight);
+  
+  // se detectou pela direita, vira p esquerda
+  if (from == 2)
+    DiffTurn(-maxSpeedLeft, maxSpeedRight);
+  
+  delay(100);
+}
+
+void MotorF_Time(int time, int obsAvoid){
+  MotorF(obsAvoid);
+  delay(10*time);
+}
+
+void MotorReverse_Time(int time, int obsAvoid){
+  MotorReverse(obsAvoid);
+  delay(10*time);
+}
+
+void MotorR_Time(int time, int obsAvoid){
+  MotorR(obsAvoid);
+  delay(10*time);
+}
+
+void MotorL_Time(int time, int obsAvoid){
+  MotorL(obsAvoid);
+  delay(10*time);
+}
+
+void MotorS_Time(int time, int obsAvoid){
+  MotorS(obsAvoid);
+  delay(10*time);
+}
+
+void randomMove(int obsAvoid){
+  int value = rand()%1000;
+  if(value<250){
+    MotorF(obsAvoid);
+  } else if(value<500) {
+    MotorReverse(obsAvoid);
+  } else if(value<750) {
+    MotorR(obsAvoid);
+  } else {
+    MotorL(obsAvoid);
+  }
+  delay(300);
+}
+
+void MotorF(int obsAvoid){
+  ledControl();
+  if(obsAvoid){
+    ObsAvoid(90);
+  }
+  DiffTurn(maxSpeedLeft, maxSpeedRight);
+  delay(250);  
+}
+
+void MotorReverse(int obsAvoid){
+  ledControl();
+  if(obsAvoid){
+    ObsAvoid(-1);
+  }  
+  DiffTurn (-maxSpeedLeft, -maxSpeedRight);
+  delay(250);  
+}
+
+void MotorS(int obsAvoid){
+  ledControl();
+  if(obsAvoid){
+    ObsAvoid(-1);
+  }
+  DiffTurn (0, 0);
+  delay(250);  
+}
+
+void MotorL(int obsAvoid){
+  ledControl();
+  if(obsAvoid){
+    ObsAvoid(0);
+  }
+  DiffTurn (-maxSpeedLeft, maxSpeedRight);  
+  delay(250);  
+}
+
+void MotorR(int obsAvoid){
+  ledControl();
+  if(obsAvoid){
+    ObsAvoid(180);
+  }  
+  DiffTurn (maxSpeedLeft, -maxSpeedRight);
+  delay(250);  
+}
+
+// ----------------------------------------------------------------- SERVO 
+
+void maxTurningLeft(){
+  ledControl();
+  servo.write(0);
+  delay(500);
+}
+
+void maxTurningRight(){
+  ledControl();
+  servo.write(180);
+  delay(500);
+}
+
+void centerHead(){
+  ledControl();
+  servo.write(90);
+  delay(500);
+}
+
+void turn45DegreesLeft(){
+  ledControl();
+  servo.write(45);
+  delay(500);
+}
+
+void turn45DegreesRight(){
+  ledControl();
+  servo.write(135);
+  delay(500);
+}
+
+void turnDegrees(int degree){
+  ledControl();
+  servo.write(degree);
+  delay(500);
+}
+
+void ServoRange(int _min, int _max, int _del, int _inc) {  
+  servo.write(i);
+  delay(_del);
+  
+  if(i >= _max) dir = DEC_POS;
+  if(i <= _min) dir = INC_POS;
+
+  if(dir == INC_POS)
+    i += _inc;
+  else
+    i -= _inc;
+}
+
+// ----------------------------------------------------------------- INTELLIGENCE
+
+void ObsAvoid(int graus){
+if(graus>=0){
+  servo.write(graus);
+}
+  ReadIR();
+  BumperReader();
+  
+  if (BLeft == 1) {
+    Beco(1);
+  } else if (BRight == 1) {
+    Beco(2);
+  } else if(graus>=0) {
+    if (IRValue >= 300) {
+      DiffTurn(-maxSpeedLeft, -maxSpeedRight);
+      delay(250);
+    }
+  }
+}
+
+void ObstacleAvoidance() {
+  obstacleAvoidance = 1;
+  ServoRange(60, 140, del, 5);
+  ReadIR();
+  BumperReader();
+  
+  if (BLeft == 1) {
+    Beco (1);
+  } else if (BRight == 1) {
+    Beco (2);
+  } else {
+    if (i < 90) {
+      if (IRValue >= 300)   {
+        ledRedOn();
+        motorRightSpeed = 0;
+        motorLeftSpeed = maxSpeedLeft;
+        del = 250;
+      }
+      if(IRValue < 299) {
+        ledGreenOn();
+        motorRightSpeed = maxSpeedRight;
+        motorLeftSpeed = maxSpeedLeft;
+        del = 50;
+      }
+    }
+    if (i > 90) {
+      if (IRValue >= 300) {        
+        ledRedOn();        
+        motorRightSpeed = maxSpeedRight;
+        motorLeftSpeed = 0;
+        del = 250;
+      }
+      if(IRValue < 299) {
+        ledGreenOn();       
+        motorRightSpeed = maxSpeedRight;
+        motorLeftSpeed = maxSpeedLeft;
+        del = 50;
+      }
+    }
+    DiffTurn(motorLeftSpeed,motorRightSpeed);
+   }
+}
+
+[%operation Acao bodyConditionCode() : String {
+			var node;
+			var t;
+			var result;
+			switch(self.type.name){
+				case "If": node := self.then; break;
+				case "While": node := self.corpo; break;
+			}
+			result := "\r  " + node.code() + "\r";
+			t := node.Transicao_de_Saida;
+			while(not (t==null)){
+			  result := result + "  " + t.Acao_de_Saida.code() + "\r";
+			  t := t.Acao_de_Saida.Transicao_de_Saida;
+			}
+			return result;
+}
+
+
+operation Acao code() : String {
+			switch(self.type.name){
+				case "Mover_Frente": if(self.evitarObstaculo){ return "    MotorF(1);"; } else { return "    MotorF(0);"; } break;
+				case "Mover_Tras": if(self.evitarObstaculo){ return "    MotorReverse(1);"; } else { return "    MotorReverse(0);"; } break;
+				case "Virar_Direita": if(self.evitarObstaculo){ return "    MotorR(1);"; } else { return "    MotorR(0);"; } break;
+				case "Virar_Esquerda": if(self.evitarObstaculo){ return "    MotorL(1);"; } else { return "    MotorL(0);"; } break;
+				case "Mover_Aleatoriamente": if(self.evitarObstaculo){ return "    randomMove(1);"; } else { return "    randomMove(0);"; } break;
+				case "Parar": if(self.evitarObstaculo){ return "    MotorS(1);"; } else { return "    MotorS(0);"; } break;
+				case "Mover_Frente_Tempo": if(self.evitarObstaculo){ return "    MotorF_Time(" + self.tempo + ",1);"; } else { return "    MotorF_Time(" + self.tempo + ",0);"; } break;
+				case "Mover_Tras_Tempo": if(self.evitarObstaculo){ return "    MotorReverse_Time(" + self.tempo + ",1);"; } else { return "    MotorReverse_Time(" + self.tempo + ",0);"; } break;
+				case "Rodar_Direita_Tempo": if(self.evitarObstaculo){ return "    MotorR_Time(" + self.tempo + ",1);"; } else { return "    MotorR_Time(" + self.tempo + ",0);"; } break;
+				case "Rodar_Esquerda_Tempo": if(self.evitarObstaculo){ return "    MotorL_Time(" + self.tempo + ",1);"; } else { return "    MotorL_Time(" + self.tempo + ",0);"; } break;
+				case "Parar_Tempo": if(self.evitarObstaculo){ return "    MotorS_Time(" + self.tempo + ",1);"; } else { return "    MotorS_Time(" + self.tempo + ",0);"; } break;
+				case "Ligar_LED_Verde": return "    boardLedOn();"; break;
+				case "Desligar_LED_Verde": return "    boardLedOff();"; break;
+				case "Ligar_Intermitencia": return "    intermittenceOn();"; break;
+				case "Desligar_Intermitencia": return "    intermittenceOff();"; break;
+				case "Ligar_Azul": return "    ledBlueOn();"; break;
+				case "Ligar_Verde": return "    ledGreenOn();"; break;
+				case "Ligar_Vermelho": return "    ledRedOn();"; break;
+				case "Desligar_Cor": return "    ledAllOff();"; break;
+				case "Ligar_Cores_Arco_Iris": return "    rainbowColorOn();"; break;
+				case "Ligar_Cores_Policia": return "    policeColorOn();"; break;
+				case "Desligar_Cores": return "    colorsOff();"; break;
+				case "Virar_Max_Esq": return "    maxTurningLeft();"; break;
+				case "Virar_Max_Drt": return "    maxTurningRight();"; break;
+				case "Centrar": return "    centerHead();"; break;
+				case "Virar_45_Esq": return "    turn45DegreesLeft();"; break;
+				case "Virar_45_Drt": return "    turn45DegreesRight();"; break;
+				case "Virar_para_X_Graus": return "    turnDegrees(" + self.graus + ");"; break;
+				case "If": if( not (self.tem==null) ){ return "    if(" + self.tem.code() + ") {"+ self.bodyConditionCode()+"    }"; } else { return "  //COMPILATION ERROR: Unable to find the condition in the IF statement."; } break;
+				case "While": if( not (self.tem==null) ){ return "    while(" + self.tem.code() + ") {" + self.bodyConditionCode()+"    }"; } else { return "  //COMPILATION ERROR: Unable to find the condition in the WHILE statement."; } break;
+				case "Inicio": return "    ledControl();"; break;
+				case "Fim": return "    finishExecution();"; break;
+			}
+}
+
+operation Condicao code() : String{
+			switch(self.type.name){
+				case "Bumper_Pressionado": return "bumper()"; break;
+				case "Distancia_Infra_Vermelhos": return "infraRed(" + self.distancia + ")"; break;
+			}
+}%]

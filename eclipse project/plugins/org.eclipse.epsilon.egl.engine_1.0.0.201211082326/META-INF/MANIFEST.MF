@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.egl,org.eclipse.epsilon.egl.config
+ ,org.eclipse.epsilon.egl.exceptions,org.eclipse.epsilon.egl.execute.c
+ ontext,org.eclipse.epsilon.egl.execute.operations,org.eclipse.epsilon
+ .egl.formatter,org.eclipse.epsilon.egl.formatter.language,org.eclipse
+ .epsilon.egl.formatter.linebyline,org.eclipse.epsilon.egl.formatter.s
+ imple,org.eclipse.epsilon.egl.internal;x-friends:="org.eclipse.epsilo
+ n.egl.engine.test.dependencies",org.eclipse.epsilon.egl.merge,org.ecl
+ ipse.epsilon.egl.merge.output,org.eclipse.epsilon.egl.merge.partition
+ ,org.eclipse.epsilon.egl.model,org.eclipse.epsilon.egl.output,org.ecl
+ ipse.epsilon.egl.parse,org.eclipse.epsilon.egl.parse.problem,org.ecli
+ pse.epsilon.egl.preprocessor,org.eclipse.epsilon.egl.spec,org.eclipse
+ .epsilon.egl.status,org.eclipse.epsilon.egl.traceability,org.eclipse.
+ epsilon.egl.types,org.eclipse.epsilon.egl.util
+Require-Bundle: org.eclipse.epsilon.eol.engine,org.eclipse.epsilon.egl
+ .traceability.fine;visibility:=reexport,org.eclipse.epsilon.erl.engin
+ e;visibility:=reexport
+Bundle-Vendor: Eclipse.org
+Bundle-ClassPath: org.eclipse.epsilon.egl.engine.jar
+Bundle-Version: 1.0.0.201211082326
+Bundle-Name: Epsilon Generation Language Engine
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.epsilon.egl.engine
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

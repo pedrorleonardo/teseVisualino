@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/application
+END
+DiagramEditorPerspective.java
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/application/DiagramEditorPerspective.java
+END
+DiagramEditorActionBarAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/application/DiagramEditorActionBarAdvisor.java
+END
+DiagramEditorWorkbenchAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/application/DiagramEditorWorkbenchAdvisor.java
+END
+RcpappApplication.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/application/RcpappApplication.java
+END
+WizardNewFileCreationPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/application/WizardNewFileCreationPage.java
+END
+DiagramEditorWorkbenchWindowAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/application/DiagramEditorWorkbenchWindowAdvisor.java
+END

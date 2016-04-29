@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduino:Robo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://arduino/1.0">
+  <temAcoes xsi:type="arduino:Inicio" Transicao_de_Saida="//@temTransicoes.0"/>
+  <temAcoes xsi:type="arduino:Virar_Max_Esq" Transicao_de_Entrada="//@temTransicoes.1" Transicao_de_Saida="//@temTransicoes.2"/>
+  <temAcoes xsi:type="arduino:Ligar_Cores_Policia" Transicao_de_Entrada="//@temTransicoes.0" Transicao_de_Saida="//@temTransicoes.1"/>
+  <temAcoes xsi:type="arduino:Mover_Frente_Tempo" Transicao_de_Entrada="//@temTransicoes.2" Transicao_de_Saida="//@temTransicoes.3" tempo="200"/>
+  <temAcoes xsi:type="arduino:Fim" Transicao_de_Entrada="//@temTransicoes.3"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.0" Acao_de_Saida="//@temAcoes.2"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.2" Acao_de_Saida="//@temAcoes.1"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.1" Acao_de_Saida="//@temAcoes.3"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.3" Acao_de_Saida="//@temAcoes.4"/>
+</arduino:Robo>

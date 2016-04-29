@@ -1,0 +1,42 @@
+/**
+ */
+package farrusco.impl;
+
+import farrusco.FarruscoPackage;
+import farrusco.Prioridade;
+
+import org.eclipse.emf.ecore.EClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Prioridade</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public class PrioridadeImpl extends BehaviorImpl implements Prioridade
+{
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected PrioridadeImpl()
+  {
+    super();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass()
+  {
+    return FarruscoPackage.Literals.PRIORIDADE;
+  }
+
+} //PrioridadeImpl

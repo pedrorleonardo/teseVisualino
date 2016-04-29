@@ -1,0 +1,78 @@
+	/*
+ * 
+ */
+package farrusco.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class RobotItemSemanticEditPolicy extends farrusco.diagram.edit.policies.FarruscoBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public RobotItemSemanticEditPolicy() {
+				super(farrusco.diagram.providers.FarruscoElementTypes.Robot_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (farrusco.diagram.providers.FarruscoElementTypes.Distancia_2001 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.DistanciaCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.Bumpers_2002 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.BumpersCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.Espera_2003 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.EsperaCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.Motor_2004 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.MotorCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.Servo_2005 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.ServoCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.LED_2006 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.LEDCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.Prioridade_2007 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.PrioridadeCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.Paralelo_2008 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.ParaleloCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.Sequencial_2009 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.SequencialCreateCommand(req));
+}
+		if (farrusco.diagram.providers.FarruscoElementTypes.AlterarEstado_2010 == req.getElementType()) {
+	return getGEFWrapper(new farrusco.diagram.edit.commands.AlterarEstadoCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

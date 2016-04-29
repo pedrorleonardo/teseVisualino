@@ -1,0 +1,25 @@
+	/*
+ * 
+ */
+package farrusco.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class FilhoItemSemanticEditPolicy extends farrusco.diagram.edit.policies.FarruscoBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public FilhoItemSemanticEditPolicy() {
+				super(farrusco.diagram.providers.FarruscoElementTypes.Filho_4001);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyElementCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(req));
+	}
+					
+	}

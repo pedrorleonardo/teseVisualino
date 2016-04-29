@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<farrusco:Robot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:farrusco="http://farrusco/1.0">
+  <nodes xsi:type="farrusco:Sequencial"/>
+  <nodes xsi:type="farrusco:LED"/>
+  <nodes xsi:type="farrusco:LED" Ligado_ou_Desligado="Desligado"/>
+  <nodes xsi:type="farrusco:Espera"/>
+  <nodes xsi:type="farrusco:Espera"/>
+  <child source="//@nodes.0" target="//@nodes.1"/>
+  <child source="//@nodes.0" target="//@nodes.3"/>
+  <child source="//@nodes.0" target="//@nodes.2"/>
+  <child source="//@nodes.0" target="//@nodes.4"/>
+  <next source="//@nodes.1" target="//@nodes.3"/>
+  <next source="//@nodes.3" target="//@nodes.2"/>
+  <next source="//@nodes.2" target="//@nodes.4"/>
+</farrusco:Robot>

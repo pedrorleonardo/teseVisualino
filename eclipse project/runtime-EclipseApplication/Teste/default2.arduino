@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduino:Robo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://arduino/1.0">
+  <temAcoes xsi:type="arduino:Inicio" Transicao_de_Saida="//@temTransicoes.0"/>
+  <temAcoes xsi:type="arduino:Mover_Frente" Transicao_de_Entrada="//@temTransicoes.0" Transicao_de_Saida="//@temTransicoes.1"/>
+  <temAcoes xsi:type="arduino:If" Transicao_de_Entrada="//@temTransicoes.1" tem="//@temCondicoes.0" then="//@temAcoes.3"/>
+  <temAcoes xsi:type="arduino:Mover_Tras"/>
+  <temAcoes xsi:type="arduino:Inicio" Transicao_de_Saida="//@temTransicoes.2"/>
+  <temAcoes xsi:type="arduino:Ligar_Vermelho" Transicao_de_Entrada="//@temTransicoes.2" Transicao_de_Saida="//@temTransicoes.3"/>
+  <temAcoes xsi:type="arduino:Ligar_Verde" Transicao_de_Entrada="//@temTransicoes.3" Transicao_de_Saida="//@temTransicoes.4"/>
+  <temAcoes xsi:type="arduino:Ligar_Azul" Transicao_de_Entrada="//@temTransicoes.4"/>
+  <temAcoes xsi:type="arduino:Inicio" Transicao_de_Saida="//@temTransicoes.5"/>
+  <temAcoes xsi:type="arduino:Mover_Frente_Tempo" Transicao_de_Entrada="//@temTransicoes.5" Transicao_de_Saida="//@temTransicoes.6" tempo="5"/>
+  <temAcoes xsi:type="arduino:Rodar_Esquerda_Tempo" Transicao_de_Entrada="//@temTransicoes.6" Transicao_de_Saida="//@temTransicoes.7" tempo="1"/>
+  <temAcoes xsi:type="arduino:Parar" Transicao_de_Entrada="//@temTransicoes.7"/>
+  <temAcoes xsi:type="arduino:Inicio" Transicao_de_Saida="//@temTransicoes.8"/>
+  <temAcoes xsi:type="arduino:Centrar" Transicao_de_Entrada="//@temTransicoes.8" Transicao_de_Saida="//@temTransicoes.9"/>
+  <temAcoes xsi:type="arduino:Virar_45_Esq" Transicao_de_Entrada="//@temTransicoes.9" Transicao_de_Saida="//@temTransicoes.10"/>
+  <temAcoes xsi:type="arduino:Virar_45_Drt" Transicao_de_Entrada="//@temTransicoes.10" Transicao_de_Saida="//@temTransicoes.11"/>
+  <temAcoes xsi:type="arduino:Centrar" Transicao_de_Entrada="//@temTransicoes.11"/>
+  <temAcoes xsi:type="arduino:While"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.0" Acao_de_Saida="//@temAcoes.1"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.1" Acao_de_Saida="//@temAcoes.2"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.4" Acao_de_Saida="//@temAcoes.5"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.5" Acao_de_Saida="//@temAcoes.6"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.6" Acao_de_Saida="//@temAcoes.7"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.8" Acao_de_Saida="//@temAcoes.9"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.9" Acao_de_Saida="//@temAcoes.10"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.10" Acao_de_Saida="//@temAcoes.11"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.12" Acao_de_Saida="//@temAcoes.13"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.13" Acao_de_Saida="//@temAcoes.14"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.14" Acao_de_Saida="//@temAcoes.15"/>
+  <temTransicoes Acao_de_Entrada="//@temAcoes.15" Acao_de_Saida="//@temAcoes.16"/>
+  <temCondicoes xsi:type="arduino:Bumper_Pressionado"/>
+  <temCondicoes xsi:type="arduino:Distancia_Infra_Vermelhos" distancia="500"/>
+</arduino:Robo>

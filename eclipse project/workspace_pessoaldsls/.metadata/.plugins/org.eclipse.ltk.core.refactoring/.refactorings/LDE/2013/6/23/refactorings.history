@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;LDE&apos;&#x0A;- Original project: &apos;LDE&apos;&#x0A;- Original element: &apos;Robo.xmi&apos;" description="Delete element" element1="metamodel/Robo.xmi" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1370522806730" subPackages="false" version="1.0"/>&#x0A;<refactoring comment="Rename resource &apos;LDE/metamodel/default.arduino&apos; to &apos;Robo.xmi&apos;" description="Rename resource &apos;default.arduino&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="metamodel/default.arduino" name="Robo.xmi" stamp="1370522818156" updateReferences="true"/>
+</session>

@@ -1,0 +1,113 @@
+@gmf(farr="usco")
+@namespace(uri="http://farrusco/1.0", prefix="farrusco")
+package farrusco;
+
+@gmf.diagram(farr="usco")
+class Robot {
+  val Node[*] nodes;
+  val Filho[*] child;
+  val Irmao[*] next;
+  attr String Name;
+}
+
+class Node{
+
+}
+
+@gmf.link(source="source", target="target", style="solid")
+class Filho {
+	ref Behavior[*] source;
+	ref Node[*] target;
+}
+
+@gmf.link(source="source", target="target", target.decoration="arrow", style="dash")
+class Irmao {
+	ref Node[*] source;
+	ref Node[*] target;
+}
+
+@gmf.node(figure="rounded", resizable="false")
+abstract class Behavior extends Node{
+	@gmf.label(label="Name", label.text="controlo")
+	attr String Name;
+}
+
+@gmf.node(label="Name", label.readOnly="true",tool.name ="Decisor")
+class Prioridade extends Behavior {
+}
+@gmf.node(label="Name", label.readOnly="true",tool.name ="Paralelo")
+class Paralelo extends Behavior {
+}
+
+
+//@gmf.node(figure="figuresPlan.figures.SequencialFigure", resizable="false",label.icon="false", label="Name", label.placement="none",tool.name="Sequencia")
+//class Sequencial extends Behavior {
+//}
+
+@gmf.node(label="Name", label.readOnly="true",tool.name ="Alterar Estado")
+class AlterarEstado extends Behavior {
+	@gmf.label(label.text="0")
+	attr int succ_policy;
+	@gmf.label(label.text="0")
+	attr int fail_policy;
+	@gmf.label(label.text="0")
+	attr int runn_policy;
+}
+
+//Acao Sensorial Ou Motora
+@gmf.node(label="name", figure="rectangle", resizable="false", label.readOnly="true")
+abstract class Action extends Node{
+  attr String name;
+}
+
+//Condicoes
+abstract class Condition extends Action {
+}
+@gmf.node(label.text="255, 255")
+class Distancia extends Condition {
+  @gmf.label(label.text="10")
+  attr int distancia;
+  @gmf.label(label.text="false")
+  attr boolean how_sucess;
+}
+@gmf.node(label.text="BumperDireito")
+class BumperDireito extends Condition {
+}
+@gmf.node(label.text="BumperEsquerdo")
+class BumperEsquerdo extends Condition {
+}
+
+@gmf.node(label.text = "Espera")
+class Espera extends Condition {
+	@gmf.label(label.text="500")	
+	attr int time;
+} 
+//Atuadores
+abstract class Actuate extends Action {
+}
+
+@gmf.node(label.text="255, 255")
+class Motor extends Actuate {
+  @gmf.label(label.text = "255")
+  attr int MotorLeft = 255;
+  @gmf.label(label.text = "255")
+  attr int MotorRight = 255;
+}
+@gmf.node(label.text="Servo")
+class Servo extends Actuate {
+  @gmf.label(label.text="0")
+  attr int min;
+  @gmf.label(label.text="160")
+  attr int max;
+  @gmf.label(label.text="10")
+  attr int inc;
+}
+
+@gmf.node(label.text="LED")
+class LED extends Actuate {
+	@gmf.label(label.text="true")
+	attr boolean on_off;
+}
+
+
+

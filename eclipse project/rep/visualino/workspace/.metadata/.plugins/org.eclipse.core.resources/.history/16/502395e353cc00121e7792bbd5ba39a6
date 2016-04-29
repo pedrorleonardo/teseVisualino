@@ -1,0 +1,288 @@
+/**
+ */
+package farrusco.impl;
+
+import farrusco.AlterarEstado;
+import farrusco.FarruscoPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Alterar Estado</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link farrusco.impl.AlterarEstadoImpl#getSucc_policy <em>Succ policy</em>}</li>
+ *   <li>{@link farrusco.impl.AlterarEstadoImpl#getFail_policy <em>Fail policy</em>}</li>
+ *   <li>{@link farrusco.impl.AlterarEstadoImpl#getRunn_policy <em>Runn policy</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class AlterarEstadoImpl extends BehaviorImpl implements AlterarEstado
+{
+  /**
+   * The default value of the '{@link #getSucc_policy() <em>Succ policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSucc_policy()
+   * @generated
+   * @ordered
+   */
+  protected static final int SUCC_POLICY_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getSucc_policy() <em>Succ policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSucc_policy()
+   * @generated
+   * @ordered
+   */
+  protected int succ_policy = SUCC_POLICY_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getFail_policy() <em>Fail policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFail_policy()
+   * @generated
+   * @ordered
+   */
+  protected static final int FAIL_POLICY_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getFail_policy() <em>Fail policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFail_policy()
+   * @generated
+   * @ordered
+   */
+  protected int fail_policy = FAIL_POLICY_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getRunn_policy() <em>Runn policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRunn_policy()
+   * @generated
+   * @ordered
+   */
+  protected static final int RUNN_POLICY_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getRunn_policy() <em>Runn policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRunn_policy()
+   * @generated
+   * @ordered
+   */
+  protected int runn_policy = RUNN_POLICY_EDEFAULT;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected AlterarEstadoImpl()
+  {
+    super();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass()
+  {
+    return FarruscoPackage.Literals.ALTERAR_ESTADO;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getSucc_policy()
+  {
+    return succ_policy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSucc_policy(int newSucc_policy)
+  {
+    int oldSucc_policy = succ_policy;
+    succ_policy = newSucc_policy;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FarruscoPackage.ALTERAR_ESTADO__SUCC_POLICY, oldSucc_policy, succ_policy));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getFail_policy()
+  {
+    return fail_policy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFail_policy(int newFail_policy)
+  {
+    int oldFail_policy = fail_policy;
+    fail_policy = newFail_policy;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FarruscoPackage.ALTERAR_ESTADO__FAIL_POLICY, oldFail_policy, fail_policy));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getRunn_policy()
+  {
+    return runn_policy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRunn_policy(int newRunn_policy)
+  {
+    int oldRunn_policy = runn_policy;
+    runn_policy = newRunn_policy;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FarruscoPackage.ALTERAR_ESTADO__RUNN_POLICY, oldRunn_policy, runn_policy));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case FarruscoPackage.ALTERAR_ESTADO__SUCC_POLICY:
+        return getSucc_policy();
+      case FarruscoPackage.ALTERAR_ESTADO__FAIL_POLICY:
+        return getFail_policy();
+      case FarruscoPackage.ALTERAR_ESTADO__RUNN_POLICY:
+        return getRunn_policy();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case FarruscoPackage.ALTERAR_ESTADO__SUCC_POLICY:
+        setSucc_policy((Integer)newValue);
+        return;
+      case FarruscoPackage.ALTERAR_ESTADO__FAIL_POLICY:
+        setFail_policy((Integer)newValue);
+        return;
+      case FarruscoPackage.ALTERAR_ESTADO__RUNN_POLICY:
+        setRunn_policy((Integer)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case FarruscoPackage.ALTERAR_ESTADO__SUCC_POLICY:
+        setSucc_policy(SUCC_POLICY_EDEFAULT);
+        return;
+      case FarruscoPackage.ALTERAR_ESTADO__FAIL_POLICY:
+        setFail_policy(FAIL_POLICY_EDEFAULT);
+        return;
+      case FarruscoPackage.ALTERAR_ESTADO__RUNN_POLICY:
+        setRunn_policy(RUNN_POLICY_EDEFAULT);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case FarruscoPackage.ALTERAR_ESTADO__SUCC_POLICY:
+        return succ_policy != SUCC_POLICY_EDEFAULT;
+      case FarruscoPackage.ALTERAR_ESTADO__FAIL_POLICY:
+        return fail_policy != FAIL_POLICY_EDEFAULT;
+      case FarruscoPackage.ALTERAR_ESTADO__RUNN_POLICY:
+        return runn_policy != RUNN_POLICY_EDEFAULT;
+    }
+    return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (succ_policy: ");
+    result.append(succ_policy);
+    result.append(", fail_policy: ");
+    result.append(fail_policy);
+    result.append(", runn_policy: ");
+    result.append(runn_policy);
+    result.append(')');
+    return result.toString();
+  }
+
+} //AlterarEstadoImpl

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: figuresPlan.figures; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: %providerName
+Bundle-Activator: figuresPlan.figures.activator.PluginActivator
+Bundle-Localization: plugin
+Export-Package: figuresPlan.figures.activator,
+ figuresPlan.figures
+Require-Bundle: org.eclipse.gmf.runtime.draw2d.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.draw2d
+Eclipse-LazyStart: true

@@ -1,0 +1,53 @@
+
+package figuresPlan.figures;
+/**
+ * @generated
+ */
+public class PrioridadeFigure extends org.eclipse.draw2d.RoundedRectangle {
+
+
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePrioridadeLabelFigure; 
+
+
+	/**
+	 * @generated
+	 */
+	public PrioridadeFigure() {
+				this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(
+8, 
+8));
+this.setBorder(new org.eclipse.draw2d.MarginBorder(5, 5, 5, 5));
+		createContents();
+	}
+	/**
+	 * @generated
+	 */
+	private void createContents(){
+
+
+fFigurePrioridadeLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+
+fFigurePrioridadeLabelFigure.setText("Prioridade");
+
+this.add(fFigurePrioridadeLabelFigure);
+
+
+	}
+
+
+
+
+
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePrioridadeLabelFigure() {
+		return fFigurePrioridadeLabelFigure;
+	}
+
+
+
+}

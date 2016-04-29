@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.epsilon.ewl.dt,org.eclipse.epsilon.ewl.dt.
+ editor,org.eclipse.epsilon.ewl.dt.editor.outline,org.eclipse.epsilon.
+ ewl.dt.wizards
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: org.eclipse.epsilon.ewl.dt.jar
+Bundle-Name: Epsilon Wizard Language Development Tools
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.epsilon.eol.dt,org.eclipse.epsilon.ewl.eng
+ ine,org.eclipse.epsilon.common.dt,org.eclipse.jface.text
+Bundle-Vendor: Eclipse.org
+Bundle-Version: 1.0.0.201211082326
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.eclipse.epsilon.ewl.dt.EwlPlugin
+Bundle-SymbolicName: org.eclipse.epsilon.ewl.dt;singleton:=true
+
+

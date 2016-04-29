@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.eclipse.epsilon.egl.EglFileGeneratingTemplateFactory"/>
+<fullyQualifiedTypeName name="org.eclipse.gef.tools.AbstractTool"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.Path"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.Platform"/>
+<fullyQualifiedTypeName name="org.farrusco.generate.action.GenerateTool"/>
+<fullyQualifiedTypeName name="figuresPlan.figures.activator.PluginActivator"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.plugin.AbstractUIPlugin"/>
+<fullyQualifiedTypeName name="org.eclipse.draw2d.ImageFigure"/>
+</qualifiedTypeNameHistroy>

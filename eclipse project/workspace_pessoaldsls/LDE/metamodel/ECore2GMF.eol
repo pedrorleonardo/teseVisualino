@@ -1,0 +1,176 @@
+var palette := GmfTool!Palette.all.first();
+
+var toolGroupHead = new GmfTool!ToolGroup;
+toolGroupHead.title := 'Cabeça';
+toolGroupHead.collapsible := true;
+palette.tools.add(toolGroupHead);
+
+var toolGroupBody = new GmfTool!ToolGroup;
+toolGroupBody.title := 'Corpo';
+toolGroupBody.collapsible := true;
+palette.tools.add(toolGroupBody);
+
+var toolGroupLed = new GmfTool!ToolGroup;
+toolGroupLed.title := 'Led';
+toolGroupLed.collapsible := true;
+palette.tools.add(toolGroupLed);
+
+var toolGroupObjects = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Objects');
+toolGroupObjects.title := "Estados";
+var toolGroupConnections = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Connections');
+toolGroupConnections.title := "Conexões";
+
+var toolEntry;
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Inicio');
+toolEntry.title := "Início";
+toolGroupObjects.tools.remove(toolEntry);
+toolGroupObjects.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Fim');
+toolEntry.title := "Fim";
+toolGroupObjects.tools.remove(toolEntry);
+toolGroupObjects.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'If');
+toolEntry.title := "If";
+toolGroupObjects.tools.remove(toolEntry);
+toolGroupObjects.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'While');
+toolEntry.title := "While";
+toolGroupObjects.tools.remove(toolEntry);
+toolGroupObjects.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Bumper_Pressionado');
+toolEntry.title := "Bumper Pressionado";
+toolGroupObjects.tools.remove(toolEntry);
+toolGroupObjects.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Distancia_Infra_Vermelhos');
+toolEntry.title := "Distância Infra Vermelhos";
+toolGroupObjects.tools.remove(toolEntry);
+toolGroupObjects.tools.add(toolEntry);
+
+toolEntry = toolGroupConnections.tools.selectOne(r|r.title = 'Transicoes');
+toolEntry.title := "Transição";
+
+
+//CABEÇA
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Virar_Max_Esq');
+toolEntry.title := "Virar máximo à esquerda";
+toolGroupHead.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Virar_45_Esq');
+toolEntry.title := "Virar 45 graus à esquerda";
+toolGroupHead.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Virar_Max_Drt');
+toolEntry.title := "Virar máximo à direita";
+toolGroupHead.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Virar_45_Drt');
+toolEntry.title := "Virar 45 graus à direita";
+toolGroupHead.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Virar_para_X_Graus');
+toolEntry.title := "Virar para x graus";
+toolGroupHead.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Centrar');
+toolEntry.title := "Centrar";
+toolGroupHead.tools.add(toolEntry);
+
+
+
+//CORPO
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Mover_Frente');
+toolEntry.title := "Mover em frente";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Mover_Frente_Tempo');
+toolEntry.title := "Mover em frente (tempo)";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Mover_Tras');
+toolEntry.title := "Mover para trás";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Mover_Tras_Tempo');
+toolEntry.title := "Mover para trás (tempo)";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Mover_Aleatoriamente');
+toolEntry.title := "Mover aleatoriamente";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Virar_Esquerda');
+toolEntry.title := "Virar à esquerda";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Rodar_Esquerda_Tempo');
+toolEntry.title := "Rodar para a esquerda (tempo)";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Virar_Direita');
+toolEntry.title := "Virar à direita";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Rodar_Direita_Tempo');
+toolEntry.title := "Rodar à direita (tempo)";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Parar');
+toolEntry.title := "Parar";
+toolGroupBody.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Parar_Tempo');
+toolEntry.title := "Parar (tempo)";
+toolGroupBody.tools.add(toolEntry);
+
+
+
+//LED
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Ligar_LED_Verde');
+toolEntry.title := "Ligar LED verde";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Desligar_LED_Verde');
+toolEntry.title := "Desligar LED verde";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Ligar_Intermitencia');
+toolEntry.title := "Ligar intermitência";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Desligar_Intermitencia');
+toolEntry.title := "Desligar intermitência";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Ligar_Verde');
+toolEntry.title := "Ligar luz verde";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Ligar_Vermelho');
+toolEntry.title := "Ligar luz vermelha";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Ligar_Azul');
+toolEntry.title := "Ligar luz azul";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Desligar_Cor');
+toolEntry.title := "Desligar luz";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Ligar_Cores_Arco_Iris');
+toolEntry.title := "Ligar cores arco-íris";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Ligar_Cores_Policia');
+toolEntry.title := "Ligar cores polícia";
+toolGroupLed.tools.add(toolEntry);
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'Desligar_Cores');
+toolEntry.title := "Desligar cores";
+toolGroupLed.tools.add(toolEntry);	

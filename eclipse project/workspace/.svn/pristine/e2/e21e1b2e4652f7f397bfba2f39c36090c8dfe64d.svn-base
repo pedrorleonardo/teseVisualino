@@ -1,0 +1,60 @@
+pluginName=Farrusco Plugin
+providerName=Sample Plugin Provider, Inc
+
+editorName=Farrusco Diagram Editing
+context.description=Farrusco Diagram Editing
+context.name=In Farrusco Diagram Editor
+newWizardName=Farrusco Diagram
+newWizardDesc=Creates Farrusco diagram.
+
+initDiagramActionLabel=Initialize farrusco_diagram diagram file
+
+perspectiveName=Farrusco Perspective
+applicationActionSetLabel=<Farrusco Actions
+newDiagramActionLabel=Farrusco Diagram
+aboutActionLabel=Farrusco Diagram About...
+openURIActionLabel=Open URI...
+openURIActionDescription=Open file by URI
+openActionLabel=Open...
+openActionDescription=Open file
+
+navigatorContentName=*.farrusco_diagram diagram contents
+update.diagram.name=Update Farrusco diagram
+update.diagram.description=Perform Farrusco diagram update
+
+
+# Property Sheet
+tab.appearance=Appearance
+tab.diagram=Rulers & Grid
+tab.domain=Core
+
+# Preferences
+prefpage.org.farrusco.diagram.general=Farrusco Diagram
+prefpage.org.farrusco.diagram.appearance=Appearance
+prefpage.org.farrusco.diagram.connections=Connections
+prefpage.org.farrusco.diagram.printing=Printing
+prefpage.org.farrusco.diagram.rulersAndGrid=Rulers And Grid
+
+
+# Providers
+metatype.name.Robot_1000=Undefined
+metatype.name.Distancia_2001=Distancia
+metatype.name.Bumpers_2002=Bumpers
+metatype.name.Espera_2003=Espera
+metatype.name.Motor_2004=Motor
+metatype.name.Servo_2005=Servo
+metatype.name.LED_2006=LED
+metatype.name.Prioridade_2007=Prioridade
+metatype.name.Paralelo_2008=Paralelo
+metatype.name.Sequencial_2009=Sequencial
+metatype.name.AlterarEstado_2010=AlterarEstado
+metatype.name.Filho_4001=Filho
+metatype.name.Irmao_4002=Irmao
+
+# Commands and menu actions
+cmdcategory.name=Farrusco Editor Commands
+cmdcategory.desc=Farrusco Editor Commands
+
+
+command.name = Load Resource
+domainNavigatorContentName=*.farrusco model contents

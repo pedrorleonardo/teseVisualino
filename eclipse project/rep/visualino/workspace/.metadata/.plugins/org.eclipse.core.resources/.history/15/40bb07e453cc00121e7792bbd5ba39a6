@@ -1,0 +1,104 @@
+/**
+ */
+package farrusco;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Alterar Estado</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link farrusco.AlterarEstado#getSucc_policy <em>Succ policy</em>}</li>
+ *   <li>{@link farrusco.AlterarEstado#getFail_policy <em>Fail policy</em>}</li>
+ *   <li>{@link farrusco.AlterarEstado#getRunn_policy <em>Runn policy</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see farrusco.FarruscoPackage#getAlterarEstado()
+ * @model annotation="gmf.node label='Name' label.readOnly='true' tool.name='Alterar Estado'"
+ * @generated
+ */
+public interface AlterarEstado extends Behavior
+{
+  /**
+   * Returns the value of the '<em><b>Succ policy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Succ policy</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Succ policy</em>' attribute.
+   * @see #setSucc_policy(int)
+   * @see farrusco.FarruscoPackage#getAlterarEstado_Succ_policy()
+   * @model annotation="gmf.label label.text='0'"
+   * @generated
+   */
+  int getSucc_policy();
+
+  /**
+   * Sets the value of the '{@link farrusco.AlterarEstado#getSucc_policy <em>Succ policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Succ policy</em>' attribute.
+   * @see #getSucc_policy()
+   * @generated
+   */
+  void setSucc_policy(int value);
+
+  /**
+   * Returns the value of the '<em><b>Fail policy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Fail policy</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Fail policy</em>' attribute.
+   * @see #setFail_policy(int)
+   * @see farrusco.FarruscoPackage#getAlterarEstado_Fail_policy()
+   * @model annotation="gmf.label label.text='0'"
+   * @generated
+   */
+  int getFail_policy();
+
+  /**
+   * Sets the value of the '{@link farrusco.AlterarEstado#getFail_policy <em>Fail policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Fail policy</em>' attribute.
+   * @see #getFail_policy()
+   * @generated
+   */
+  void setFail_policy(int value);
+
+  /**
+   * Returns the value of the '<em><b>Runn policy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Runn policy</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Runn policy</em>' attribute.
+   * @see #setRunn_policy(int)
+   * @see farrusco.FarruscoPackage#getAlterarEstado_Runn_policy()
+   * @model annotation="gmf.label label.text='0'"
+   * @generated
+   */
+  int getRunn_policy();
+
+  /**
+   * Sets the value of the '{@link farrusco.AlterarEstado#getRunn_policy <em>Runn policy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Runn policy</em>' attribute.
+   * @see #getRunn_policy()
+   * @generated
+   */
+  void setRunn_policy(int value);
+
+} // AlterarEstado

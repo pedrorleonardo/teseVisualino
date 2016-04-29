@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/parts
+END
+ComponentEditPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/parts/ComponentEditPart.java
+END
+ComponentNameEditPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/parts/ComponentNameEditPart.java
+END
+RcpappEditPartFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/parts/RcpappEditPartFactory.java
+END
+ModelEditPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svnroot/modeling/org.eclipse.epsilon/!svn/ver/2272/trunk/examples/org.eclipse.epsilon.eugenia.examples.rcpapp.diagram/src/rcpapp/diagram/edit/parts/ModelEditPart.java
+END

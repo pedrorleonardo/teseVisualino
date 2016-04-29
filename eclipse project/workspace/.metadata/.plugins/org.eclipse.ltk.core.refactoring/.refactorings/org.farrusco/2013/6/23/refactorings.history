@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;org.farrusco&apos;&#x0D;&#x0A;- Original project: &apos;org.farrusco&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     org.farrusco/src/farrusco&#x0D;&#x0A;     org.farrusco/src/farrusco.impl&#x0D;&#x0A;     org.farrusco/src/farrusco.util&#x0D;&#x0A;- Delete subpackages" description="Delete elements" element1="/src&lt;farrusco.util" element2="/src&lt;farrusco.impl" element3="/src&lt;farrusco" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1370267145902" subPackages="true" version="1.0"/>
+</session>

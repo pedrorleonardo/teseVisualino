@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:arduino="http://arduino/1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_6YGFQO6_EeKPXfAQScPd8w" type="Arduino" name="default2.arduino_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_HKGaUO7PEeKNAbeBhRDFMA" type="2029">
+    <children xmi:type="notation:DecorationNode" xmi:id="_HKHBYO7PEeKNAbeBhRDFMA" type="5027"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_HKGaUe7PEeKNAbeBhRDFMA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HKGaUu7PEeKNAbeBhRDFMA"/>
+    <element xmi:type="arduino:Inicio" href="default2.arduino#//@temAcoes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HKGaU-7PEeKNAbeBhRDFMA" x="70" y="60"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_PNH38O8DEeKdStFLVjNhpg" type="2033">
+    <children xmi:type="notation:DecorationNode" xmi:id="_PNH39O8DEeKdStFLVjNhpg" type="5033"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_PNH38e8DEeKdStFLVjNhpg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_PNH38u8DEeKdStFLVjNhpg"/>
+    <element xmi:type="arduino:Bumper_Pressionado" href="default2.arduino#//@temCondicoes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PNH38-8DEeKdStFLVjNhpg" x="65" y="145"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_RRQ58O8DEeKdStFLVjNhpg" type="2013">
+    <children xmi:type="notation:DecorationNode" xmi:id="_RRQ59O8DEeKdStFLVjNhpg" type="5002"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_RRQ58e8DEeKdStFLVjNhpg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_RRQ58u8DEeKdStFLVjNhpg"/>
+    <element xmi:type="arduino:Mover_Frente" href="default2.arduino#//@temAcoes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RRQ58-8DEeKdStFLVjNhpg" x="189" y="64"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_TIN0gO8DEeKdStFLVjNhpg" type="2028">
+    <children xmi:type="notation:DecorationNode" xmi:id="_TIN0hO8DEeKdStFLVjNhpg" type="5030"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_TIN0ge8DEeKdStFLVjNhpg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_TIN0gu8DEeKdStFLVjNhpg"/>
+    <element xmi:type="arduino:If" href="default2.arduino#//@temAcoes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TIN0g-8DEeKdStFLVjNhpg" x="360" y="60"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_YkeB0O8DEeKdStFLVjNhpg" type="2014">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ykeo4O8DEeKdStFLVjNhpg" type="5003"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_YkeB0e8DEeKdStFLVjNhpg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YkeB0u8DEeKdStFLVjNhpg"/>
+    <element xmi:type="arduino:Mover_Tras" href="default2.arduino#//@temAcoes.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YkeB0-8DEeKdStFLVjNhpg" x="175" y="140"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_6YGFQe6_EeKPXfAQScPd8w"/>
+  <element xmi:type="arduino:Robo" href="default2.arduino#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_RrSjgO8DEeKdStFLVjNhpg" type="4001" source="_HKGaUO7PEeKNAbeBhRDFMA" target="_RRQ58O8DEeKdStFLVjNhpg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_RrSjge8DEeKdStFLVjNhpg"/>
+    <element xmi:type="arduino:Transicoes" href="default2.arduino#//@temTransicoes.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RrSjgu8DEeKdStFLVjNhpg" points="[20, 3, -129, -1]$[99, 3, -50, -1]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_aMUJYO8DEeKdStFLVjNhpg" type="4001" source="_RRQ58O8DEeKdStFLVjNhpg" target="_TIN0gO8DEeKdStFLVjNhpg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_aMUJYe8DEeKdStFLVjNhpg"/>
+    <element xmi:type="arduino:Transicoes" href="default2.arduino#//@temTransicoes.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aMUJYu8DEeKdStFLVjNhpg" points="[23, -6, -102, 0]$[133, -5, 8, 1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aMVXgO8DEeKdStFLVjNhpg" id="(0.7722772277227723,0.6)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aMVXge8DEeKdStFLVjNhpg" id="(0.8,0.55)"/>
+  </edges>
+</notation:Diagram>

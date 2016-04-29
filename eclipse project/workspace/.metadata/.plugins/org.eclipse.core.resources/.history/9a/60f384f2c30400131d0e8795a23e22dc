@@ -1,0 +1,35 @@
+	/*
+ * 
+ */
+package farrusco.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public class FarruscoNavigatorSorter  extends org.eclipse.jface.viewers.ViewerSorter {
+
+		/**
+ * @generated
+ */
+private static final int GROUP_CATEGORY = 4004;
+	
+	/**
+ * @generated
+ */
+private static final int SHORTCUTS_CATEGORY = 4003;
+		
+		/**
+ * @generated
+ */
+public int category(Object element) {
+	if (element instanceof farrusco.diagram.navigator.FarruscoNavigatorItem) {
+		farrusco.diagram.navigator.FarruscoNavigatorItem item = (farrusco.diagram.navigator.FarruscoNavigatorItem) element;
+			if (item.getView().getEAnnotation("Shortcut") != null) {  //$NON-NLS-1$
+			return SHORTCUTS_CATEGORY;
+		}
+			return farrusco.diagram.part.FarruscoVisualIDRegistry.getVisualID(item.getView());
+	}
+	return GROUP_CATEGORY;
+}
+
+    }

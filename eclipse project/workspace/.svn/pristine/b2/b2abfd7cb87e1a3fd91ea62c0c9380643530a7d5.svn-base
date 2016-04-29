@@ -1,0 +1,155 @@
+@gmf(farr="usco")
+@namespace(uri="http://farrusco/1.0", prefix="farrusco")
+package farrusco;
+
+@gmf.diagram(farr="usco")
+class Robot {
+  val Node[*] nodes;
+  val Filho[*] child;
+  val Irmao[*] next;
+  attr String Nome;
+}
+
+
+
+class Node{
+
+}
+
+@gmf.link(source="source", target="target", style="dot", color="100,149,237", width="2")
+class Filho {
+	ref Behavior[*] source;
+	ref Node[*] target;
+}
+
+@gmf.link(source="source", target="target", target.decoration="arrow", style="solid", color="60,179,113", width="2")
+class Irmao {
+	ref Node[*] source;
+	ref Node[*] target;
+}
+
+class Behavior extends Node{
+}
+
+@gmf.node(figure="figuresPlan.figures.PrioridadeFigure",label="Nome" , label.readOnly="true",label.placement="none",tool.name ="Decisor")
+class Prioridade extends Behavior {
+attr String Nome="Decisor";
+}
+@gmf.node(figure="figuresPlan.figures.ParaleloFigure",label="Nome" , label.readOnly="true",label.placement="none",tool.name ="Paralelo")
+class Paralelo extends Behavior {
+attr String Nome="Paralelo";
+}
+
+
+@gmf.node(figure="figuresPlan.figures.SequencialFigure",label="Nome" , label.readOnly="true",label.placement="none",tool.name="Sequencia")
+class Sequencial extends Behavior {
+attr String Nome="Sequencia";
+}
+
+//@gmf.node(label="Nome", label.text="Alterar Estado", label.readOnly="true",tool.name ="Alterar Estado")
+class AlterarEstado extends Behavior {
+    attr String Nome = "Alterar Estado";
+	//@gmf.label(label.text="Sucesso")
+	attr EstadoSucesso Alterar_Sucesso = "Sucesso";
+	//@gmf.label(label.text="Falha")
+	attr EstadoFalha Alterar_Falha="Falha";
+	//@gmf.label(label.text="Decorrer")
+	attr EstadoDecorrer Alterar_Decorrer="Decorrer";
+}
+
+//Acao Sensorial Ou Motora
+abstract class Action extends Node{
+
+}
+
+//Condicoes
+abstract class Condition extends Action {
+}
+
+
+@gmf.node(figure="figuresPlan.figures.DistanciaFigure",label="Nome", label.readOnly="true",label.placement="none", tool.name="Distancia")
+class Distancia extends Condition {
+  attr String Nome = "Distancia";
+  //@gmf.label(label.text="10")
+  attr int distancia="300";
+  //@gmf.label(label.text="false")
+  attr TipoDistancia Menor_Maior = "Maior";
+}
+
+@gmf.node(figure="figuresPlan.figures.BumpersFigure",label="Nome" , label.readOnly="true",label.placement="none", tool.name="Colisao")
+class Bumpers extends Condition {
+   attr String Nome="Bumpers";
+   //@gmf.label(label.text="Esquerdo")
+   attr EscolhaBumper Bumper_Esquerdo_ou_Direito ="Esquerdo";
+}
+
+@gmf.node(figure="figuresPlan.figures.EsperaFigure",label="Nome" , label.readOnly="true",label.placement="none",tool.name="Relógio")
+class Espera extends Condition {
+	attr String Nome="Tempo";
+	//@gmf.label(label.text="500")	
+	attr int Tempo = 1;
+} 
+//Atuadores
+abstract class Actuate extends Action {
+}
+
+@gmf.node(figure="figuresPlan.figures.MotorFigure",label="Nome" , label.readOnly="true",label.placement="none",tool.name="Motores")
+class Motor extends Actuate {
+  attr String Nome = "Motor";
+  //@gmf.label(label.text = "255",label.placement="none")
+  attr int Motor_Esquerdo = 255;
+  //@gmf.label(label.text = "255", label.placement="none")
+  attr int Motor_Direito = 255;
+}
+@gmf.node(figure="figuresPlan.figures.ServoFigure",label="Nome" , label.readOnly="true",label.placement="none",tool.name="Pescoço")
+class Servo extends Actuate {
+  attr String Nome ="Servo";
+  //@gmf.label(label.text="0")
+  attr int Posicao_Minima=0;
+  //@gmf.label(label.text="160")
+  attr int Posicao_Maxima=160;
+  //@gmf.label(label.text="10")
+  attr int Passo_a_Passo=10;
+}
+
+@gmf.node(figure="figuresPlan.figures.LEDFigure",label="Nome" , label.readOnly="true",label.placement="none",tool.name="Luz")
+class LED extends Actuate {
+	attr String Nome="Luz";
+	//@gmf.label(label.text="Ligado")
+	attr EstadoDaLuz Ligado_ou_Desligado = "Ligado";
+}
+
+enum EstadoDaLuz {
+	Ligado;
+	Desligado;
+}
+
+enum EstadoSucesso {
+	Sucesso;
+	Falha;
+	Decorrer;
+}
+
+enum EstadoFalha{
+	Falha;
+	Sucesso;
+	Decorrer;
+}
+
+enum EstadoDecorrer{
+	Sucesso;
+	Falha;
+	Decorrer;
+}
+
+enum EscolhaBumper{
+	Esquerdo;
+	Direito;
+}
+
+enum TipoDistancia{
+	Menor;
+	Maior;
+}
+
+

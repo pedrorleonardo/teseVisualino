@@ -1,0 +1,31 @@
+-- This script is executed automatically by Eugenia 
+
+/*
+"Clearing Empty Feature Mappings...".println();
+var feature_mappings = GmfMap!FeatureLabelMapping.all.select(f|f.features.isEmpty());
+
+for (n in feature_mappings){
+  ("Found Mapping: " + n).println();
+  delete n;
+}
+"Clearing Empty Feature Mappings... DONE".println();
+*/
+
+var toolsPalette = GmfTool!Palette.all.first;
+
+var actionToolGroup = new GmfTool!ToolGroup;
+actionToolGroup.title="Actions";
+actionToolGroup.description="Actions";
+actionToolGroup.collapsible=true;
+toolsPalette.tools.add(actionToolGroup);
+
+"Inserting Custom Tool Generate IDs... ".println();
+
+var generateIDsTool = new GmfTool!GenericTool;
+generateIDsTool.title = "Criar Programa";
+generateIDsTool.description = "Criar Programa";
+generateIDsTool.toolClass="org.farrusco.generate.action.GenerateTool";
+
+actionToolGroup.tools.add(generateIDsTool);
+
+"Inserting Custom Tool Generate IDs... DONE".println();

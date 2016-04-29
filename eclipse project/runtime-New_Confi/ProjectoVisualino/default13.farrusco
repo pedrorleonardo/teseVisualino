@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<farrusco:Robot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:farrusco="http://farrusco/1.0">
+  <nodes xsi:type="farrusco:Paralelo"/>
+  <nodes xsi:type="farrusco:Servo"/>
+  <nodes xsi:type="farrusco:LED"/>
+  <nodes xsi:type="farrusco:Paralelo"/>
+  <nodes xsi:type="farrusco:Sequencial"/>
+  <nodes xsi:type="farrusco:Motor"/>
+  <nodes xsi:type="farrusco:Espera" Tempo="2"/>
+  <nodes xsi:type="farrusco:Motor" Motor_Esquerdo="0" Motor_Direito="0"/>
+  <nodes xsi:type="farrusco:Espera" Tempo="5"/>
+  <nodes xsi:type="farrusco:Espera"/>
+  <nodes xsi:type="farrusco:Espera"/>
+  <nodes xsi:type="farrusco:Sequencial"/>
+  <nodes xsi:type="farrusco:LED" Ligado_ou_Desligado="Desligado"/>
+  <nodes xsi:type="farrusco:Espera"/>
+  <child source="//@nodes.0" target="//@nodes.1"/>
+  <child source="//@nodes.3" target="//@nodes.0"/>
+  <child source="//@nodes.4" target="//@nodes.5"/>
+  <child source="//@nodes.4" target="//@nodes.6"/>
+  <child source="//@nodes.4" target="//@nodes.7"/>
+  <child source="//@nodes.4" target="//@nodes.8"/>
+  <child source="//@nodes.3" target="//@nodes.4"/>
+  <child source="//@nodes.0" target="//@nodes.11"/>
+  <child source="//@nodes.11" target="//@nodes.2"/>
+  <child source="//@nodes.11" target="//@nodes.9"/>
+  <child source="//@nodes.11" target="//@nodes.12"/>
+  <child source="//@nodes.11" target="//@nodes.10"/>
+  <child source="//@nodes.4" target="//@nodes.13"/>
+  <next source="//@nodes.5" target="//@nodes.6"/>
+  <next source="//@nodes.6" target="//@nodes.7"/>
+  <next source="//@nodes.7" target="//@nodes.8"/>
+  <next source="//@nodes.2" target="//@nodes.9"/>
+  <next source="//@nodes.9" target="//@nodes.12"/>
+  <next source="//@nodes.12" target="//@nodes.10"/>
+  <next source="//@nodes.8" target="//@nodes.13"/>
+</farrusco:Robot>

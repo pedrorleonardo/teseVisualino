@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="org.farrusco" default="main" basedir=".">
+
+	<!-- Generate GMF Editor -->
+	<target name="main">
+
+		<!-- Remove previously generated files. -->
+
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="../org.farrusco.diagram/src" />
+		</delete>
+
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="../org.farrusco.tests/src" />
+		</delete>
+
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="../org.farrusco.editor/src" />
+		</delete>
+
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="../org.farrusco.edit/src" />
+		</delete>
+		
+		
+		
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="./src/farrusco/impl" />
+		</delete>
+		
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="./src/farrusco/util" />
+		</delete>
+		
+		
+		<delete file="./model/farrusco.ecore" />
+		<delete file="./model/farrusco.ecorediag" />
+		<delete file="./model/farrusco.genmodel" />
+		<delete file="./model/farrusco.gmfgen" />
+		<delete file="./model/farrusco.gmfgraph" />
+		<delete file="./model/farrusco.gmfmap" />
+		<delete file="./model/farrusco.gmftool" />
+		<delete file="./model/farrusco.trace" />
+		
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="./src/farrusco" />
+		</delete>
+		<!--
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="./META-INF" />
+		</delete>
+		-->
+		
+
+		<delete file="./plugin.properties" />
+		<delete file="./plugin.xml" />
+		<eclipse.refreshLocal resource="org.farrusco.diagram" depth="infinite"/>
+		<eclipse.refreshLocal resource="org.farrusco.edit" depth="infinite"/>
+		<eclipse.refreshLocal resource="org.farrusco.editor" depth="infinite"/>
+		<eclipse.refreshLocal resource="org.farrusco.tests" depth="infinite"/>
+		
+		
+		<eclipse.refreshLocal resource="org.farrusco" depth="infinite"/>
+		
+		
+		<epsilon.eugenia src="model/farrusco.emf" />
+
+
+
+		<!-- Deploy diagram icon files 
+		<copy todir="../new/dir" >
+			<fileset dir="src_dir" />
+		</copy>
+		-->
+
+	</target>
+
+
+
+</project>
